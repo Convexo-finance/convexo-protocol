@@ -24,7 +24,7 @@ export default function LatamFundingGap() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 lg:order-1">
             <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-6">The Challenge</h3>
+              <h3 className="text-2xl font-bold text-convexo-navy mb-6">{t('fundingGap.challengeTitle')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-red-100 rounded-full p-2 mr-4 flex-shrink-0">
@@ -33,8 +33,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">Limited Access to Capital</h4>
-                    <p className="text-gray-600">SMEs in LATAM face rejection rates of up to 40% for traditional bank loans, even when creditworthy.</p>
+                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge1Title')}</h4>
+                    <p className="text-gray-600">{t('fundingGap.challenge1Desc')}</p>
                   </div>
                 </div>
 
@@ -45,8 +45,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">High Cost of Capital</h4>
-                    <p className="text-gray-600">Interest rates in LATAM can be 2-3x higher than in developed markets, stifling growth.</p>
+                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge2Title')}</h4>
+                    <p className="text-gray-600">{t('fundingGap.challenge2Desc')}</p>
                   </div>
                 </div>
 
@@ -57,8 +57,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">Currency Volatility</h4>
-                    <p className="text-gray-600">Local currency depreciation makes international funding risky and unpredictable.</p>
+                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge3Title')}</h4>
+                    <p className="text-gray-600">{t('fundingGap.challenge3Desc')}</p>
                   </div>
                 </div>
 
@@ -69,8 +69,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">Complex Processes</h4>
-                    <p className="text-gray-600">Traditional international funding involves mountains of paperwork and months of waiting.</p>
+                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge4Title')}</h4>
+                    <p className="text-gray-600">{t('fundingGap.challenge4Desc')}</p>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function LatamFundingGap() {
 
           <div className="order-1 lg:order-2">
             <div className="bg-gradient-to-br from-convexo-purple to-convexo-blue rounded-2xl p-8 text-white shadow-xl">
-              <h3 className="text-2xl font-bold mb-6">The Solution</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('fundingGap.solutionTitle')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-green-400 rounded-full p-2 mr-4 flex-shrink-0">
@@ -88,8 +88,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Tokenized Corporate Bonds</h4>
-                    <p className="text-white/90">Access international investors through blockchain-based corporate bonds with transparent pricing.</p>
+                    <h4 className="font-semibold mb-1">{t('fundingGap.solution1Title')}</h4>
+                    <p className="text-white/90">{t('fundingGap.solution1Desc')}</p>
                   </div>
                 </div>
 
@@ -100,8 +100,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">AI-Powered Credit Scoring</h4>
-                    <p className="text-white/90">Fair, transparent evaluation that looks beyond traditional credit scores to assess true potential.</p>
+                    <h4 className="font-semibold mb-1">{t('fundingGap.solution2Title')}</h4>
+                    <p className="text-white/90">{t('fundingGap.solution2Desc')}</p>
                   </div>
                 </div>
 
@@ -112,8 +112,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Stablecoin Infrastructure</h4>
-                    <p className="text-white/90">Mitigate currency risk with USDC, EURC, and local stablecoins like ECOP for Colombia.</p>
+                    <h4 className="font-semibold mb-1">{t('fundingGap.solution3Title')}</h4>
+                    <p className="text-white/90">{t('fundingGap.solution3Desc')}</p>
                   </div>
                 </div>
 
@@ -124,8 +124,8 @@ export default function LatamFundingGap() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Streamlined Digital Process</h4>
-                    <p className="text-white/90">Complete evaluation and funding in weeks, not months, with full digital workflow.</p>
+                    <h4 className="font-semibold mb-1">{t('fundingGap.solution4Title')}</h4>
+                    <p className="text-white/90">{t('fundingGap.solution4Desc')}</p>
                   </div>
                 </div>
               </div>
