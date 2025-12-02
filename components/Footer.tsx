@@ -112,12 +112,12 @@ export default function Footer() {
             <h3 className="text-convexo-cream font-bold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <button
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                <Link
+                  href="/about"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
                 >
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
                 <Link

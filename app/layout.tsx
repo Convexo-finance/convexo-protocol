@@ -20,6 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script 
+          src="https://widgets.coingecko.com/gecko-coin-price-static-headline-widget.js" 
+          async
+        ></script>
+      </head>
       <body className={`${nunito.variable} antialiased`}>
         {children}
       </body>

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Products() {
   const products = [
     {
@@ -14,6 +16,7 @@ export default function Products() {
         'Transparent and secure bond tokenization',
       ],
       gradient: 'from-convexo-purple to-convexo-blue',
+      href: '/products/tokenized-bonds',
     },
     {
       title: 'Digital Assets Treasury',
@@ -27,6 +30,7 @@ export default function Products() {
         'Real-time portfolio management',
       ],
       gradient: 'from-convexo-blue to-convexo-lightblue',
+      href: '/products/treasury',
     },
     {
       title: 'Local Stablecoins for LATAM',
@@ -40,6 +44,7 @@ export default function Products() {
         'Regulatory-compliant infrastructure',
       ],
       gradient: 'from-convexo-lightblue to-convexo-purple',
+      href: '/products/stablecoins',
     },
     {
       title: 'OTC Services',
@@ -53,6 +58,7 @@ export default function Products() {
         'White-glove service',
       ],
       gradient: 'from-convexo-purple to-convexo-navy',
+      href: '/products/otc',
     },
     {
       title: 'Payments',
@@ -66,6 +72,7 @@ export default function Products() {
         'Multi-currency support',
       ],
       gradient: 'from-convexo-navy to-convexo-blue',
+      href: '/products/payments',
     },
   ];
 
@@ -114,6 +121,17 @@ export default function Products() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <Link
+                    href={product.href}
+                    className="inline-flex items-center text-convexo-purple hover:text-convexo-blue font-semibold transition-colors duration-200"
+                  >
+                    Learn More
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
