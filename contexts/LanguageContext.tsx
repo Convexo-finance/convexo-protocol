@@ -62,6 +62,7 @@ export function useLanguage() {
 const translations = {
   en: {
     nav: {
+      home: 'Home',
       products: 'Products',
       about: 'About Us',
       launchApp: 'Launch App',
@@ -197,6 +198,7 @@ const translations = {
   },
   es: {
     nav: {
+      home: 'Inicio',
       products: 'Productos',
       about: 'Nosotros',
       launchApp: 'Abrir App',

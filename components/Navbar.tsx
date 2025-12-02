@@ -44,6 +44,14 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Home Link */}
+            <Link
+              href="/"
+              className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium"
+            >
+              {t('nav.home')}
+            </Link>
+
             {/* Language Toggle */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
@@ -157,6 +165,15 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-convexo-navy border-t border-convexo-blue/20">
           <div className="px-4 pt-2 pb-4 space-y-2">
+            {/* Home Link Mobile */}
+            <Link
+              href="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 text-convexo-cream hover:bg-convexo-blue/20 rounded-lg transition-colors duration-200 font-semibold"
+            >
+              {t('nav.home')}
+            </Link>
+
             {/* Language Toggle Mobile */}
             <button
               onClick={() => {
