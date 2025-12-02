@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 declare global {
   namespace JSX {
@@ -17,11 +17,13 @@ declare global {
 }
 
 export default function CoinPriceWidget() {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-8 bg-convexo-navy border-y border-convexo-blue/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
-          <h3 className="text-lg font-semibold text-convexo-lightblue">Live Market Prices</h3>
+          <h3 className="text-lg font-semibold text-convexo-lightblue">{t('coinWidget.title')}</h3>
         </div>
         <div className="overflow-x-auto">
           <gecko-coin-price-static-headline-widget 

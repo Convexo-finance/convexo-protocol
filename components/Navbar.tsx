@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const products = [
     { name: 'Tokenized Corporate Bonds', href: '/products/tokenized-bonds', icon: '🏦' },
@@ -42,6 +44,18 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+              className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium flex items-center space-x-2"
+              aria-label="Toggle language"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+              <span className="uppercase font-semibold">{language === 'en' ? 'ES' : 'EN'}</span>
+            </button>
+
             {/* Products Dropdown */}
             <div 
               className="relative"
@@ -51,7 +65,7 @@ export default function Navbar() {
               <button
                 className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium flex items-center"
               >
-                Products
+                {t('nav.products')}
                 <svg 
                   className={`ml-1 w-4 h-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
                   fill="none" 
@@ -82,7 +96,7 @@ export default function Navbar() {
                       href="/#products"
                       className="text-sm text-convexo-blue hover:text-convexo-purple font-medium"
                     >
-                      View All Products →
+                      {t('nav.viewAll')} →
                     </Link>
                   </div>
                 </div>
@@ -93,7 +107,7 @@ export default function Navbar() {
               href="/about"
               className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium"
             >
-              About Us
+              {t('nav.about')}
             </Link>
 
             <Link
@@ -102,7 +116,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-convexo-purple/50 transition-all duration-300 transform hover:scale-105"
             >
-              Launch App
+              {t('nav.launchApp')}
             </Link>
           </div>
 
@@ -143,10 +157,26 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-convexo-navy border-t border-convexo-blue/20">
           <div className="px-4 pt-2 pb-4 space-y-2">
+            {/* Language Toggle Mobile */}
+            <button
+              onClick={() => {
+                setLanguage(language === 'en' ? 'es' : 'en');
+                setIsMenuOpen(false);
+              }}
+              className="flex items-center justify-center w-full px-4 py-3 text-convexo-cream bg-convexo-blue/20 rounded-lg transition-colors duration-200 space-x-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+              <span className="font-semibold">{language === 'en' ? 'Cambiar a Español' : 'Switch to English'}</span>
+            </button>
+
+            <div className="border-t border-convexo-blue/20 my-2"></div>
+
             {/* Mobile Products Section */}
             <div className="space-y-2">
               <div className="text-convexo-lightblue font-semibold px-4 py-2 text-sm uppercase tracking-wide">
-                Products
+                {t('nav.products')}
               </div>
               {products.map((product) => (
                 <Link
@@ -168,7 +198,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="block w-full text-left px-4 py-3 text-convexo-cream hover:bg-convexo-blue/20 rounded-lg transition-colors duration-200"
             >
-              About Us
+              {t('nav.about')}
             </Link>
             
             <Link
@@ -177,7 +207,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="block w-full text-center bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-4 py-3 rounded-lg font-semibold mt-2"
             >
-              Launch App
+              {t('nav.launchApp')}
             </Link>
           </div>
         </div>

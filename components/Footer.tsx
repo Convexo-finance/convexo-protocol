@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-convexo-navy border-t border-convexo-blue/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -18,7 +21,7 @@ export default function Footer() {
               className="h-12 w-auto mb-4"
             />
             <p className="text-convexo-lightblue mb-4 max-w-md">
-              Institutional DeFi solutions connecting LATAM enterprises with global capital markets.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -70,7 +73,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-convexo-cream font-bold mb-4">Products</h3>
+            <h3 className="text-convexo-cream font-bold mb-4">{t('footer.productsTitle')}</h3>
             <ul className="space-y-2">
               <li>
                 <button
@@ -109,7 +112,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-convexo-cream font-bold mb-4">Company</h3>
+            <h3 className="text-convexo-cream font-bold mb-4">{t('footer.companyTitle')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -135,7 +138,7 @@ export default function Footer() {
 
         <div className="border-t border-convexo-blue/20 mt-12 pt-8 text-center">
           <p className="text-convexo-lightblue">
-            © {new Date().getFullYear()} Convexo Protocol. All rights reserved.
+            © {new Date().getFullYear()} Convexo Protocol. {t('footer.copyright')}.
           </p>
         </div>
       </div>

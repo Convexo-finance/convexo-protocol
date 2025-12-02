@@ -1,75 +1,78 @@
 'use client';
 
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Products() {
+  const { t } = useLanguage();
+  
   const products = [
     {
-      title: 'Tokenized Corporate Bonds',
+      titleKey: 'products.tokenizedBonds.title',
       icon: '🏦',
-      description: 'Access international funding through compliant, tokenized corporate bonds. Our comprehensive evaluation process includes Sumsub verification and AI-powered credit scoring.',
-      features: [
-        'AI-generated credit score with NFT certification',
-        'Sumsub compliant evaluation',
-        'Focus on solid enterprises needing working capital',
-        'Scale your current operations with international funding',
-        'Transparent and secure bond tokenization',
+      descriptionKey: 'products.tokenizedBonds.description',
+      featureKeys: [
+        'products.tokenizedBonds.feature1',
+        'products.tokenizedBonds.feature2',
+        'products.tokenizedBonds.feature3',
+        'products.tokenizedBonds.feature4',
+        'products.tokenizedBonds.feature5',
       ],
       gradient: 'from-convexo-purple to-convexo-blue',
       href: '/products/tokenized-bonds',
     },
     {
-      title: 'Digital Assets Treasury',
+      titleKey: 'products.treasury.title',
       icon: '💱',
-      description: 'Seamlessly trade local stablecoins with international stablecoins like USDC and EURC. Manage your digital asset treasury with institutional-grade tools.',
-      features: [
-        'Easy conversion to USDC and EURC',
-        'Local stablecoin support',
-        'Competitive exchange rates',
-        'Institutional-grade security',
-        'Real-time portfolio management',
+      descriptionKey: 'products.treasury.description',
+      featureKeys: [
+        'products.treasury.feature1',
+        'products.treasury.feature2',
+        'products.treasury.feature3',
+        'products.treasury.feature4',
+        'products.treasury.feature5',
       ],
       gradient: 'from-convexo-blue to-convexo-lightblue',
       href: '/products/treasury',
     },
     {
-      title: 'Local Stablecoins for LATAM',
+      titleKey: 'products.stablecoins.title',
       icon: '🪙',
-      description: 'Introducing ECOP for Colombia, powered by Uniswap V4 and Chainlink oracles. Access localized stablecoins designed for LATAM markets.',
-      features: [
-        'ECOP - Colombian Peso stablecoin',
-        'Powered by Uniswap V4',
-        'Chainlink price feeds',
-        'Designed for LATAM markets',
-        'Regulatory-compliant infrastructure',
+      descriptionKey: 'products.stablecoins.description',
+      featureKeys: [
+        'products.stablecoins.feature1',
+        'products.stablecoins.feature2',
+        'products.stablecoins.feature3',
+        'products.stablecoins.feature4',
+        'products.stablecoins.feature5',
       ],
       gradient: 'from-convexo-lightblue to-convexo-purple',
       href: '/products/stablecoins',
     },
     {
-      title: 'OTC Services',
+      titleKey: 'products.otc.title',
       icon: '🤝',
-      description: 'Fast, private, and secure trading of digital assets with our professional traders. Get personalized service for large volume trades.',
-      features: [
-        'Professional trader support',
-        'Private and secure transactions',
-        'Fast execution',
-        'Competitive pricing for large volumes',
-        'White-glove service',
+      descriptionKey: 'products.otc.description',
+      featureKeys: [
+        'products.otc.feature1',
+        'products.otc.feature2',
+        'products.otc.feature3',
+        'products.otc.feature4',
+        'products.otc.feature5',
       ],
       gradient: 'from-convexo-purple to-convexo-navy',
       href: '/products/otc',
     },
     {
-      title: 'Payments',
+      titleKey: 'products.payments.title',
       icon: '💳',
-      description: 'Streamline your business payments. Save payment information and pay contractors and suppliers using stablecoins.',
-      features: [
-        'Pay contractors with stablecoins',
-        'Supplier payment management',
-        'Secure payment information storage',
-        'Automated payment scheduling',
-        'Multi-currency support',
+      descriptionKey: 'products.payments.description',
+      featureKeys: [
+        'products.payments.feature1',
+        'products.payments.feature2',
+        'products.payments.feature3',
+        'products.payments.feature4',
+        'products.payments.feature5',
       ],
       gradient: 'from-convexo-navy to-convexo-blue',
       href: '/products/payments',
@@ -81,10 +84,10 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-convexo-navy mb-4">
-            Our Products
+            {t('products.title')}
           </h2>
           <p className="text-xl text-convexo-blue max-w-3xl mx-auto">
-            Comprehensive institutional DeFi solutions designed for LATAM enterprises
+            {t('products.subtitle')}
           </p>
         </div>
 
@@ -98,13 +101,13 @@ export default function Products() {
               <div className="p-8">
                 <div className="text-5xl mb-4">{product.icon}</div>
                 <h3 className="text-3xl font-bold text-convexo-navy mb-4">
-                  {product.title}
+                  {t(product.titleKey)}
                 </h3>
                 <p className="text-convexo-blue mb-6 text-lg">
-                  {product.description}
+                  {t(product.descriptionKey)}
                 </p>
                 <ul className="space-y-3">
-                  {product.features.map((feature, idx) => (
+                  {product.featureKeys.map((featureKey, idx) => (
                     <li key={idx} className="flex items-start">
                       <svg
                         className="w-6 h-6 text-convexo-purple mr-3 flex-shrink-0 mt-0.5"
@@ -117,7 +120,7 @@ export default function Products() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700">{t(featureKey)}</span>
                     </li>
                   ))}
                 </ul>
@@ -126,7 +129,7 @@ export default function Products() {
                     href={product.href}
                     className="inline-flex items-center text-convexo-purple hover:text-convexo-blue font-semibold transition-colors duration-200"
                   >
-                    Learn More
+                    {t('products.learnMore')}
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
