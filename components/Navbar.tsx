@@ -44,13 +44,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Home Link */}
-            <Link
-              href="/"
-              className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium"
-            >
-              {t('nav.home')}
-            </Link>
+
 
             {/* Language Toggle */}
             <button
@@ -63,6 +57,14 @@ export default function Navbar() {
               </svg>
               <span className="uppercase font-semibold">{language === 'en' ? 'ES' : 'EN'}</span>
             </button>
+
+            {/* Home Link */}
+            <Link
+              href="/"
+              className="text-convexo-cream hover:text-convexo-lightblue transition-colors duration-200 font-medium"
+            >
+              {t('nav.home')}
+            </Link>
 
             {/* Products Dropdown */}
             <div 
