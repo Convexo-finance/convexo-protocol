@@ -14,18 +14,18 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Image
-              src="/branding/logologo.png"
+              src="/branding/convexohorizontal.png"
               alt="Convexo Protocol"
-              width={180}
-              height={50}
-              className="h-12 w-auto mb-4"
+              width={250}
+              height={70}
+              className="h-auto w-auto"
             />
             <p className="text-convexo-lightblue mb-4 max-w-md">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://x.com/convexofinance"
+                href="https://x.com/convexoprotocol"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
@@ -36,7 +36,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/convexo-finance/"
+                href="https://www.linkedin.com/company/convexo-protocol/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
@@ -47,7 +47,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/convexo.finance/"
+                href="https://www.instagram.com/convexo.protocol"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
@@ -76,36 +76,36 @@ export default function Footer() {
             <h3 className="text-convexo-cream font-bold mb-4">{t('footer.productsTitle')}</h3>
             <ul className="space-y-2">
               <li>
-                <button
-                  onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                <Link
+                  href="/products/digital-ids"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
                 >
-                  Tokenized Bonds
-                </button>
+                  Digital IDs
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                <Link
+                  href="/products/treasury"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
                 >
-                  Digital Assets Treasury
-                </button>
+                  Treasury
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                <Link
+                  href="/products/stablecoins"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
                 >
-                  Local Stablecoins
-                </button>
+                  Stablecoins
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                <Link
+                  href="/products/eloans"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"
                 >
-                  OTC Services
-                </button>
+                  E-LOANS
+                </Link>
               </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://fund.convexo.xyz"
+                  href="https://protocol.convexo.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-convexo-lightblue hover:text-convexo-cream transition-colors"

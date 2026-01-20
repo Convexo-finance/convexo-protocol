@@ -82,7 +82,7 @@ npm start
 
 ## Link to App
 
-The main application is hosted at: [fund.convexo.xyz](https://fund.convexo.xyz)
+The main application is hosted at: [protocol.convexo.xyz](https://protocol.convexo.xyz)
 
 ## License
 

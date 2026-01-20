@@ -1,12 +1,60 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Digital Assets Treasury | Convexo Protocol',
-  description: 'Trade local stablecoins with international stablecoins like USDC and EURC with institutional-grade security and competitive rates.',
-};
+import Link from 'next/link';
+import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function TreasuryPage() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      title: 'OTC Orders',
+      icon: '🤝',
+      description: 'Cash-in and cash-out using Telegram, WhatsApp, and Signal. We charge a fixed spread of 1.5% over the market price.',
+      features: [
+        'Fixed spread of 1.5% over market price',
+        'Secure cash delivery for your crypto',
+        'Contact via Telegram, WhatsApp, or Signal',
+        'Based on Google Finance USD-COP price',
+      ],
+      contactMethods: [
+        { logo: '/contacts/telegram.png', alt: 'Telegram' },
+        { logo: '/contacts/whatsapp.png', alt: 'WhatsApp' },
+        { logo: '/contacts/signal.png', alt: 'Signal' },
+      ],
+      priceLink: 'https://www.google.com/finance/quote/USD-COP',
+      gradient: 'from-convexo-purple to-convexo-blue',
+    },
+    {
+      title: 'Swaps with Uniswap V4',
+      icon: '🔄',
+      description: 'Swap and be a liquidity provider in Private Persistent and Compliant Liquidity Pools with Uniswap V4.',
+      features: [
+        '0.3% spread on swaps',
+        'Private Persistent Pools',
+        'Compliant Liquidity Pools',
+        'Based on Google API Price (USD-COP)',
+      ],
+      provider: { logo: '/providers/uniswap.png', alt: 'Uniswap', link: 'https://uniswap.org' },
+      priceLink: 'https://www.google.com/finance/quote/USD-COP',
+      gradient: 'from-convexo-blue to-convexo-lightblue',
+    },
+    {
+      title: 'Monetization of Local Stablecoins',
+      icon: '💱',
+      description: 'Redeem and claim local stablecoins powered by Chainlink Cross-Chain Interoperability Protocol (CCIP).',
+      features: [
+        'Chainlink CCIP powered',
+        'Local stablecoin redemption',
+        'Cross-chain interoperability',
+        'Secure and reliable',
+      ],
+      provider: { logo: '/providers/chainlink.png', alt: 'Chainlink', link: 'https://chainlink.com' },
+      gradient: 'from-convexo-lightblue to-convexo-purple',
+    },
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -22,249 +70,160 @@ export default function TreasuryPage() {
           <div className="text-center">
             <div className="text-6xl mb-6">💱</div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Digital Assets Treasury
+              Treasury Services
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Seamlessly trade local and international stablecoins with institutional-grade tools and security
+              OTC orders, Uniswap V4 swaps, and local stablecoin monetization
             </p>
-            <Link
-              href="https://fund.convexo.xyz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-convexo-blue px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            >
-              Start Trading
-            </Link>
+            <div className="inline-block bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded mb-8">
+              <p className="font-semibold">Private ID verification required for all services</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Overview */}
+      {/* Services Overview */}
       <section className="py-20 bg-convexo-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-convexo-navy mb-6">
-                Enterprise Treasury Management
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Our Digital Assets Treasury platform provides enterprises with the tools they need to efficiently manage their digital asset holdings, convert between local and international stablecoins, and optimize their treasury operations.
-              </p>
-              <p className="text-lg text-gray-700">
-                With support for USDC, EURC, and local LATAM stablecoins, you can execute trades quickly and securely while maintaining full visibility into your digital asset portfolio.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-6">Supported Assets</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-convexo-cream rounded-lg">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-convexo-blue/10 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">💵</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-convexo-navy mb-4">Our Treasury Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              All treasury functions require at least Private ID verification. Choose the service that fits your needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
+                <div className="p-8">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-convexo-navy mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-convexo-blue mb-6 text-lg">
+                    {service.description}
+                  </p>
+
+                  {service.contactMethods && (
+                    <div className="mb-6">
+                      <p className="text-sm text-gray-600 mb-3">Contact via:</p>
+                      <div className="flex items-center space-x-4">
+                        {service.contactMethods.map((method, idx) => (
+                          <div key={idx} className="relative w-12 h-12 hover:scale-110 transition-transform">
+                            <Image
+                              src={method.logo}
+                              alt={method.alt}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-semibold text-convexo-navy">USDC</div>
-                      <div className="text-sm text-gray-600">USD Coin</div>
+                  )}
+
+                  {service.provider && (
+                    <div className="mb-6">
+                      <Link
+                        href={service.provider.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 hover:opacity-80 transition-opacity"
+                      >
+                        <div className="relative w-24 h-12">
+                          <Image
+                            src={service.provider.logo}
+                            alt={service.provider.alt}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-convexo-cream rounded-lg">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-convexo-purple/10 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">💶</span>
+                  )}
+
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <svg
+                          className="w-6 h-6 text-convexo-purple mr-3 flex-shrink-0 mt-0.5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {service.priceLink && (
+                    <div className="pt-6 border-t border-gray-200">
+                      <Link
+                        href={service.priceLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-convexo-blue hover:text-convexo-purple inline-flex items-center"
+                      >
+                        View Market Price (USD-COP)
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </Link>
                     </div>
-                    <div>
-                      <div className="font-semibold text-convexo-navy">EURC</div>
-                      <div className="text-sm text-gray-600">Euro Coin</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-convexo-cream rounded-lg">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-convexo-lightblue/20 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">🪙</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-convexo-navy">Local Stablecoins</div>
-                      <div className="text-sm text-gray-600">LATAM currencies</div>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
+      {/* How It Works */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-convexo-navy mb-12 text-center">Platform Features</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-blue/10 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Competitive Rates</h3>
-              <p className="text-gray-700">
-                Access the best exchange rates in the market with our optimized liquidity aggregation system
-              </p>
-            </div>
-
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-purple/10 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Institutional Security</h3>
-              <p className="text-gray-700">
-                Bank-grade security measures protect your assets with multi-signature wallets and cold storage
-              </p>
-            </div>
-
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-lightblue/20 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Instant Execution</h3>
-              <p className="text-gray-700">
-                Execute trades instantly with our high-performance matching engine and deep liquidity pools
-              </p>
-            </div>
-
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-blue/10 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Real-time Analytics</h3>
-              <p className="text-gray-700">
-                Monitor your portfolio with comprehensive dashboards and real-time performance metrics
-              </p>
-            </div>
-
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-purple/10 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Multi-currency Support</h3>
-              <p className="text-gray-700">
-                Support for multiple stablecoins including USDC, EURC, and regional LATAM currencies
-              </p>
-            </div>
-
-            <div className="bg-convexo-cream rounded-xl p-8">
-              <div className="bg-convexo-lightblue/20 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-convexo-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-4">Detailed Reporting</h3>
-              <p className="text-gray-700">
-                Generate comprehensive reports for accounting, compliance, and financial analysis
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-convexo-navy mb-4">How to Get Started</h2>
+            <p className="text-xl text-gray-600">Simple steps to access treasury services</p>
           </div>
-        </div>
-      </section>
 
-      {/* Use Cases */}
-      <section className="py-20 bg-convexo-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-convexo-navy mb-12 text-center">Use Cases</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-4">International Payments</h3>
-              <p className="text-gray-700 mb-6">
-                Convert local currency to USDC or EURC for seamless international payments with lower fees and faster settlement times compared to traditional banking.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-convexo-purple to-convexo-blue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-convexo-navy mb-3">Get Private ID</h3>
+              <p className="text-gray-600">
+                Verify your identity with zkPassport to receive a private persistent NFT
               </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>Instant cross-border transfers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>Reduced transaction fees</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>24/7 availability</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-4">Treasury Optimization</h3>
-              <p className="text-gray-700 mb-6">
-                Optimize your company's treasury by holding assets in stable currencies and earning yields while maintaining liquidity for operational needs.
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-convexo-blue to-convexo-lightblue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-convexo-navy mb-3">Choose Service</h3>
+              <p className="text-gray-600">
+                Select OTC orders, Uniswap V4 swaps, or local stablecoin monetization
               </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Yield generation opportunities</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Currency diversification</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Liquidity management</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-4">Hedging & Risk Management</h3>
-              <p className="text-gray-700 mb-6">
-                Protect your business from currency volatility by converting to stablecoins and maintaining purchasing power across different markets.
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-convexo-lightblue to-convexo-purple rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-convexo-navy mb-3">Start Trading</h3>
+              <p className="text-gray-600">
+                Begin using treasury services with secure, compliant transactions
               </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>Currency risk mitigation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>Stable value preservation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-blue mr-2">✓</span>
-                  <span>Predictable costs</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-4">Working Capital Management</h3>
-              <p className="text-gray-700 mb-6">
-                Efficiently manage working capital by quickly converting between currencies to pay suppliers, contractors, and manage operational expenses.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Fast conversions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Reduced FX fees</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-convexo-purple mr-2">✓</span>
-                  <span>Streamlined operations</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -274,13 +233,13 @@ export default function TreasuryPage() {
       <section className="py-20 bg-gradient-to-r from-convexo-blue to-convexo-purple">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Start Managing Your Digital Treasury
+            Ready to Access Treasury Services?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Access institutional-grade treasury management tools today
+            Get your Private ID and start using our treasury services today
           </p>
           <Link
-            href="https://fund.convexo.xyz"
+            href="https://protocol.convexo.xyz"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-convexo-blue px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
@@ -292,4 +251,3 @@ export default function TreasuryPage() {
     </div>
   );
 }
-

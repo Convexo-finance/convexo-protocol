@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import ChainDeployments from '@/components/ChainDeployments';
 import Products from '@/components/Products';
 import CryptoRails from '@/components/CryptoRails';
 import LatamFundingGap from '@/components/LatamFundingGap';
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <ChainDeployments />
       <CoinPriceWidget />
       <CryptoRails />
       <LatamFundingGap />

@@ -72,7 +72,7 @@ Your professional institutional website includes:
 - Smooth scroll navigation
 - Professional animations and transitions
 - Your brand colors integrated throughout
-- Link to fund.convexo.xyz app
+- Link to protocol.convexo.xyz app
 - Modern gradient effects
 - SEO optimized
 

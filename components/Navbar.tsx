@@ -11,11 +11,10 @@ export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
 
   const products = [
-    { name: 'Tokenized Corporate Bonds', href: '/products/tokenized-bonds', icon: '🏦' },
-    { name: 'Digital Assets Treasury', href: '/products/treasury', icon: '💱' },
-    { name: 'Local Stablecoins', href: '/products/stablecoins', icon: '🪙' },
-    { name: 'OTC Services', href: '/products/otc', icon: '🤝' },
-    { name: 'Payments', href: '/products/payments', icon: '💳' },
+    { name: 'Digital IDs', href: '/products/digital-ids', icon: '🆔' },
+    { name: 'Treasury', href: '/products/treasury', icon: '💱' },
+    { name: 'Stablecoins', href: '/products/stablecoins', icon: '🪙' },
+    { name: 'E-LOANS', href: '/products/eloans', icon: '💳' },
   ];
 
   const scrollToSection = (id: string) => {
@@ -33,11 +32,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center">
             <Image
-              src="/branding/logologo.png"
+              src="/branding/convexoblanco.png"
               alt="Convexo Protocol"
-              width={180}
-              height={50}
-              className="h-12 w-auto"
+              width={200}
+              height={70}
+              className="h-auto w-auto "
               priority
             />
           </Link>
@@ -121,7 +120,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="https://fund.convexo.xyz"
+              href="https://protocol.convexo.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-convexo-purple/50 transition-all duration-300 transform hover:scale-105"
@@ -221,7 +220,7 @@ export default function Navbar() {
             </Link>
             
             <Link
-              href="https://fund.convexo.xyz"
+              href="https://protocol.convexo.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-4 py-3 rounded-lg font-semibold mt-2"

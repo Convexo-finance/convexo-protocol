@@ -217,7 +217,7 @@ export default function AboutPage() {
               Join the future of institutional finance in Latin America
             </p>
             <Link
-              href="https://fund.convexo.xyz"
+              href="https://protocol.convexo.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
