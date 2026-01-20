@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "Convexo Protocol | Institutional DeFi Solutions",
   description: "Access international funding through tokenized corporate bonds, digital asset treasury services, and institutional-grade DeFi solutions for LATAM enterprises.",
   keywords: "DeFi, tokenized bonds, corporate bonds, stablecoins, digital assets, LATAM, blockchain, institutional finance",
+  icons: {
+    icon: '/branding/logologo.png',
+    shortcut: '/branding/logologo.png',
+    apple: '/branding/logologo.png',
+  },
 };
 
 export default function RootLayout({
