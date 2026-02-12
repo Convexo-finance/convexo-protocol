@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function DigitalIDsPage() {
@@ -17,8 +19,6 @@ export default function DigitalIDsPage() {
         { logo: '/opensantionsfondoblanco.png', alt: 'OpenSanctions', link: 'https://www.opensanctions.org/' },
       ],
       requirements: ['digitalIds.tier1.req1', 'digitalIds.tier1.req2', 'digitalIds.tier1.req3'],
-      gradient: 'from-convexo-purple to-convexo-blue',
-      icon: '🔐',
     },
     {
       tier: 2,
@@ -36,8 +36,6 @@ export default function DigitalIDsPage() {
           provider: { logo: '/providers/sumsub.jpg', alt: 'Sumsub', link: 'https://sumsub.com/' },
         },
       ],
-      gradient: 'from-convexo-blue to-convexo-lightblue',
-      icon: '👥',
     },
     {
       tier: 3,
@@ -45,86 +43,79 @@ export default function DigitalIDsPage() {
       descriptionKey: 'digitalIds.tier3.description',
       providers: [],
       requirements: ['digitalIds.tier3.req1', 'digitalIds.tier3.req2'],
-      gradient: 'from-convexo-lightblue to-convexo-purple',
-      icon: '💳',
     },
   ];
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-convexo-navy via-convexo-purple to-convexo-blue py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="text-6xl mb-6">🆔</div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Digital Identity Tiers
-            </h1>
-            <p className="text-xl md:text-2xl text-convexo-lightblue mb-8 max-w-3xl mx-auto">
-              Progressive verification system with 4 tiers of identity verification and compliance
-            </p>
+    <>
+      <Navbar />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative section-padding pt-32 border-b border-border">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/8 via-base to-layer/30" />
+          
+          <div className="relative z-10 section-container">
+            <div className="max-w-2xl">
+              <div className="heading-section mb-6">Identity Verification</div>
+              <h1 className="heading-xl text-primary-text mb-6">
+                Digital Identity Tiers
+              </h1>
+              <p className="text-base text-muted-light leading-relaxed mb-8">
+                Progressive verification system with multiple tiers of identity verification and compliance,
+                ensuring secure access to institutional DeFi services.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tier System Overview */}
-      <section className="py-20 bg-convexo-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-convexo-navy mb-4">Our Tier System</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Start with Private ID and progress through verification levels to unlock more features and services
-            </p>
-          </div>
+        {/* Tier System */}
+        <section className="section-padding border-b border-border">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto mb-12 text-center">
+              <div className="heading-section mb-4">Verification System</div>
+              <h2 className="heading-lg text-primary-text mb-4">
+                Progressive Access Levels
+              </h2>
+              <p className="body-text">
+                Start with Private ID and progress through verification levels to unlock more features and services
+              </p>
+            </div>
 
-          <div className="space-y-12">
-            {tiers.map((tierData) => (
-              <div
-                key={tierData.tier}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
-              >
-                <div className={`h-2 bg-gradient-to-r ${tierData.gradient}`}></div>
-                <div className="p-8">
-                  <div className="flex items-start mb-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${tierData.gradient} text-white rounded-full font-bold text-2xl mr-6`}>
-                      {tierData.tier}
+            <div className="space-y-8 max-w-4xl mx-auto">
+              {tiers.map((tierData) => (
+                <div key={tierData.tier} className="card p-8">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-medium text-authority-blue">{tierData.tier}</span>
                     </div>
                     <div className="flex-1">
-                      <div className="text-4xl mb-3">{tierData.icon}</div>
-                      <h3 className="text-3xl font-bold text-convexo-navy mb-3">
+                      <h3 className="text-xl font-medium text-primary-text mb-2">
                         {t(tierData.titleKey)}
                       </h3>
-                      <p className="text-lg text-gray-700">
+                      <p className="text-sm text-muted-light">
                         {t(tierData.descriptionKey)}
                       </p>
                     </div>
                   </div>
 
                   {tierData.providers && tierData.providers.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-xl font-semibold text-convexo-navy mb-4">Powered By</h4>
-                      <div className="flex flex-wrap gap-6">
+                    <div className="mb-6 pb-6 border-b border-border">
+                      <h4 className="text-sm font-medium text-primary-text mb-4 uppercase tracking-[0.1em]">Powered By</h4>
+                      <div className="flex flex-wrap gap-4">
                         {tierData.providers.map((provider, idx) => (
                           <Link
                             key={idx}
                             href={provider.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center space-x-3 hover:opacity-80 transition-opacity bg-convexo-cream rounded-lg p-4"
+                            className="bg-layer rounded-lg p-4 hover:bg-surface-hover transition-colors"
                           >
-                            <div className="relative w-24 h-12">
+                            <div className="relative w-20 h-10">
                               <Image
                                 src={provider.logo}
                                 alt={provider.alt}
                                 fill
-                                className="object-contain"
+                                className="object-contain opacity-80"
                               />
                             </div>
                           </Link>
@@ -134,29 +125,29 @@ export default function DigitalIDsPage() {
                   )}
 
                   {tierData.subTiers && (
-                    <div className="mb-6">
-                      <h4 className="text-xl font-semibold text-convexo-navy mb-4">Verification Options</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="mb-6 pb-6 border-b border-border">
+                      <h4 className="text-sm font-medium text-primary-text mb-4 uppercase tracking-[0.1em]">Verification Options</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {tierData.subTiers.map((subTier, idx) => (
-                          <div key={idx} className="bg-convexo-cream rounded-xl p-6">
-                            <h5 className="text-xl font-bold text-convexo-navy mb-3">
+                          <div key={idx} className="bg-layer rounded-lg p-5">
+                            <h5 className="text-base font-medium text-primary-text mb-2">
                               {t(subTier.name)}
                             </h5>
-                            <p className="text-gray-700 mb-4">
+                            <p className="text-sm text-muted-light mb-4">
                               {t(subTier.description)}
                             </p>
                             <Link
                               href={subTier.provider.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center space-x-2 hover:opacity-80 transition-opacity"
+                              className="inline-block hover:opacity-70 transition-opacity"
                             >
-                              <div className="relative w-20 h-10">
+                              <div className="relative w-16 h-8">
                                 <Image
                                   src={subTier.provider.logo}
                                   alt={subTier.provider.alt}
                                   fill
-                                  className="object-contain"
+                                  className="object-contain opacity-80"
                                 />
                               </div>
                             </Link>
@@ -167,13 +158,13 @@ export default function DigitalIDsPage() {
                   )}
 
                   {tierData.requirements && (
-                    <div className="bg-convexo-cream rounded-xl p-6">
-                      <h4 className="text-xl font-semibold text-convexo-navy mb-4">Requirements</h4>
-                      <ul className="space-y-3">
+                    <div>
+                      <h4 className="text-sm font-medium text-primary-text mb-3 uppercase tracking-[0.1em]">Requirements</h4>
+                      <ul className="space-y-2">
                         {tierData.requirements.map((reqKey, idx) => (
-                          <li key={idx} className="flex items-start">
+                          <li key={idx} className="flex items-start gap-3">
                             <svg
-                              className="w-6 h-6 text-convexo-purple mr-3 flex-shrink-0 mt-0.5"
+                              className="w-4 h-4 text-authority-blue mt-0.5 flex-shrink-0"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -183,68 +174,44 @@ export default function DigitalIDsPage() {
                                 clipRule="evenodd"
                               />
                             </svg>
-                            <span className="text-gray-700">{t(reqKey)}</span>
+                            <span className="text-sm text-muted-light">{t(reqKey)}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tier Progression */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-convexo-navy mb-4">Progression Path</h2>
-            <p className="text-xl text-gray-600">Build your verified identity step by step</p>
+        {/* CTA */}
+        <section className="section-padding">
+          <div className="section-container">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="heading-lg text-primary-text mb-4">
+                Start Your Verification Journey
+              </h2>
+              <p className="body-text mb-8">
+                Get your Private ID with zkPassport and unlock access to all Convexo Protocol services
+              </p>
+              <Link
+                href="https://protocol.convexo.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center"
+              >
+                Get Started
+                <svg className="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
-
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
-            {tiers.map((tier, index) => (
-              <div key={tier.tier} className="flex flex-col items-center">
-                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${tier.gradient} flex items-center justify-center text-white font-bold text-2xl mb-4`}>
-                  {tier.tier}
-                </div>
-                <h3 className="text-lg font-bold text-convexo-navy mb-2 text-center">
-                  {t(tier.titleKey)}
-                </h3>
-                {index < tiers.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-full w-16 h-0.5 bg-gradient-to-r from-convexo-purple to-convexo-blue transform translate-x-4">
-                    <svg className="w-6 h-6 text-convexo-purple absolute right-0 top-1/2 transform -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-convexo-purple to-convexo-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Start Your Verification Journey
-          </h2>
-          <p className="text-xl text-convexo-lightblue mb-8">
-            Get your Private ID with zkPassport and unlock access to all Convexo Protocol services
-          </p>
-          <Link
-            href="https://protocol.convexo.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-convexo-navy px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-          >
-            Get Started
-          </Link>
-        </div>
-      </section>
-    </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

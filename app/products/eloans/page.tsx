@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ELoansPage() {
@@ -10,7 +12,6 @@ export default function ELoansPage() {
     {
       titleKey: 'eloans.credits.title',
       descriptionKey: 'eloans.credits.description',
-      icon: '💰',
       features: [
         'eloans.credits.feature1',
         'eloans.credits.feature2',
@@ -19,12 +20,10 @@ export default function ELoansPage() {
       ],
       framework: 'eloans.credits.framework',
       frameworkLink: 'https://eips.ethereum.org/EIPS/eip-4626',
-      gradient: 'from-convexo-purple to-convexo-blue',
     },
     {
       titleKey: 'eloans.contracts.title',
       descriptionKey: 'eloans.contracts.description',
-      icon: '📝',
       features: [
         'eloans.contracts.feature1',
         'eloans.contracts.feature2',
@@ -32,76 +31,70 @@ export default function ELoansPage() {
         'eloans.contracts.feature4',
       ],
       apy: 'eloans.contracts.apy',
-      gradient: 'from-convexo-blue to-convexo-lightblue',
     },
   ];
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-convexo-purple via-convexo-navy to-convexo-blue py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="text-6xl mb-6">💳</div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              E-LOANS
-            </h1>
-            <p className="text-xl md:text-2xl text-convexo-lightblue mb-8 max-w-3xl mx-auto">
-              Electronic Credit and Contract services for verified Tier 3 users
-            </p>
-            <div className="inline-block bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded mb-8">
-              <p className="font-semibold">{t('eloans.requirement')}</p>
+    <>
+      <Navbar />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative section-padding pt-32 border-b border-border">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/8 via-base to-layer/30" />
+          
+          <div className="relative z-10 section-container">
+            <div className="max-w-2xl">
+              <div className="heading-section mb-6">E-LOANS</div>
+              <h1 className="heading-xl text-primary-text mb-6">
+                Electronic Credit & Contract Services
+              </h1>
+              <p className="text-base text-muted-light leading-relaxed mb-6">
+                Create electronic credit lines and attach legal contracts for verified Tier 3 users,
+                powered by EIP-4626 vault standard.
+              </p>
+              <div className="inline-block bg-authority-blue/10 border-l-2 border-authority-blue px-4 py-3 rounded">
+                <p className="text-sm font-medium text-primary-text">{t('eloans.requirement')}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* E-LOANS Services */}
-      <section className="py-20 bg-convexo-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-convexo-navy mb-4">Our E-LOANS Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Create loans, attach legal contracts, and manage your electronic credit portfolio
-            </p>
-          </div>
+        {/* E-LOANS Services */}
+        <section className="section-padding border-b border-border">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto mb-12 text-center">
+              <div className="heading-section mb-4">Services</div>
+              <h2 className="heading-lg text-primary-text mb-4">
+                Electronic Credit Portfolio Management
+              </h2>
+              <p className="body-text">
+                Create loans, attach legal contracts, and manage your electronic credit portfolio
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
-                <div className="p-8">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-3xl font-bold text-convexo-navy mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {services.map((service, index) => (
+                <div key={index} className="card p-8">
+                  <h3 className="text-xl font-medium text-primary-text mb-3">
                     {t(service.titleKey)}
                   </h3>
-                  <p className="text-convexo-blue mb-6 text-lg">
+                  <p className="text-sm text-muted-light mb-6 leading-relaxed">
                     {t(service.descriptionKey)}
                   </p>
 
                   {service.framework && (
-                    <div className="mb-6 p-4 bg-convexo-cream rounded-lg">
-                      <p className="text-sm text-gray-600 mb-2">
-                        <span className="font-semibold">{t('eloans.framework')}:</span>
+                    <div className="mb-6 pb-6 border-b border-border">
+                      <p className="text-xs text-muted uppercase tracking-[0.15em] mb-2">
+                        {t('eloans.framework')}
                       </p>
                       <Link
                         href={service.frameworkLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-convexo-purple hover:text-convexo-blue font-semibold inline-flex items-center"
+                        className="text-sm text-authority-blue hover:text-data-blue inline-flex items-center gap-1"
                       >
                         {t(service.framework)}
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </Link>
@@ -109,18 +102,18 @@ export default function ELoansPage() {
                   )}
 
                   {service.apy && (
-                    <div className="mb-6 p-4 bg-convexo-cream rounded-lg">
-                      <p className="text-2xl font-bold text-convexo-purple">
+                    <div className="mb-6 pb-6 border-b border-border">
+                      <p className="text-lg font-medium text-authority-blue">
                         {t(service.apy)}
                       </p>
                     </div>
                   )}
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2">
                     {service.features.map((featureKey, idx) => (
-                      <li key={idx} className="flex items-start">
+                      <li key={idx} className="flex items-start gap-2">
                         <svg
-                          className="w-6 h-6 text-convexo-purple mr-3 flex-shrink-0 mt-0.5"
+                          className="w-4 h-4 text-authority-blue mt-0.5 flex-shrink-0"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -130,114 +123,140 @@ export default function ELoansPage() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="text-gray-700">{t(featureKey)}</span>
+                        <span className="text-sm text-muted-light">{t(featureKey)}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-convexo-navy mb-4">How E-LOANS Work</h2>
-            <p className="text-xl text-gray-600">Simple process for electronic credit creation</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-convexo-purple to-convexo-blue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl text-white font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-3">Reach Tier 3</h3>
-              <p className="text-gray-600">
-                Complete Private ID, KYC/KYB, and get your credit score
+        {/* How It Works */}
+        <section className="section-padding border-b border-border">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto mb-12 text-center">
+              <div className="heading-section mb-4">Process</div>
+              <h2 className="heading-lg text-primary-text mb-4">
+                How E-LOANS Work
+              </h2>
+              <p className="body-text">
+                Simple process for electronic credit creation
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-convexo-blue to-convexo-lightblue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl text-white font-bold">2</span>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-lg font-medium text-authority-blue">1</span>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Reach Tier 3</h3>
+                <p className="text-sm text-muted-light">
+                  Complete Private ID, KYC/KYB, and get your credit score
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-3">Create E-Credit</h3>
-              <p className="text-gray-600">
-                Create a loan using the EIP-4626 standard vault framework
-              </p>
-            </div>
 
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-convexo-lightblue to-convexo-purple rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl text-white font-bold">3</span>
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-lg font-medium text-authority-blue">2</span>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Create E-Credit</h3>
+                <p className="text-sm text-muted-light">
+                  Create a loan using the EIP-4626 standard vault framework
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-3">Attach Contract</h3>
-              <p className="text-gray-600">
-                Fill out legal contract details as the borrower
-              </p>
-            </div>
 
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-convexo-purple to-convexo-navy rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl text-white font-bold">4</span>
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-lg font-medium text-authority-blue">3</span>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Attach Contract</h3>
+                <p className="text-sm text-muted-light">
+                  Fill out legal contract details as the borrower
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-convexo-navy mb-3">Lender Approval</h3>
-              <p className="text-gray-600">
-                Lender signs contract to activate and release funds
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Requirements */}
-      <section className="py-20 bg-convexo-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl font-bold text-convexo-navy mb-6 text-center">Tier 3 Requirements</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-convexo-cream rounded-xl">
-                <div className="text-4xl mb-4">🔐</div>
-                <h3 className="text-xl font-bold text-convexo-navy mb-2">Private ID</h3>
-                <p className="text-gray-600">zkPassport verification for Personhood and age +18</p>
-              </div>
-              <div className="text-center p-6 bg-convexo-cream rounded-xl">
-                <div className="text-4xl mb-4">✅</div>
-                <h3 className="text-xl font-bold text-convexo-navy mb-2">KYC/KYB</h3>
-                <p className="text-gray-600">Veriff for individuals or Sumsub for enterprises</p>
-              </div>
-              <div className="text-center p-6 bg-convexo-cream rounded-xl">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-convexo-navy mb-2">Credit Score</h3>
-                <p className="text-gray-600">AI-powered credit profile analysis</p>
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-lg font-medium text-authority-blue">4</span>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Lender Approval</h3>
+                <p className="text-sm text-muted-light">
+                  Lender signs contract to activate and release funds
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-convexo-purple via-convexo-navy to-convexo-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Create E-LOANS?
-          </h2>
-          <p className="text-xl text-convexo-lightblue mb-8">
-            Reach Tier 3 verification and start creating electronic credits and contracts
-          </p>
-          <Link
-            href="https://protocol.convexo.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-convexo-navy px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-          >
-            Get Started
-          </Link>
-        </div>
-      </section>
-    </div>
+        {/* Requirements */}
+        <section className="section-padding border-b border-border">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto mb-12 text-center">
+              <div className="heading-section mb-4">Tier 3 Requirements</div>
+              <h2 className="heading-lg text-primary-text mb-4">
+                Verification Prerequisites
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Private ID</h3>
+                <p className="text-sm text-muted-light">zkPassport verification for Personhood and age +18</p>
+              </div>
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">KYC/KYB</h3>
+                <p className="text-sm text-muted-light">Veriff for individuals or Sumsub for enterprises</p>
+              </div>
+              <div className="card p-6 text-center">
+                <div className="w-12 h-12 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-medium text-primary-text mb-2">Credit Score</h3>
+                <p className="text-sm text-muted-light">AI-powered credit profile analysis</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="section-padding">
+          <div className="section-container">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="heading-lg text-primary-text mb-4">
+                Ready to Create E-LOANS?
+              </h2>
+              <p className="body-text mb-8">
+                Reach Tier 3 verification and start creating electronic credits and contracts
+              </p>
+              <Link
+                href="https://protocol.convexo.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center"
+              >
+                Get Started
+                <svg className="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

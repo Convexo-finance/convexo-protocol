@@ -79,11 +79,11 @@ export default function Hero() {
           </div>
           <div>
             <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Settlement</div>
-            <div className="text-sm font-medium text-primary-text">&lt; 1 minute</div>
+            <div className="text-sm font-medium text-primary-text">~15 minutes</div>
           </div>
           <div>
             <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Coverage</div>
-            <div className="text-sm font-medium text-primary-text">195+ countries</div>
+            <div className="text-sm font-medium text-primary-text">20 countries</div>
           </div>
           <div>
             <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Availability</div>

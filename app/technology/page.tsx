@@ -171,20 +171,20 @@ export default function TechnologyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {providers.map((provider, index) => (
               <div
                 key={index}
-                className="bg-base p-6 hover:bg-surface-hover transition-colors duration-300"
+                className="bg-base p-6 rounded-lg border border-border hover:border-border-hover transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-lg bg-white flex items-center justify-center p-3">
                     <Image
                       src={provider.logo}
                       alt={provider.name}
                       width={48}
                       height={48}
-                      className="object-contain opacity-70"
+                      className="object-contain"
                     />
                   </div>
                   <div className="text-[9px] font-semibold uppercase tracking-[0.15em] text-authority-blue">

@@ -46,10 +46,10 @@ export default function CryptoRails() {
   ];
 
   const stats = [
-    { value: '<1 min', label: t('cryptoRails.settlementTime') },
+    { value: '~15 min', label: t('cryptoRails.settlementTime') },
     { value: '80%+', label: t('cryptoRails.lowerFees') },
     { value: '24/7', label: t('cryptoRails.available') },
-    { value: '195+', label: t('cryptoRails.countries') },
+    { value: '20', label: t('cryptoRails.countries') },
   ];
 
   return (
