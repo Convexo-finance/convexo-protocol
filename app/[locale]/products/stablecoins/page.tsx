@@ -2,8 +2,6 @@
 
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { useTranslations } from 'next-intl';
 
 export default function StablecoinsPage() {
@@ -43,9 +41,7 @@ export default function StablecoinsPage() {
   ];
 
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen">
+    <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative section-padding pt-32 border-b border-border">
           <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/8 via-base to-layer/30" />
@@ -296,7 +292,5 @@ export default function StablecoinsPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

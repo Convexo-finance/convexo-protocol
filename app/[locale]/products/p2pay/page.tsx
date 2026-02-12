@@ -1,8 +1,6 @@
 'use client';
 
 import { Link } from '@/navigation';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { useTranslations } from 'next-intl';
 
 export default function P2PAIPage() {
@@ -58,9 +56,7 @@ export default function P2PAIPage() {
   const currencies = ['COP', 'ARS', 'MXN', 'BRL', 'CLP', 'PEN'];
 
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen">
+    <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative section-padding pt-32 border-b border-border">
           <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/8 via-base to-layer/30" />
@@ -216,7 +212,5 @@ export default function P2PAIPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

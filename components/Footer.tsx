@@ -43,9 +43,10 @@ export default function Footer() {
             <Image
               src="/branding/convexoblanco.png"
               alt="Convexo"
-              width={140}
-              height={36}
-              className="h-6 sm:h-7 w-auto opacity-70 mb-5"
+              width={150}
+              height={50}
+
+              className="w-auto opacity-90 mb-5"
             />
             <p className="text-xs text-muted max-w-xs leading-relaxed mb-6">
               {t('footer.description')}
