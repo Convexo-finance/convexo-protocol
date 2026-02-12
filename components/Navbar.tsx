@@ -2,21 +2,22 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const t = useTranslations();
 
   const products = [
-    { name: 'Digital IDs', href: '/products/digital-ids' },
-    { name: 'Treasury Services', href: '/products/treasury' },
-    { name: 'Stablecoins', href: '/products/stablecoins' },
-    { name: 'E-LOANS', href: '/products/eloans' },
-    { name: 'Real Estate Vaults', href: '/products/real-estate-vaults' },
-    { name: 'P2P-AI', href: '/products/p2pay' },
+    { nameKey: 'products.digitalIds.title', href: '/products/digital-ids' },
+    { nameKey: 'products.treasury.title', href: '/products/treasury' },
+    { nameKey: 'products.stablecoins.title', href: '/products/stablecoins' },
+    { nameKey: 'products.eloans.title', href: '/products/eloans' },
+    { nameKey: 'products.realEstateVaults.title', href: '/products/real-estate-vaults' },
+    { nameKey: 'products.p2pai.title', href: '/products/p2pay' },
   ];
 
   return (
@@ -72,7 +73,7 @@ export default function Navbar() {
                           href={product.href}
                           className="block px-4 py-2.5 text-xs text-primary-text/60 hover:text-primary-text hover:bg-surface-hover transition-colors duration-100"
                         >
-                          {product.name}
+                          {t(product.nameKey)}
                         </Link>
                       ))}
                     </div>
@@ -85,7 +86,7 @@ export default function Navbar() {
               href="/technology"
               className="text-xs font-medium uppercase tracking-[0.15em] text-primary-text/70 hover:text-primary-text transition-colors duration-150"
             >
-              Technology
+              {t('nav.technology')}
             </Link>
 
             <Link
@@ -95,13 +96,8 @@ export default function Navbar() {
               {t('nav.about')}
             </Link>
 
-            {/* Language */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="text-xs font-medium text-primary-text/40 hover:text-primary-text/70 transition-colors duration-150 uppercase tracking-[0.15em]"
-            >
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
+            {/* Language Switcher */}
+            <LanguageSwitcher />
 
             <Link
               href="https://protocol.convexo.xyz"
@@ -153,7 +149,7 @@ export default function Navbar() {
                     onClick={() => setIsMenuOpen(false)}
                     className="block py-2.5 px-3 text-sm text-muted hover:text-primary-text hover:bg-surface-hover active:bg-surface-hover transition-colors rounded-md"
                   >
-                    {product.name}
+                    {t(product.nameKey)}
                   </Link>
                 ))}
               </div>
@@ -166,7 +162,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="block py-3 text-sm font-medium text-primary-text active:bg-surface-hover transition-colors rounded-md"
             >
-              Technology
+              {t('nav.technology')}
             </Link>
 
             <Link
@@ -178,14 +174,7 @@ export default function Navbar() {
             </Link>
 
             <div className="flex items-center gap-4 pt-2 pb-1">
-              <button
-                onClick={() => {
-                  setLanguage(language === 'en' ? 'es' : 'en');
-                }}
-                className="text-sm text-muted hover:text-primary-text py-2 active:text-primary-text transition-colors"
-              >
-                {language === 'en' ? 'Español' : 'English'}
-              </button>
+              <LanguageSwitcher />
             </div>
 
             <div className="pt-3 pb-2">

@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from 'next-intl';
 
 export default function ChainDeployments() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   const chains = [
     {

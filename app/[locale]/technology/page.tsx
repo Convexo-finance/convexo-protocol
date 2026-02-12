@@ -2,13 +2,25 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: 'Technology Stack | Convexo Protocol',
-  description: 'Built on proven infrastructure: Ethereum, Base, UniChain, Chainlink, Uniswap, and institutional-grade custody providers.',
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function TechnologyPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'technology' });
+
+  return {
+    title: `${t('hero.title')} | Convexo Protocol`,
+    description: t('hero.subtitle'),
+  };
+}
+
+export default async function TechnologyPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'technology' });
   const providers = [
     {
       name: 'Chainlink',
@@ -98,19 +110,17 @@ export default function TechnologyPage() {
       <section className="section-padding pt-32 border-b border-border">
         <div className="section-container">
           <div className="max-w-2xl">
-            <div className="heading-section mb-6">Technology Stack</div>
+            <div className="heading-section mb-6">{t('badge')}</div>
             <h1 className="heading-xl text-primary-text mb-6">
-              Built on Proven Infrastructure
+              {t('hero.title')}
             </h1>
             <p className="text-base text-muted-light leading-relaxed mb-8">
-              Convexo Protocol integrates best-in-class blockchain infrastructure,
-              institutional custody, and compliance providers to deliver sovereign-grade
-              financial services.
+              {t('hero.subtitle')}
             </p>
 
             {/* Chains - Lighter Display */}
             <div className="inline-flex items-center gap-3 flex-wrap">
-              <span className="text-xs text-muted uppercase tracking-[0.15em]">Deployed on</span>
+              <span className="text-xs text-muted uppercase tracking-[0.15em]">{t('hero.deployedOn')}</span>
               {chains.map((chain, index) => (
                 <div key={index} className="flex items-center gap-2 bg-layer rounded-lg px-3 py-2">
                   <div className="w-5 h-5 flex items-center justify-center">
@@ -134,13 +144,12 @@ export default function TechnologyPage() {
       <section className="section-padding border-b border-border">
         <div className="section-container">
           <div className="mb-12">
-            <div className="heading-section mb-4">Infrastructure Partners</div>
+            <div className="heading-section mb-4">{t('partners.badge')}</div>
             <h2 className="heading-lg text-primary-text mb-4">
-              Enterprise-Grade Integrations
+              {t('partners.title')}
             </h2>
             <p className="body-text max-w-xl">
-              We partner with leading institutional infrastructure providers for
-              custody, compliance, oracles, and identity verification.
+              {t('partners.subtitle')}
             </p>
           </div>
 
@@ -180,9 +189,9 @@ export default function TechnologyPage() {
       <section className="section-padding">
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
-            <div className="heading-section mb-6 text-center">Technical Architecture</div>
+            <div className="heading-section mb-6 text-center">{t('architecture.badge')}</div>
             <h2 className="heading-lg text-primary-text mb-8 text-center">
-              Sovereign-Grade Infrastructure
+              {t('architecture.title')}
             </h2>
 
             <div className="space-y-6">
@@ -194,10 +203,9 @@ export default function TechnologyPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">Security First</h3>
+                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.security.title')}</h3>
                     <p className="text-xs text-muted-light leading-relaxed">
-                      Multi-signature custody, zero-knowledge proofs, and institutional-grade
-                      key management ensure sovereign control of digital assets.
+                      {t('architecture.security.description')}
                     </p>
                   </div>
                 </div>
@@ -211,10 +219,9 @@ export default function TechnologyPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">Compliance Native</h3>
+                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.compliance.title')}</h3>
                     <p className="text-xs text-muted-light leading-relaxed">
-                      KYC/KYB verification, AML screening, and regulatory compliance built
-                      into every layer of the protocol.
+                      {t('architecture.compliance.description')}
                     </p>
                   </div>
                 </div>
@@ -228,10 +235,9 @@ export default function TechnologyPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">High Performance</h3>
+                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.performance.title')}</h3>
                     <p className="text-xs text-muted-light leading-relaxed">
-                      Sub-second settlement, L2 scaling, and optimized smart contracts for
-                      institutional trading volumes.
+                      {t('architecture.performance.description')}
                     </p>
                   </div>
                 </div>

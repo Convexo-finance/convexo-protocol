@@ -1,14 +1,26 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: 'About Us | Convexo Protocol',
-  description: 'Learn about Convexo Protocol - pioneering institutional DeFi solutions for Latin American enterprises with AI-powered credit scoring and blockchain technology.',
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function AboutPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'about' });
+
+  return {
+    title: `${t('hero.title')} | Convexo Protocol`,
+    description: t('hero.subtitle'),
+  };
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'about' });
   return (
     <>
       <Navbar />
@@ -19,13 +31,12 @@ export default function AboutPage() {
           
           <div className="relative z-10 section-container">
             <div className="max-w-2xl">
-              <div className="heading-section mb-6">About</div>
+              <div className="heading-section mb-6">{t('badge')}</div>
               <h1 className="heading-xl text-primary-text mb-6">
-                Pioneering Institutional DeFi for Latin America
+                {t('hero.title')}
               </h1>
               <p className="text-base text-muted-light leading-relaxed">
-                Building the bridge between traditional finance and decentralized financial systems
-                with sovereign-grade infrastructure.
+                {t('hero.subtitle')}
               </p>
             </div>
           </div>
@@ -37,19 +48,19 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="card p-8">
-                  <div className="heading-section mb-4">Mission</div>
+                  <div className="heading-section mb-4">{t('mission.badge')}</div>
                   <h2 className="text-xl font-medium text-primary-text mb-4">
-                    Democratizing Capital Access
+                    {t('mission.title')}
                   </h2>
                   <p className="text-sm text-muted-light leading-relaxed">
-                    Connecting Latin American enterprises with global capital markets through blockchain technology and rigorous compliance standards.
+                    {t('mission.description')}
                   </p>
                 </div>
                 <div className="card p-8">
-                  <div className="heading-section mb-4">Vision</div>
-                  <h3 className="text-xl font-medium text-primary-text mb-4">Leading Institutional DeFi</h3>
+                  <div className="heading-section mb-4">{t('vision.badge')}</div>
+                  <h3 className="text-xl font-medium text-primary-text mb-4">{t('vision.title')}</h3>
                   <p className="text-sm text-muted-light leading-relaxed">
-                    Becoming the premier platform where geographical boundaries don&apos;t limit access to funding and blockchain enables transparent, efficient financial services.
+                    {t('vision.description')}
                   </p>
                 </div>
               </div>
@@ -61,9 +72,9 @@ export default function AboutPage() {
         <section className="section-padding border-b border-border">
           <div className="section-container">
             <div className="max-w-3xl mx-auto mb-10 text-center">
-              <div className="heading-section mb-4">Our Approach</div>
+              <div className="heading-section mb-4">{t('approach.badge')}</div>
               <h2 className="heading-lg text-primary-text">
-                Three Core Pillars
+                {t('approach.title')}
               </h2>
             </div>
 
@@ -74,9 +85,9 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-medium text-primary-text mb-3">Compliance First</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('approach.compliance.title')}</h3>
                 <p className="text-sm text-muted-light leading-relaxed">
-                  Rigorous KYC/KYB verification ensuring all participants meet institutional standards.
+                  {t('approach.compliance.description')}
                 </p>
               </div>
 
@@ -86,9 +97,9 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-medium text-primary-text mb-3">AI-Powered</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('approach.aiPowered.title')}</h3>
                 <p className="text-sm text-muted-light leading-relaxed">
-                  Advanced algorithms for accurate credit scoring with blockchain-certified assessments.
+                  {t('approach.aiPowered.description')}
                 </p>
               </div>
 
@@ -98,9 +109,9 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-medium text-primary-text mb-3">Enterprise Grade</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('approach.enterprise.title')}</h3>
                 <p className="text-sm text-muted-light leading-relaxed">
-                  Built on leading DeFi protocols with institutional-grade security and infrastructure.
+                  {t('approach.enterprise.description')}
                 </p>
               </div>
             </div>
@@ -112,43 +123,43 @@ export default function AboutPage() {
         <section className="section-padding border-b border-border">
           <div className="section-container">
             <div className="max-w-3xl mx-auto mb-12 text-center">
-              <div className="heading-section mb-4">Global Presence</div>
+              <div className="heading-section mb-4">{t('locations.badge')}</div>
               <h2 className="heading-lg text-primary-text mb-4">
-                Our Locations
+                {t('locations.title')}
               </h2>
               <p className="body-text">
-                Operating across key financial hubs to serve our clients worldwide
+                {t('locations.subtitle')}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {/* United States */}
               <div className="card p-6">
-                <h3 className="text-base font-medium text-primary-text mb-3">United States</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('locations.us.title')}</h3>
                 <div className="space-y-1 text-sm text-muted-light">
-                  <p>159 North Wolcott Street</p>
-                  <p>Suite 133</p>
-                  <p className="text-primary-text font-medium">Casper, WY</p>
+                  <p>{t('locations.us.address1')}</p>
+                  <p>{t('locations.us.address2')}</p>
+                  <p className="text-primary-text font-medium">{t('locations.us.city')}</p>
                 </div>
               </div>
 
               {/* Colombia */}
               <div className="card p-6">
-                <h3 className="text-base font-medium text-primary-text mb-3">Colombia</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('locations.colombia.title')}</h3>
                 <div className="space-y-1 text-sm text-muted-light">
-                  <p>Calle 36#128-321</p>
-                  <p>Zona Franca, Zonaamerica.com</p>
-                  <p className="text-primary-text font-medium">Cali, Valle del Cauca</p>
+                  <p>{t('locations.colombia.address1')}</p>
+                  <p>{t('locations.colombia.address2')}</p>
+                  <p className="text-primary-text font-medium">{t('locations.colombia.city')}</p>
                 </div>
               </div>
 
               {/* Hong Kong */}
               <div className="card p-6">
-                <h3 className="text-base font-medium text-primary-text mb-3">Hong Kong</h3>
+                <h3 className="text-base font-medium text-primary-text mb-3">{t('locations.hongkong.title')}</h3>
                 <div className="space-y-1 text-sm text-muted-light">
-                  <p>Spaces</p>
-                  <p>8 Queens Road East</p>
-                  <p className="text-primary-text font-medium">Hong Kong</p>
+                  <p>{t('locations.hongkong.address1')}</p>
+                  <p>{t('locations.hongkong.address2')}</p>
+                  <p className="text-primary-text font-medium">{t('locations.hongkong.city')}</p>
                 </div>
               </div>
             </div>
@@ -159,9 +170,9 @@ export default function AboutPage() {
         <section className="section-padding border-b border-border bg-layer/30">
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="heading-section mb-4">Get in Touch</div>
+              <div className="heading-section mb-4">{t('contact.badge')}</div>
               <h2 className="heading-lg text-primary-text mb-8">
-                Contact Us
+                {t('contact.title')}
               </h2>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -178,7 +189,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-xs text-muted uppercase tracking-[0.1em]">WhatsApp</div>
+                    <div className="text-xs text-muted uppercase tracking-[0.1em]">{t('contact.whatsapp')}</div>
                     <div className="text-sm text-primary-text font-medium">+57 318 6766035</div>
                   </div>
                 </a>
@@ -196,7 +207,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-xs text-muted uppercase tracking-[0.1em]">Telegram</div>
+                    <div className="text-xs text-muted uppercase tracking-[0.1em]">{t('contact.telegram')}</div>
                     <div className="text-sm text-primary-text font-medium">@convexoprotocol</div>
                   </div>
                 </a>
@@ -212,7 +223,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-xs text-muted uppercase tracking-[0.1em]">Email</div>
+                    <div className="text-xs text-muted uppercase tracking-[0.1em]">{t('contact.email')}</div>
                     <div className="text-sm text-primary-text font-medium">hello@convexo.xyz</div>
                   </div>
                 </a>
@@ -226,22 +237,22 @@ export default function AboutPage() {
           <div className="section-container">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="heading-lg text-primary-text mb-4">
-                Ready to Transform Your Business?
+                {t('cta.title')}
               </h2>
               <p className="body-text mb-8">
-                Join the future of institutional finance in Latin America
+                {t('cta.subtitle')}
               </p>
-              <Link
+              <a
                 href="https://protocol.convexo.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center"
               >
-                Get Started
+                {t('cta.button')}
                 <svg className="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

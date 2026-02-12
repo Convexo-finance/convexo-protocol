@@ -1,10 +1,10 @@
 'use client';
 
-import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Products() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   const products = [
     {
@@ -86,7 +86,7 @@ export default function Products() {
       <div className="section-container">
         {/* Header */}
         <div className="mb-16">
-          <div className="heading-section mb-4">Solutions</div>
+          <div className="heading-section mb-4">{t('products.badge')}</div>
           <h2 className="heading-lg text-primary-text mb-4">
             {t('products.title')}
           </h2>

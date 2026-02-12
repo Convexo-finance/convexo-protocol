@@ -1,13 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from 'next-intl';
 
 export default function StablecoinsPage() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   const chainlinkFeatures = [
     {

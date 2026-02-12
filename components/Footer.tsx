@@ -1,19 +1,19 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Image from 'next/image';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   const productLinks = [
-    { name: 'Digital IDs', href: '/products/digital-ids' },
-    { name: 'Treasury', href: '/products/treasury' },
-    { name: 'Stablecoins', href: '/products/stablecoins' },
-    { name: 'E-LOANS', href: '/products/eloans' },
-    { name: 'Real Estate Vaults', href: '/products/real-estate-vaults' },
-    { name: 'P2P-AI', href: '/products/p2pay' },
+    { nameKey: 'products.digitalIds.title', href: '/products/digital-ids' },
+    { nameKey: 'products.treasury.title', href: '/products/treasury' },
+    { nameKey: 'products.stablecoins.title', href: '/products/stablecoins' },
+    { nameKey: 'products.eloans.title', href: '/products/eloans' },
+    { nameKey: 'products.realEstateVaults.title', href: '/products/real-estate-vaults' },
+    { nameKey: 'products.p2pai.title', href: '/products/p2pay' },
   ];
 
   const socialLinks = [
@@ -80,7 +80,7 @@ export default function Footer() {
                     href={item.href}
                     className="text-xs text-muted hover:text-primary-text transition-colors duration-200"
                   >
-                    {item.name}
+                    {t(item.nameKey)}
                   </Link>
                 </li>
               ))}
@@ -95,13 +95,13 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
-                  About
+                  {t('footer.about')}
                 </Link>
               </li>
               <li>
-                <Link href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
-                  Launch App
-                </Link>
+                <a href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
+                  {t('footer.launchApp')}
+                </a>
               </li>
             </ul>
           </div>
@@ -109,7 +109,7 @@ export default function Footer() {
           {/* Connect */}
           <div className="md:col-span-2">
             <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
-              Connect
+              {t('footer.connect')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -136,7 +136,7 @@ export default function Footer() {
             &copy; 2024 Convexo Protocol. {t('footer.copyright')}.
           </p>
           <p className="text-[10px] text-muted-dark uppercase tracking-[0.15em]">
-            Institutional Financial Infrastructure
+            {t('footer.tagline')}
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 'use client';
 
-import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function CryptoRails() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   const features = [
     {

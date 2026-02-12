@@ -1,0 +1,574 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Nosotros",
+    "technology": "Tecnología",
+    "launchApp": "Abrir App",
+    "viewAll": "Ver Todos los Productos"
+  },
+  "hero": {
+    "title": "Soluciones",
+    "titleHighlight": "DeFi Institucionales",
+    "titleSuffix": "para LATAM",
+    "subtitle": "Accede a financiamiento internacional a través de bonos corporativos tokenizados y servicios de activos digitales de grado institucional",
+    "getStarted": "Comenzar",
+    "exploreProducts": "Explorar Productos",
+    "aiPowered": "Inteligencia Artificial",
+    "aiPoweredSub": "Scoring Crediticio",
+    "nft": "NFT",
+    "nftSub": "Certificados de Evaluación",
+    "uniswap": "Uniswap V4",
+    "uniswapSub": "Integración",
+    "chainlink": "Chainlink",
+    "chainlinkSub": "Oráculos",
+    "badge": "Infraestructura Financiera Institucional",
+    "viewProducts": "Ver Productos",
+    "networks": "Redes",
+    "settlement": "Liquidación",
+    "coverage": "Cobertura",
+    "availability": "Disponibilidad",
+    "networksValue": "Ethereum, Base, UniChain",
+    "settlementValue": "~15 minutos",
+    "coverageValue": "20 países",
+    "availabilityValue": "24 / 7 / 365"
+  },
+  "coinWidget": {
+    "title": "Precios en Tiempo Real"
+  },
+  "cryptoRails": {
+    "badge": "EL FUTURO DE LAS FINANZAS",
+    "title": "Por Qué Importan los Rieles Cripto Internacionales",
+    "description1": "Los sistemas de pago transfronterizos tradicionales son lentos, costosos y opacos. Los rieles cripto ofrecen una alternativa revolucionaria: liquidación instantánea, precios transparentes y disponibilidad 24/7. Para las empresas en América Latina, esto no es solo conveniente—es transformador.",
+    "description2": "Con rieles de pago basados en blockchain, las empresas LATAM pueden acceder a mercados internacionales sin las barreras tradicionales. No más esperas de 3-5 días para transferencias. No más pérdida del 3-7% en comisiones intermediarias. No más restricciones de horarios bancarios.",
+    "cta": "Explorar Soluciones de Tesorería",
+    "instantTitle": "Liquidación Instantánea",
+    "instantDesc": "Transfiere valor globalmente en segundos, no días. Sin esperas por compensaciones bancarias.",
+    "lowerCostsTitle": "Costos Más Bajos",
+    "lowerCostsDesc": "Ahorra hasta 80% en comisiones de transferencias internacionales comparado con la banca tradicional.",
+    "globalTitle": "Acceso Global",
+    "globalDesc": "Alcanza cualquier mercado, en cualquier momento. Operaciones financieras 24/7 sin fronteras.",
+    "transparentTitle": "Transparencia Total",
+    "transparentDesc": "Cada transacción es rastreable y verificable en la blockchain. Auditorías completas.",
+    "settlementTime": "Tiempo Promedio de Liquidación",
+    "lowerFees": "Menores Comisiones de Transacción",
+    "available": "Siempre Disponible",
+    "countries": "Países Accesibles"
+  },
+  "fundingGap": {
+    "badge": "LA OPORTUNIDAD LATAM",
+    "title": "Cerrando la Brecha de Financiamiento en LATAM",
+    "subtitle": "América Latina enfrenta una brecha de financiamiento masiva. Estamos aquí para cambiar eso.",
+    "challengeTitle": "El Desafío",
+    "challenge1Title": "Acceso Limitado al Capital",
+    "challenge1Desc": "Las PYMEs en LATAM enfrentan tasas de rechazo de hasta 40% para préstamos bancarios tradicionales, incluso siendo solventes.",
+    "challenge2Title": "Alto Costo del Capital",
+    "challenge2Desc": "Las tasas de interés en LATAM pueden ser 2-3x más altas que en mercados desarrollados, sofocando el crecimiento.",
+    "challenge3Title": "Volatilidad Cambiaria",
+    "challenge3Desc": "La depreciación de moneda local hace que el financiamiento internacional sea riesgoso e impredecible.",
+    "challenge4Title": "Procesos Complejos",
+    "challenge4Desc": "El financiamiento internacional tradicional implica montañas de papeleo y meses de espera.",
+    "solutionTitle": "La Solución",
+    "solution1Title": "Bonos Corporativos Tokenizados",
+    "solution1Desc": "Accede a inversores internacionales a través de bonos corporativos basados en blockchain con precios transparentes.",
+    "solution2Title": "Scoring Crediticio con IA",
+    "solution2Desc": "Evaluación justa y transparente que va más allá de los puntajes crediticios tradicionales para evaluar el verdadero potencial.",
+    "solution3Title": "Infraestructura de Stablecoins",
+    "solution3Desc": "Mitiga el riesgo cambiario con USDC, EURC y stablecoins locales como ECOP para Colombia.",
+    "solution4Title": "Proceso Digital Simplificado",
+    "solution4Desc": "Completa la evaluación y financiamiento en semanas, no meses, con flujo de trabajo totalmente digital.",
+    "impactTitle": "El Impacto de la Brecha de Financiamiento",
+    "stat1": "Brecha Crediticia PYMEs LATAM",
+    "stat1Desc": "Déficit anual de financiamiento para pequeñas y medianas empresas",
+    "stat2": "PYMEs con Restricción Crediticia",
+    "stat2Desc": "No pueden acceder al capital que necesitan para crecer",
+    "stat3": "Tasas de Interés Promedio",
+    "stat3Desc": "Significativamente más altas que mercados desarrollados",
+    "ctaTitle": "¿Listo para Acceder a Financiamiento Internacional?",
+    "ctaDesc": "Únete a empresas LATAM líderes aprovechando la tecnología blockchain para crecer",
+    "ctaButton": "Explorar Bonos Tokenizados"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "subtitle": "Soluciones DeFi institucionales integrales diseñadas para empresas LATAM",
+    "learnMore": "Conocer Más",
+    "badge": "Soluciones",
+    "tags": {
+      "identity": "Identidad",
+      "treasury": "Tesorería",
+      "currency": "Moneda",
+      "trading": "Comercio",
+      "lending": "Préstamos",
+      "realEstate": "Bienes Raíces",
+      "p2p": "P2P"
+    },
+    "tokenizedBonds": {
+      "title": "Bonos Corporativos Tokenizados",
+      "description": "Accede a financiamiento internacional a través de bonos corporativos tokenizados y cumplimiento normativo. Nuestro proceso de evaluación integral incluye verificación Sumsub y scoring crediticio con IA.",
+      "feature1": "Puntaje crediticio generado por IA con certificación NFT",
+      "feature2": "Evaluación conforme con Sumsub",
+      "feature3": "Enfoque en empresas sólidas que necesitan capital de trabajo",
+      "feature4": "Escala tus operaciones actuales con financiamiento internacional",
+      "feature5": "Tokenización de bonos transparente y segura"
+    },
+    "treasury": {
+      "title": "Tesorería de Activos Digitales",
+      "description": "Intercambia sin problemas stablecoins locales con stablecoins internacionales como USDC y EURC. Administra tu tesorería de activos digitales con herramientas de grado institucional.",
+      "feature1": "Conversión fácil a USDC y EURC",
+      "feature2": "Soporte para stablecoins locales",
+      "feature3": "Tipos de cambio competitivos",
+      "feature4": "Seguridad de grado institucional",
+      "feature5": "Gestión de portafolio en tiempo real"
+    },
+    "stablecoins": {
+      "title": "Stablecoins Locales para LATAM",
+      "description": "Presentamos ECOP para Colombia, impulsado por Uniswap V4 y oráculos Chainlink. Accede a stablecoins localizadas diseñadas para mercados LATAM.",
+      "feature1": "ECOP - Stablecoin de Peso Colombiano",
+      "feature2": "Impulsado por Uniswap V4",
+      "feature3": "Feeds de precios Chainlink",
+      "feature4": "Diseñado para mercados LATAM",
+      "feature5": "Infraestructura conforme a regulaciones"
+    },
+    "otc": {
+      "title": "Servicios OTC",
+      "description": "Comercio rápido, privado y seguro de activos digitales con nuestros traders profesionales. Obtén servicio personalizado para operaciones de gran volumen.",
+      "feature1": "Soporte de traders profesionales",
+      "feature2": "Transacciones privadas y seguras",
+      "feature3": "Ejecución rápida",
+      "feature4": "Precios competitivos para grandes volúmenes",
+      "feature5": "Servicio premium"
+    },
+    "digitalIds": {
+      "title": "Niveles de Identidad Digital",
+      "description": "Sistema de verificación progresivo con 4 niveles: ID Privado, Socios Limitados (Individuos y Empresas), y E-Crédito.",
+      "feature1": "Nivel 1: ID Privado con zkPassport",
+      "feature2": "Nivel 2: Socios Limitados (Veriff/Sumsub)",
+      "feature3": "Nivel 3: E-Crédito con scoring IA",
+      "feature4": "Verificación privada persistente"
+    },
+    "eloans": {
+      "title": "E-PRÉSTAMOS",
+      "description": "Servicios de Crédito y Contrato Electrónicos usando marco EIP-4626. Crea préstamos con contratos legales y APY mínimo del 12%.",
+      "feature1": "E-Créditos usando estándar EIP-4626",
+      "feature2": "E-Contratos con documentos legales",
+      "feature3": "APY mínimo del 12%",
+      "feature4": "Se requiere verificación Nivel 3"
+    },
+    "realEstateVaults": {
+      "title": "Bóvedas de Bienes Raíces",
+      "description": "Accede a inversiones inmobiliarias tokenizadas con propiedades de grado institucional y valuaciones transparentes on-chain.",
+      "feature1": "Propiedades comerciales y residenciales tokenizadas",
+      "feature2": "Oportunidades de propiedad fraccionada",
+      "feature3": "Gestión de activos de grado institucional",
+      "feature4": "Valuaciones transparentes basadas en blockchain"
+    },
+    "p2pai": {
+      "title": "P2P-AI",
+      "description": "Mercado P2P agéntico donde un agente IA actúa como árbitro confiable, manteniendo fondos en garantía para intercambios seguros cripto-fiat.",
+      "feature1": "Agente árbitro IA con billetera Coinbase",
+      "feature2": "Interfaz de comercio basada en Telegram",
+      "feature3": "Sistema de reputación on-chain ERC-8004",
+      "feature4": "Comisión del 0.1% en todos los intercambios"
+    }
+  },
+  "footer": {
+    "description": "Soluciones DeFi institucionales conectando empresas LATAM con mercados de capital globales.",
+    "productsTitle": "Productos",
+    "companyTitle": "Empresa",
+    "copyright": "Todos los derechos reservados",
+    "about": "Nosotros",
+    "launchApp": "Abrir App",
+    "connect": "Conectar",
+    "tagline": "Infraestructura Financiera Institucional"
+  },
+  "chains": {
+    "deployed": "Desplegado En",
+    "subtitle": "Convexo Protocol está disponible en las principales redes blockchain",
+    "base": "Base",
+    "ethereum": "Ethereum",
+    "unichain": "UniChain"
+  },
+  "digitalIds": {
+    "title": "Niveles de Identidad Digital",
+    "subtitle": "Sistema de verificación progresivo con 4 niveles de verificación de identidad y cumplimiento",
+    "learnMore": "Conoce Más Sobre Identidades Digitales",
+    "tier1": {
+      "title": "ID Privado",
+      "description": "NFT privado persistente creado usando zkPassport que verifica Personhood, edad +18, y usuarios KYC usando OpenSanctions.",
+      "req1": "Verificación zkPassport para Personhood",
+      "req2": "Verificación de edad (18+)",
+      "req3": "Screening KYC de OpenSanctions"
+    },
+    "tier2": {
+      "title": "Socios Limitados",
+      "description": "Verificación mejorada para individuos y empresas",
+      "individuals": {
+        "title": "Individuos",
+        "description": "Verificado con Veriff para validación de identidad individual"
+      },
+      "enterprises": {
+        "title": "Empresas",
+        "description": "Verificado con Sumsub para validación de entidades comerciales"
+      }
+    },
+    "tier3": {
+      "title": "E-Crédito",
+      "description": "Perfil crediticio con IA usando Información del Modelo de Negocio e Información Financiera analizada por un modelo de IA de código abierto con criterios abiertos.",
+      "req1": "Información completa del modelo de negocio",
+      "req2": "Análisis de información financiera"
+    }
+  },
+  "treasury": {
+    "title": "Servicios de Tesorería",
+    "subtitle": "Todas las funciones de tesorería requieren al menos verificación de ID Privado",
+    "requirement": "Requisito",
+    "learnMore": "Conocer Más",
+    "otc": {
+      "title": "Órdenes OTC",
+      "description": "Cash-in y cash-out usando Telegram, WhatsApp y Signal. Cobramos un spread fijo del 1.5% sobre el precio de mercado con entrega segura en efectivo.",
+      "contactVia": "Contacto vía",
+      "feature1": "1.5% de spread fijo sobre precio de mercado",
+      "feature2": "Entrega segura en efectivo",
+      "feature3": "Privacidad persistente con zkPassport",
+      "feature4": "Contacto directo vía aplicaciones de mensajería",
+      "requirement": "Se requiere verificación de ID Privado"
+    },
+    "swaps": {
+      "title": "Swaps con Uniswap V4",
+      "description": "Intercambia y sé proveedor de liquidez en Pools de Liquidez Privadas Persistentes y Cumplidoras con Uniswap V4.",
+      "feature1": "0.3% de spread en swaps",
+      "feature2": "Pools Privadas Persistentes",
+      "feature3": "Pools de Liquidez Cumplidoras",
+      "feature4": "Basado en Precio API de Google (USD-COP)",
+      "requirement": "Se requiere verificación de ID Privado"
+    },
+    "monetization": {
+      "title": "Monetización de Stablecoins Locales",
+      "description": "Redime y reclama stablecoins locales potenciadas por Chainlink Cross-Chain Interoperability Protocol (CCIP).",
+      "feature1": "Potenciado por Chainlink CCIP",
+      "feature2": "Redención de stablecoins locales",
+      "feature3": "Interoperabilidad cross-chain",
+      "requirement": "Se requiere verificación de ID Privado"
+    }
+  },
+  "eloans": {
+    "title": "E-PRÉSTAMOS",
+    "subtitle": "Servicios de Crédito y Contrato Electrónicos para usuarios verificados Nivel 3",
+    "requirement": "Requiere Nivel 3: ID Privado + KYC/KYB + Puntuación Crediticia",
+    "learnMore": "Conoce Más Sobre E-PRÉSTAMOS",
+    "framework": "Marco",
+    "credits": {
+      "title": "E-Créditos",
+      "description": "Los usuarios crean préstamos para ser cumplidos por contrapartes usando el marco estándar EIP-4626.",
+      "feature1": "Implementación estándar EIP-4626",
+      "feature2": "Préstamos creados por usuarios",
+      "feature3": "Cumplimiento por contrapartes",
+      "feature4": "Préstamos abiertos y transparentes",
+      "framework": "Estandar EIP-4626 Tokenized Vault"
+    },
+    "contracts": {
+      "title": "E-Contratos",
+      "description": "Cada bóveda debe estar adjunta a un contrato predefinido para activar el préstamo. Los contratos se construyen a partir de documentos legales sólidos completados por el prestatario y firmados por el prestamista.",
+      "feature1": "Contratos basados en documentos legales",
+      "feature2": "El prestatario completa los detalles del contrato",
+      "feature3": "Firma del prestamista requerida para activación",
+      "feature4": "Fondos solo accesibles después de aprobación del prestamista",
+      "apy": "APY Mínimo: 12%"
+    }
+  },
+  "realEstateVaults": {
+    "hero": {
+      "title": "Bóvedas de Bienes Raíces",
+      "subtitle": "Accede a inversiones inmobiliarias tokenizadas de grado institucional en América Latina"
+    },
+    "requirement": {
+      "tier2": "Requiere Verificación Nivel 2 (KYC/KYB)"
+    },
+    "properties": {
+      "title": "Tipos de Propiedades",
+      "subtitle": "Portafolio diversificado de activos inmobiliarios de grado institucional",
+      "commercial": {
+        "title": "Oficinas Comerciales",
+        "description": "Edificios de oficinas premium en distritos empresariales principales con inquilinos corporativos estables",
+        "feature1": "Propiedades de oficinas Clase A",
+        "feature2": "Arrendamientos corporativos a largo plazo",
+        "feature3": "Ubicaciones empresariales premium"
+      },
+      "residential": {
+        "title": "Torres Residenciales",
+        "description": "Complejos de apartamentos de lujo modernos con rendimientos de alquiler consistentes",
+        "feature1": "Unidades residenciales multifamiliares",
+        "feature2": "Flujos de ingresos por alquiler estables",
+        "feature3": "Ubicaciones urbanas de alta demanda"
+      },
+      "mixedUse": {
+        "title": "Desarrollos de Uso Mixto",
+        "description": "Complejos comerciales y residenciales integrados maximizando el valor de la propiedad",
+        "feature1": "Flujos de ingresos diversificados",
+        "feature2": "Combinación comercio + residencial",
+        "feature3": "Posicionamiento urbano estratégico"
+      }
+    },
+    "process": {
+      "title": "Proceso de Tokenización",
+      "subtitle": "Cómo transformamos bienes raíces en activos digitales accesibles",
+      "step1": {
+        "title": "Selección de Propiedad",
+        "description": "Propiedades de grado institucional evaluadas por calidad, ubicación y potencial de rendimiento"
+      },
+      "step2": {
+        "title": "Estructuración Legal",
+        "description": "Formación de SPV conforme con derechos de propiedad claros y cumplimiento regulatorio"
+      },
+      "step3": {
+        "title": "Emisión de Tokens",
+        "description": "Tokens de bóveda ERC-4626 representando propiedad fraccionada de la propiedad"
+      },
+      "step4": {
+        "title": "Distribución de Rendimientos",
+        "description": "Distribución automática de ingresos por alquiler a los poseedores de tokens on-chain"
+      }
+    },
+    "benefits": {
+      "title": "¿Por Qué Bóvedas de Bienes Raíces?",
+      "subtitle": "Eliminando barreras para la inversión inmobiliaria institucional",
+      "fractional": {
+        "title": "Propiedad Fraccionada",
+        "description": "Invierte en propiedades premium con menores requisitos de capital"
+      },
+      "liquidity": {
+        "title": "Liquidez Mejorada",
+        "description": "Comercializa acciones inmobiliarias tokenizadas 24/7 en mercados secundarios"
+      },
+      "transparent": {
+        "title": "Valuaciones Transparentes",
+        "description": "Valuaciones de propiedades on-chain potenciadas por oráculos Chainlink"
+      },
+      "institutional": {
+        "title": "Calidad Institucional",
+        "description": "Accede a propiedades administradas profesionalmente con estándares institucionales"
+      }
+    },
+    "technology": {
+      "title": "Stack Tecnológico",
+      "subtitle": "Construido sobre infraestructura blockchain probada para seguridad y cumplimiento",
+      "blockchain": {
+        "title": "Soporte Multi-Cadena",
+        "description": "Desplegado en Ethereum, Base y UniChain para máxima accesibilidad"
+      },
+      "erc4626": {
+        "title": "Bóvedas ERC-4626",
+        "description": "Bóvedas tokenizadas con estándar de la industria asegurando interoperabilidad y seguridad"
+      },
+      "oracles": {
+        "title": "Oráculos Chainlink",
+        "description": "Valuaciones de propiedades en tiempo real y prueba de reservas vía oráculos descentralizados"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Invertir en Bienes Raíces?",
+      "description": "Únete a inversores institucionales accediendo a bienes raíces tokenizados en América Latina",
+      "getStarted": "Comenzar",
+      "learnVerification": "Conocer Sobre Verificación"
+    }
+  },
+  "p2pai": {
+    "hero": {
+      "title": "P2P-AI",
+      "subtitle": "Mercado peer-to-peer impulsado por IA con garantía automatizada y arbitraje sin confianza"
+    },
+    "requirement": {
+      "tier1": "Requiere Verificación Nivel 1 (ID Privado)"
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona el Agente",
+      "subtitle": "Agente IA autónomo facilita intercambios seguros entre dos partes",
+      "step1": {
+        "title": "Creación de Orden",
+        "description": "Usuario inicia orden de compra/venta vía bot de Telegram con monto deseado"
+      },
+      "step2": {
+        "title": "Agente Cotiza Precio",
+        "description": "Agente IA obtiene tasa de CoinGecko y aplica comisión del 0.1%"
+      },
+      "step3": {
+        "title": "Transferencia de Fondos",
+        "description": "Usuario envía fiat o USDC a billetera de garantía del agente en Base"
+      },
+      "step4": {
+        "title": "Verificación del Agente",
+        "description": "Agente confirma recepción e inicia transferencia de contraparte"
+      },
+      "step5": {
+        "title": "Liquidación y Reputación",
+        "description": "Intercambio completado, reputación registrada on-chain vía ERC-8004"
+      }
+    },
+    "features": {
+      "title": "Características Clave",
+      "subtitle": "Construido para confianza, velocidad y seguridad en comercio P2P",
+      "agent": {
+        "title": "Agente IA Autónomo",
+        "description": "Billetera Agéntica Coinbase en Base actúa como árbitro neutral, eliminando riesgo de contraparte y asegurando ejecución justa."
+      },
+      "reputation": {
+        "title": "Reputación ERC-8004",
+        "description": "Sistema de reputación on-chain inmutable registra todos los intercambios y feedback, construyendo confianza a través de transparencia."
+      },
+      "escrow": {
+        "title": "Sistema de Garantía Inteligente",
+        "description": "Fondos mantenidos seguros por billetera del agente hasta que ambas partes confirmen, protegiendo compradores y vendedores por igual."
+      },
+      "telegram": {
+        "title": "Integración con Telegram",
+        "description": "Experiencia de comercio fluida a través de interfaz familiar de Telegram con notificaciones instantáneas."
+      }
+    },
+    "architecture": {
+      "title": "Arquitectura del Agente",
+      "subtitle": "Impulsado por tecnología blockchain e IA de vanguardia",
+      "wallet": {
+        "title": "Billetera Agéntica Coinbase",
+        "description": "Billetera del agente autocustodiada en Base para ejecución autónoma de transacciones"
+      },
+      "escrow": {
+        "title": "Protocolo de Garantía",
+        "description": "Garantía basada en contratos inteligentes asegurando custodia de fondos sin confianza"
+      },
+      "pricing": {
+        "title": "Precios de Oráculo",
+        "description": "Precios API CoinGecko en tiempo real con spread transparente del 0.1%"
+      }
+    },
+    "currencies": {
+      "title": "Monedas Soportadas",
+      "subtitle": "Comercializa USDC contra las principales monedas fiat latinoamericanas"
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar a Comerciar?",
+      "description": "Conéctate con nuestro agente IA en Telegram y experimenta comercio P2P sin confianza",
+      "startTrading": "Comenzar a Comerciar en Telegram",
+      "getVerified": "Verificarse Primero"
+    }
+  },
+  "about": {
+    "badge": "Nosotros",
+    "hero": {
+      "title": "Pioneros en DeFi Institucional para América Latina",
+      "subtitle": "Construyendo el puente entre las finanzas tradicionales y los sistemas financieros descentralizados con infraestructura de grado soberano."
+    },
+    "mission": {
+      "badge": "Misión",
+      "title": "Democratizando el Acceso al Capital",
+      "description": "Conectando empresas latinoamericanas con mercados de capital globales a través de tecnología blockchain y rigurosos estándares de cumplimiento."
+    },
+    "vision": {
+      "badge": "Visión",
+      "title": "Liderando DeFi Institucional",
+      "description": "Convirtiéndonos en la plataforma principal donde las fronteras geográficas no limitan el acceso al financiamiento y blockchain habilita servicios financieros transparentes y eficientes."
+    },
+    "approach": {
+      "badge": "Nuestro Enfoque",
+      "title": "Tres Pilares Fundamentales",
+      "compliance": {
+        "title": "Cumplimiento Primero",
+        "description": "Verificación rigurosa KYC/KYB asegurando que todos los participantes cumplan con estándares institucionales."
+      },
+      "aiPowered": {
+        "title": "Impulsado por IA",
+        "description": "Algoritmos avanzados para scoring crediticio preciso con evaluaciones certificadas en blockchain."
+      },
+      "enterprise": {
+        "title": "Grado Empresarial",
+        "description": "Construido sobre protocolos DeFi líderes con seguridad e infraestructura de grado institucional."
+      }
+    },
+    "locations": {
+      "badge": "Presencia Global",
+      "title": "Nuestras Ubicaciones",
+      "subtitle": "Operando en centros financieros clave para servir a nuestros clientes en todo el mundo",
+      "us": {
+        "title": "Estados Unidos",
+        "address1": "159 North Wolcott Street",
+        "address2": "Suite 133",
+        "city": "Casper, WY"
+      },
+      "colombia": {
+        "title": "Colombia",
+        "address1": "Calle 36#128-321",
+        "address2": "Zona Franca, Zonaamerica.com",
+        "city": "Cali, Valle del Cauca"
+      },
+      "hongkong": {
+        "title": "Hong Kong",
+        "address1": "Spaces",
+        "address2": "8 Queens Road East",
+        "city": "Hong Kong"
+      }
+    },
+    "contact": {
+      "badge": "Contáctanos",
+      "title": "Contacto",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "email": "Correo"
+    },
+    "cta": {
+      "title": "¿Listo para Transformar tu Negocio?",
+      "subtitle": "Únete al futuro de las finanzas institucionales en América Latina",
+      "button": "Comenzar"
+    }
+  },
+  "technology": {
+    "badge": "Stack Tecnológico",
+    "hero": {
+      "title": "Construido sobre Infraestructura Probada",
+      "subtitle": "Convexo Protocol integra la mejor infraestructura blockchain, custodia institucional y proveedores de cumplimiento para ofrecer servicios financieros de grado soberano.",
+      "deployedOn": "Desplegado en"
+    },
+    "partners": {
+      "badge": "Socios de Infraestructura",
+      "title": "Integraciones de Grado Empresarial",
+      "subtitle": "Nos asociamos con proveedores de infraestructura institucional líderes para custodia, cumplimiento, oráculos y verificación de identidad.",
+      "categories": {
+        "oracles": "Oráculos",
+        "dex": "Infraestructura DEX",
+        "kyb": "Verificación KYB",
+        "identity": "Verificación de Identidad",
+        "privacy": "Identidad Privada",
+        "custody": "Custodia",
+        "stablecoins": "Stablecoins",
+        "pricing": "Oráculos de Precios",
+        "liquidity": "Liquidez"
+      },
+      "providers": {
+        "chainlink": "Red de oráculos descentralizados para feeds de precios y prueba de reservas",
+        "uniswap": "Uniswap V4 potencia nuestros pools de liquidez e intercambios de stablecoins",
+        "sumsub": "Verificación KYB/KYC empresarial para clientes institucionales",
+        "veriff": "Verificación de identidad individual con autenticación impulsada por IA",
+        "zkpassport": "Identidad de prueba de conocimiento cero para verificación persistente privada",
+        "safe": "Billeteras de contratos inteligentes multi-firma para seguridad institucional",
+        "usdc": "USD Coin para infraestructura de stablecoin respaldada por fiat",
+        "coingecko": "Datos de precios de criptomonedas en tiempo real y análisis de mercado",
+        "hashkey": "Custodia de activos digitales de grado institucional e infraestructura",
+        "okx": "Proveedor de liquidez profunda para comercio institucional"
+      }
+    },
+    "architecture": {
+      "badge": "Arquitectura Técnica",
+      "title": "Infraestructura de Grado Soberano",
+      "security": {
+        "title": "Seguridad Primero",
+        "description": "Custodia multi-firma, pruebas de conocimiento cero y gestión de claves de grado institucional aseguran control soberano de activos digitales."
+      },
+      "compliance": {
+        "title": "Cumplimiento Nativo",
+        "description": "Verificación KYC/KYB, screening AML y cumplimiento regulatorio integrado en cada capa del protocolo."
+      },
+      "performance": {
+        "title": "Alto Rendimiento",
+        "description": "Liquidación subsegundo, escalado L2 y contratos inteligentes optimizados para volúmenes de comercio institucional."
+      }
+    }
+  }
+}

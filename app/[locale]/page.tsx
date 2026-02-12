@@ -6,6 +6,22 @@ import CryptoRails from '@/components/CryptoRails';
 import LatamFundingGap from '@/components/LatamFundingGap';
 import CoinPriceWidget from '@/components/CoinPriceWidget';
 import Footer from '@/components/Footer';
+import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'hero' });
+
+  return {
+    title: 'Convexo Protocol | Institutional Financial Infrastructure',
+    description: t('subtitle'),
+  };
+}
 
 export default function Home() {
   return (

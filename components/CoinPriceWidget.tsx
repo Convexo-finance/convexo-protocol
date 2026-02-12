@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from 'next-intl';
 
 declare global {
   namespace JSX {
@@ -17,7 +17,7 @@ declare global {
 }
 
 export default function CoinPriceWidget() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   return (
     <section className="py-5 border-b border-border bg-layer/20">

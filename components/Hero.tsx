@@ -1,10 +1,10 @@
 'use client';
 
-import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="animate-fade-in-up">
             {/* Badge */}
             <div className="heading-section mb-10">
-              Institutional Financial Infrastructure
+              {t('hero.badge')}
             </div>
 
             {/* Headline */}
@@ -65,7 +65,7 @@ export default function Hero() {
                 href="#products"
                 className="btn-secondary"
               >
-                View Products
+                {t('hero.viewProducts')}
               </Link>
             </div>
           </div>
@@ -74,20 +74,20 @@ export default function Hero() {
         {/* Bottom data bar */}
         <div className="mt-24 md:mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-border pt-8">
           <div>
-            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Networks</div>
-            <div className="text-sm font-medium text-primary-text">Ethereum, Base, UniChain</div>
+            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">{t('hero.networks')}</div>
+            <div className="text-sm font-medium text-primary-text">{t('hero.networksValue')}</div>
           </div>
           <div>
-            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Settlement</div>
-            <div className="text-sm font-medium text-primary-text">~15 minutes</div>
+            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">{t('hero.settlement')}</div>
+            <div className="text-sm font-medium text-primary-text">{t('hero.settlementValue')}</div>
           </div>
           <div>
-            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Coverage</div>
-            <div className="text-sm font-medium text-primary-text">20 countries</div>
+            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">{t('hero.coverage')}</div>
+            <div className="text-sm font-medium text-primary-text">{t('hero.coverageValue')}</div>
           </div>
           <div>
-            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">Availability</div>
-            <div className="text-sm font-medium text-primary-text">24 / 7 / 365</div>
+            <div className="text-xs text-muted-dark uppercase tracking-[0.15em] mb-1">{t('hero.availability')}</div>
+            <div className="text-sm font-medium text-primary-text">{t('hero.availabilityValue')}</div>
           </div>
         </div>
       </div>
