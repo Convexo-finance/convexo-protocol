@@ -27,11 +27,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/branding/convexohorizontal.png"
+              src="/branding/convexoblanco.png"
               alt="Convexo"
               width={180}
-              height={45}
-              className="h-9 sm:h-10 w-auto"
+              height={45  }
+              className="h-8 sm:h-9 w-auto"
               priority
             />
           </Link>
