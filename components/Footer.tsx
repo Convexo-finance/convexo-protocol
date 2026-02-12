@@ -133,7 +133,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-muted-dark uppercase tracking-[0.15em]">
-            &copy; {new Date().getFullYear()} Convexo Protocol. {t('footer.copyright')}.
+            &copy; 2024 Convexo Protocol. {t('footer.copyright')}.
           </p>
           <p className="text-[10px] text-muted-dark uppercase tracking-[0.15em]">
             Institutional Financial Infrastructure

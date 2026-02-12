@@ -16,11 +16,14 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     background-color: var(--base);
     color: var(--primary-text);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   ::selection {
@@ -113,4 +116,24 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(51, 78, 172, 0.5);
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  /* Better tap targets */
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Smooth scrolling on mobile */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
 }

@@ -129,21 +129,13 @@ export default function TechnologyPage() {
             {chains.map((chain, index) => (
               <div key={index} className="card p-8 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  {chain.logo.endsWith('.svg') ? (
-                    <img
-                      src={chain.logo}
-                      alt={chain.name}
-                      className="w-full h-full object-contain opacity-80"
-                    />
-                  ) : (
-                    <Image
-                      src={chain.logo}
-                      alt={chain.name}
-                      width={64}
-                      height={64}
-                      className="object-contain opacity-80"
-                    />
-                  )}
+                  <Image
+                    src={chain.logo}
+                    alt={chain.name}
+                    width={64}
+                    height={64}
+                    className="object-contain opacity-80"
+                  />
                 </div>
                 <h3 className="text-base font-medium text-primary-text mb-2">
                   {chain.name}

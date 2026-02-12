@@ -41,17 +41,17 @@ export default function AboutPage() {
                   Democratizing Access to Capital Markets
                 </h2>
                 <p className="body-text mb-4">
-                  At Convexo Protocol, we're on a mission to democratize access to international capital markets for Latin American enterprises. We believe that solid, established businesses in LATAM deserve the same opportunities as their counterparts in developed markets.
+                  At Convexo Protocol, we&apos;re on a mission to democratize access to international capital markets for Latin American enterprises. We believe that solid, established businesses in LATAM deserve the same opportunities as their counterparts in developed markets.
                 </p>
                 <p className="body-text">
-                  By combining cutting-edge blockchain technology with rigorous compliance standards, we're building the bridge between traditional finance and the future of decentralized financial systems.
+                  By combining cutting-edge blockchain technology with rigorous compliance standards, we&apos;re building the bridge between traditional finance and the future of decentralized financial systems.
                 </p>
               </div>
               <div className="card p-8">
                 <div className="heading-section mb-4">Vision</div>
                 <h3 className="text-xl font-medium text-primary-text mb-4">Leading Institutional DeFi Platform</h3>
                 <p className="body-text">
-                  To become the leading institutional DeFi platform connecting LATAM enterprises with global capital markets, fostering economic growth and financial innovation across the region. We envision a future where geographical boundaries don't limit access to funding and where blockchain technology enables transparent, efficient, and inclusive financial services.
+                  To become the leading institutional DeFi platform connecting LATAM enterprises with global capital markets, fostering economic growth and financial innovation across the region. We envision a future where geographical boundaries don&apos;t limit access to funding and where blockchain technology enables transparent, efficient, and inclusive financial services.
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   We knew there had to be a better way. By leveraging blockchain technology, artificial intelligence, and decentralized finance protocols, we set out to create a platform that would level the playing field. Our team brings together expertise in traditional finance, blockchain development, artificial intelligence, and regulatory compliance.
                 </p>
                 <p className="body-text">
-                  Today, we're proud to offer a comprehensive suite of institutional DeFi solutions designed specifically for the LATAM market. From tokenized corporate bonds to local stablecoins, we're helping businesses access the funding they need to grow and thrive.
+                  Today, we&apos;re proud to offer a comprehensive suite of institutional DeFi solutions designed specifically for the LATAM market. From tokenized corporate bonds to local stablecoins, we&apos;re helping businesses access the funding they need to grow and thrive.
                 </p>
               </div>
             </div>

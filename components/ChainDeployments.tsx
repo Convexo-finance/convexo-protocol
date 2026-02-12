@@ -45,21 +45,13 @@ export default function ChainDeployments() {
                 className="group flex items-center gap-3 opacity-40 hover:opacity-80 transition-opacity duration-300"
               >
                 <div className="relative w-8 h-8 flex items-center justify-center">
-                  {chain.logo.endsWith('.svg') ? (
-                    <img
-                      src={chain.logo}
-                      alt={chain.alt}
-                      className="w-full h-full object-contain brightness-0 invert opacity-80"
-                    />
-                  ) : (
-                    <Image
-                      src={chain.logo}
-                      alt={chain.alt}
-                      width={32}
-                      height={32}
-                      className="object-contain brightness-0 invert opacity-80"
-                    />
-                  )}
+                  <Image
+                    src={chain.logo}
+                    alt={chain.alt}
+                    width={32}
+                    height={32}
+                    className="object-contain brightness-0 invert opacity-80"
+                  />
                 </div>
                 <span className="text-xs font-medium text-primary-text/70 group-hover:text-primary-text transition-colors hidden sm:block">
                   {chain.name}

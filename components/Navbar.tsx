@@ -76,14 +76,6 @@ export default function Navbar() {
                         </Link>
                       ))}
                     </div>
-                    <div className="border-t border-border px-4 py-2.5">
-                      <Link
-                        href="/#products"
-                        className="text-xs text-data-blue hover:text-primary-text transition-colors"
-                      >
-                        {t('nav.viewAll')} &rarr;
-                      </Link>
-                    </div>
                   </div>
                 </div>
               )}
@@ -142,35 +134,37 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-layer border-t border-border">
-          <div className="px-6 py-5 space-y-1">
+          <div className="px-5 py-4 space-y-1">
             <Link
               href="/"
               onClick={() => setIsMenuOpen(false)}
-              className="block py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-primary-text"
+              className="block py-3 text-sm font-medium text-primary-text active:bg-surface-hover transition-colors rounded-md"
             >
               {t('nav.home')}
             </Link>
 
-            <div className="py-3">
-              <div className="heading-section text-[10px] mb-3">{t('nav.products')}</div>
-              {products.map((product) => (
-                <Link
-                  key={product.href}
-                  href={product.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-2 text-xs text-muted hover:text-primary-text"
-                >
-                  {product.name}
-                </Link>
-              ))}
+            <div className="py-2">
+              <div className="heading-section text-[10px] mb-2 px-0">{t('nav.products')}</div>
+              <div className="space-y-0.5">
+                {products.map((product) => (
+                  <Link
+                    key={product.href}
+                    href={product.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-2.5 px-3 text-sm text-muted hover:text-primary-text hover:bg-surface-hover active:bg-surface-hover transition-colors rounded-md"
+                  >
+                    {product.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="divider" />
+            <div className="divider my-3" />
 
             <Link
               href="/technology"
               onClick={() => setIsMenuOpen(false)}
-              className="block py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-primary-text"
+              className="block py-3 text-sm font-medium text-primary-text active:bg-surface-hover transition-colors rounded-md"
             >
               Technology
             </Link>
@@ -178,29 +172,29 @@ export default function Navbar() {
             <Link
               href="/about"
               onClick={() => setIsMenuOpen(false)}
-              className="block py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-primary-text"
+              className="block py-3 text-sm font-medium text-primary-text active:bg-surface-hover transition-colors rounded-md"
             >
               {t('nav.about')}
             </Link>
 
-            <div className="flex items-center gap-4 pt-3">
+            <div className="flex items-center gap-4 pt-2 pb-1">
               <button
                 onClick={() => {
                   setLanguage(language === 'en' ? 'es' : 'en');
-                  setIsMenuOpen(false);
                 }}
-                className="text-xs text-muted"
+                className="text-sm text-muted hover:text-primary-text py-2 active:text-primary-text transition-colors"
               >
                 {language === 'en' ? 'Español' : 'English'}
               </button>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-3 pb-2">
               <Link
                 href="https://protocol.convexo.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full text-center text-xs"
+                onClick={() => setIsMenuOpen(false)}
+                className="btn-primary w-full text-center text-sm py-3 block"
               >
                 {t('nav.launchApp')}
               </Link>

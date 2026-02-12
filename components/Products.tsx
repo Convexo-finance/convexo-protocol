@@ -98,9 +98,10 @@ export default function Products() {
         {/* Product grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
           {products.map((product, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-base p-7 hover:bg-surface-hover transition-colors duration-300 group"
+              href={product.href}
+              className="bg-base p-7 hover:bg-surface-hover transition-colors duration-300 group cursor-pointer block"
             >
               {/* Tag */}
               <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-authority-blue mb-4">
@@ -118,7 +119,7 @@ export default function Products() {
               </p>
 
               {/* Features */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2">
                 {product.featureKeys.map((featureKey, idx) => (
                   <li key={idx} className="flex items-start text-xs">
                     <span className="w-1 h-1 rounded-full bg-authority-blue/80 mr-2.5 mt-1.5 flex-shrink-0" />
@@ -126,18 +127,7 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-
-              {/* Link */}
-              <Link
-                href={product.href}
-                className="inline-flex items-center text-xs font-medium text-authority-blue hover:text-data-blue transition-colors duration-200"
-              >
-                {t('products.learnMore')}
-                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
