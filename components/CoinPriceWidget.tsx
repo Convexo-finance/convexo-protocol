@@ -18,24 +18,25 @@ declare global {
 
 export default function CoinPriceWidget() {
   const { t } = useLanguage();
-  
+
   return (
-    <section className="py-8 bg-convexo-navy border-y border-convexo-blue/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-4">
-          <h3 className="text-lg font-semibold text-convexo-lightblue">{t('coinWidget.title')}</h3>
-        </div>
-        <div className="overflow-x-auto">
-          <gecko-coin-price-static-headline-widget 
-            locale="en" 
-            dark-mode="true" 
-            outlined="true" 
-            coin-ids="dogecoin,bitcoin,ethereum,zcash,solana,chainlink,uniswap,havven,aave,ripple,litecoin,filecoin,worldcoin-wld" 
-            initial-currency="usd"
-          ></gecko-coin-price-static-headline-widget>
+    <section className="py-5 border-b border-border bg-layer/20">
+      <div className="section-container">
+        <div className="flex items-center gap-6">
+          <span className="heading-section text-[10px] whitespace-nowrap hidden sm:block">
+            {t('coinWidget.title')}
+          </span>
+          <div className="overflow-x-auto flex-1">
+            <gecko-coin-price-static-headline-widget
+              locale="en"
+              dark-mode="true"
+              outlined="false"
+              coin-ids="bitcoin,ethereum,solana,chainlink,uniswap,aave"
+              initial-currency="usd"
+            ></gecko-coin-price-static-headline-widget>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

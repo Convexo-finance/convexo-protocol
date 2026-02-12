@@ -28,63 +28,45 @@ export default function ChainDeployments() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-convexo-navy mb-4">
+    <section className="py-16 border-t border-b border-border">
+      <div className="section-container">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="heading-section text-[10px]">
             {t('chains.deployed')}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('chains.subtitle')}
-          </p>
-        </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {chains.map((chain, index) => (
-            <a
-              key={index}
-              href={chain.link}
-              target={chain.link !== '#' ? '_blank' : undefined}
-              rel={chain.link !== '#' ? 'noopener noreferrer' : undefined}
-              className="group bg-convexo-cream rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center justify-center"
-            >
-              <div className="relative w-32 h-32 mb-6 flex items-center justify-center">
-                {chain.logo.endsWith('.svg') ? (
-                  <img
-                    src={chain.logo}
-                    alt={chain.alt}
-                    className="w-full h-full object-contain"
-                  />
-                ) : (
-                  <Image
-                    src={chain.logo}
-                    alt={chain.alt}
-                    width={128}
-                    height={128}
-                    className="object-contain"
-                  />
-                )}
-              </div>
-              <h3 className="text-2xl font-bold text-convexo-navy mb-2 group-hover:text-convexo-purple transition-colors">
-                {chain.name}
-              </h3>
-              {chain.link !== '#' && (
-                <svg
-                  className="w-5 h-5 text-convexo-blue opacity-0 group-hover:opacity-100 transition-opacity"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              )}
-            </a>
-          ))}
+          <div className="flex items-center gap-12 md:gap-16">
+            {chains.map((chain, index) => (
+              <a
+                key={index}
+                href={chain.link}
+                target={chain.link !== '#' ? '_blank' : undefined}
+                rel={chain.link !== '#' ? 'noopener noreferrer' : undefined}
+                className="group flex items-center gap-3 opacity-40 hover:opacity-80 transition-opacity duration-300"
+              >
+                <div className="relative w-8 h-8 flex items-center justify-center">
+                  {chain.logo.endsWith('.svg') ? (
+                    <img
+                      src={chain.logo}
+                      alt={chain.alt}
+                      className="w-full h-full object-contain brightness-0 invert opacity-80"
+                    />
+                  ) : (
+                    <Image
+                      src={chain.logo}
+                      alt={chain.alt}
+                      width={32}
+                      height={32}
+                      className="object-contain brightness-0 invert opacity-80"
+                    />
+                  )}
+                </div>
+                <span className="text-xs font-medium text-primary-text/60 group-hover:text-primary-text/80 transition-colors hidden sm:block">
+                  {chain.name}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

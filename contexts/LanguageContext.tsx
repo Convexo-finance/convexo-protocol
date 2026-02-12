@@ -195,12 +195,203 @@ const translations = {
         feature3: 'Minimum 12% APY',
         feature4: 'Tier 3 verification required',
       },
+      realEstateVaults: {
+        title: 'Real Estate Vaults',
+        description: 'Access tokenized real estate investments with institutional-grade properties and transparent on-chain valuations.',
+        feature1: 'Tokenized commercial & residential properties',
+        feature2: 'Fractional ownership opportunities',
+        feature3: 'Institutional-grade asset management',
+        feature4: 'Transparent blockchain-based valuations',
+      },
+      p2pay: {
+        title: 'P2PAY',
+        description: 'Agentic P2P marketplace where an AI agent acts as trusted arbitrator, holding funds in escrow for secure crypto-fiat trades.',
+        feature1: 'AI agent arbitrator with Coinbase wallet',
+        feature2: 'Telegram-based trading interface',
+        feature3: 'ERC-8004 on-chain reputation system',
+        feature4: '0.1% commission on all trades',
+      },
     },
     footer: {
       description: 'Institutional DeFi solutions connecting LATAM enterprises with global capital markets.',
       productsTitle: 'Products',
       companyTitle: 'Company',
       copyright: 'All rights reserved',
+    },
+    realEstateVaults: {
+      hero: {
+        title: 'Real Estate Vaults',
+        subtitle: 'Access institutional-grade tokenized real estate investments across Latin America',
+      },
+      requirement: {
+        tier2: 'Requires Tier 2 Verification (KYC/KYB)',
+      },
+      properties: {
+        title: 'Property Types',
+        subtitle: 'Diversified portfolio of institutional-grade real estate assets',
+        commercial: {
+          title: 'Commercial Office',
+          description: 'Premium office buildings in major business districts with stable corporate tenants',
+          feature1: 'Class A office properties',
+          feature2: 'Long-term corporate leases',
+          feature3: 'Prime business locations',
+        },
+        residential: {
+          title: 'Residential Towers',
+          description: 'Modern luxury apartment complexes with consistent rental yields',
+          feature1: 'Multi-family residential units',
+          feature2: 'Stable rental income streams',
+          feature3: 'High-demand urban locations',
+        },
+        mixedUse: {
+          title: 'Mixed-Use Developments',
+          description: 'Integrated commercial and residential complexes maximizing property value',
+          feature1: 'Diversified revenue streams',
+          feature2: 'Retail + residential combination',
+          feature3: 'Strategic urban positioning',
+        },
+      },
+      process: {
+        title: 'Tokenization Process',
+        subtitle: 'How we transform real estate into accessible digital assets',
+        step1: {
+          title: 'Property Selection',
+          description: 'Institutional-grade properties vetted for quality, location, and yield potential',
+        },
+        step2: {
+          title: 'Legal Structuring',
+          description: 'Compliant SPV formation with clear ownership rights and regulatory compliance',
+        },
+        step3: {
+          title: 'Token Issuance',
+          description: 'ERC-4626 vault tokens representing fractional property ownership',
+        },
+        step4: {
+          title: 'Yield Distribution',
+          description: 'Automatic rental income distribution to token holders on-chain',
+        },
+      },
+      benefits: {
+        title: 'Why Real Estate Vaults?',
+        subtitle: 'Breaking down barriers to institutional real estate investment',
+        fractional: {
+          title: 'Fractional Ownership',
+          description: 'Invest in premium properties with lower capital requirements',
+        },
+        liquidity: {
+          title: 'Enhanced Liquidity',
+          description: 'Trade tokenized real estate shares 24/7 on secondary markets',
+        },
+        transparent: {
+          title: 'Transparent Valuations',
+          description: 'On-chain property valuations powered by Chainlink oracles',
+        },
+        institutional: {
+          title: 'Institutional Quality',
+          description: 'Access professionally managed properties with institutional standards',
+        },
+      },
+      technology: {
+        title: 'Technology Stack',
+        subtitle: 'Built on proven blockchain infrastructure for security and compliance',
+        blockchain: {
+          title: 'Multi-Chain Support',
+          description: 'Deployed on Ethereum, Base, and UniChain for maximum accessibility',
+        },
+        erc4626: {
+          title: 'ERC-4626 Vaults',
+          description: 'Industry-standard tokenized vaults ensuring interoperability and security',
+        },
+        oracles: {
+          title: 'Chainlink Oracles',
+          description: 'Real-time property valuations and proof of reserves via decentralized oracles',
+        },
+      },
+      cta: {
+        title: 'Ready to Invest in Real Estate?',
+        description: 'Join institutional investors accessing tokenized real estate in Latin America',
+        getStarted: 'Get Started',
+        learnVerification: 'Learn About Verification',
+      },
+    },
+    p2pay: {
+      hero: {
+        title: 'P2PAY',
+        subtitle: 'AI-powered peer-to-peer marketplace with automated escrow and trustless arbitration',
+      },
+      requirement: {
+        tier1: 'Requires Tier 1 Verification (Private ID)',
+      },
+      howItWorks: {
+        title: 'How the Agent Works',
+        subtitle: 'Autonomous AI agent facilitates secure trades between two parties',
+        step1: {
+          title: 'Order Creation',
+          description: 'User initiates buy/sell order via Telegram bot with desired amount',
+        },
+        step2: {
+          title: 'Agent Quotes Price',
+          description: 'AI agent fetches CoinGecko rate and applies 0.1% commission spread',
+        },
+        step3: {
+          title: 'Funds Transfer',
+          description: 'User sends fiat or USDC to agent\'s escrow wallet on Base',
+        },
+        step4: {
+          title: 'Agent Verification',
+          description: 'Agent confirms receipt and initiates counterparty transfer',
+        },
+        step5: {
+          title: 'Settlement & Reputation',
+          description: 'Trade completed, reputation recorded on-chain via ERC-8004',
+        },
+      },
+      features: {
+        title: 'Key Features',
+        subtitle: 'Built for trust, speed, and security in P2P trading',
+        agent: {
+          title: 'Autonomous AI Agent',
+          description: 'Coinbase Agentic Wallet on Base acts as neutral arbitrator, eliminating counterparty risk and ensuring fair trade execution.',
+        },
+        reputation: {
+          title: 'ERC-8004 Reputation',
+          description: 'Immutable on-chain reputation system records all trades and feedback, building trust through transparency.',
+        },
+        escrow: {
+          title: 'Smart Escrow System',
+          description: 'Funds held securely by agent wallet until both parties confirm, protecting buyers and sellers equally.',
+        },
+        telegram: {
+          title: 'Telegram Integration',
+          description: 'Seamless trading experience through familiar Telegram interface with instant notifications.',
+        },
+      },
+      architecture: {
+        title: 'Agent Architecture',
+        subtitle: 'Powered by cutting-edge blockchain and AI technology',
+        wallet: {
+          title: 'Coinbase Agentic Wallet',
+          description: 'Self-custodial agent wallet on Base for autonomous transaction execution',
+        },
+        escrow: {
+          title: 'Escrow Protocol',
+          description: 'Smart contract-based escrow ensuring trustless fund custody',
+        },
+        pricing: {
+          title: 'Oracle Pricing',
+          description: 'Real-time CoinGecko API pricing with transparent 0.1% spread',
+        },
+      },
+      currencies: {
+        title: 'Supported Currencies',
+        subtitle: 'Trade USDC against major Latin American fiat currencies',
+      },
+      cta: {
+        title: 'Ready to Start Trading?',
+        description: 'Connect with our AI agent on Telegram and experience trustless P2P trading',
+        startTrading: 'Start Trading on Telegram',
+        getVerified: 'Get Verified First',
+      },
     },
     chains: {
       deployed: 'Deployed On',
@@ -433,6 +624,22 @@ const translations = {
         feature3: 'APY mínimo del 12%',
         feature4: 'Se requiere verificación Nivel 3',
       },
+      realEstateVaults: {
+        title: 'Bóvedas de Bienes Raíces',
+        description: 'Accede a inversiones inmobiliarias tokenizadas con propiedades de grado institucional y valuaciones transparentes on-chain.',
+        feature1: 'Propiedades comerciales y residenciales tokenizadas',
+        feature2: 'Oportunidades de propiedad fraccionada',
+        feature3: 'Gestión de activos de grado institucional',
+        feature4: 'Valuaciones transparentes basadas en blockchain',
+      },
+      p2pay: {
+        title: 'P2PAY',
+        description: 'Mercado P2P agéntico donde un agente IA actúa como árbitro confiable, manteniendo fondos en garantía para intercambios seguros cripto-fiat.',
+        feature1: 'Agente árbitro IA con billetera Coinbase',
+        feature2: 'Interfaz de comercio basada en Telegram',
+        feature3: 'Sistema de reputación on-chain ERC-8004',
+        feature4: 'Comisión del 0.1% en todos los intercambios',
+      },
     },
     footer: {
       description: 'Soluciones DeFi institucionales conectando empresas LATAM con mercados de capital globales.',
@@ -533,6 +740,181 @@ const translations = {
         feature3: 'Firma del prestamista requerida para activación',
         feature4: 'Fondos solo accesibles después de aprobación del prestamista',
         apy: 'APY Mínimo: 12%',
+      },
+    },
+    realEstateVaults: {
+      hero: {
+        title: 'Bóvedas de Bienes Raíces',
+        subtitle: 'Accede a inversiones inmobiliarias tokenizadas de grado institucional en América Latina',
+      },
+      requirement: {
+        tier2: 'Requiere Verificación Nivel 2 (KYC/KYB)',
+      },
+      properties: {
+        title: 'Tipos de Propiedades',
+        subtitle: 'Portafolio diversificado de activos inmobiliarios de grado institucional',
+        commercial: {
+          title: 'Oficinas Comerciales',
+          description: 'Edificios de oficinas premium en distritos empresariales principales con inquilinos corporativos estables',
+          feature1: 'Propiedades de oficinas Clase A',
+          feature2: 'Arrendamientos corporativos a largo plazo',
+          feature3: 'Ubicaciones empresariales premium',
+        },
+        residential: {
+          title: 'Torres Residenciales',
+          description: 'Complejos de apartamentos de lujo modernos con rendimientos de alquiler consistentes',
+          feature1: 'Unidades residenciales multifamiliares',
+          feature2: 'Flujos de ingresos por alquiler estables',
+          feature3: 'Ubicaciones urbanas de alta demanda',
+        },
+        mixedUse: {
+          title: 'Desarrollos de Uso Mixto',
+          description: 'Complejos comerciales y residenciales integrados maximizando el valor de la propiedad',
+          feature1: 'Flujos de ingresos diversificados',
+          feature2: 'Combinación comercio + residencial',
+          feature3: 'Posicionamiento urbano estratégico',
+        },
+      },
+      process: {
+        title: 'Proceso de Tokenización',
+        subtitle: 'Cómo transformamos bienes raíces en activos digitales accesibles',
+        step1: {
+          title: 'Selección de Propiedad',
+          description: 'Propiedades de grado institucional evaluadas por calidad, ubicación y potencial de rendimiento',
+        },
+        step2: {
+          title: 'Estructuración Legal',
+          description: 'Formación de SPV conforme con derechos de propiedad claros y cumplimiento regulatorio',
+        },
+        step3: {
+          title: 'Emisión de Tokens',
+          description: 'Tokens de bóveda ERC-4626 representando propiedad fraccionada de la propiedad',
+        },
+        step4: {
+          title: 'Distribución de Rendimientos',
+          description: 'Distribución automática de ingresos por alquiler a los poseedores de tokens on-chain',
+        },
+      },
+      benefits: {
+        title: '¿Por Qué Bóvedas de Bienes Raíces?',
+        subtitle: 'Eliminando barreras para la inversión inmobiliaria institucional',
+        fractional: {
+          title: 'Propiedad Fraccionada',
+          description: 'Invierte en propiedades premium con menores requisitos de capital',
+        },
+        liquidity: {
+          title: 'Liquidez Mejorada',
+          description: 'Comercializa acciones inmobiliarias tokenizadas 24/7 en mercados secundarios',
+        },
+        transparent: {
+          title: 'Valuaciones Transparentes',
+          description: 'Valuaciones de propiedades on-chain potenciadas por oráculos Chainlink',
+        },
+        institutional: {
+          title: 'Calidad Institucional',
+          description: 'Accede a propiedades administradas profesionalmente con estándares institucionales',
+        },
+      },
+      technology: {
+        title: 'Stack Tecnológico',
+        subtitle: 'Construido sobre infraestructura blockchain probada para seguridad y cumplimiento',
+        blockchain: {
+          title: 'Soporte Multi-Cadena',
+          description: 'Desplegado en Ethereum, Base y UniChain para máxima accesibilidad',
+        },
+        erc4626: {
+          title: 'Bóvedas ERC-4626',
+          description: 'Bóvedas tokenizadas con estándar de la industria asegurando interoperabilidad y seguridad',
+        },
+        oracles: {
+          title: 'Oráculos Chainlink',
+          description: 'Valuaciones de propiedades en tiempo real y prueba de reservas vía oráculos descentralizados',
+        },
+      },
+      cta: {
+        title: '¿Listo para Invertir en Bienes Raíces?',
+        description: 'Únete a inversores institucionales accediendo a bienes raíces tokenizados en América Latina',
+        getStarted: 'Comenzar',
+        learnVerification: 'Conocer Sobre Verificación',
+      },
+    },
+    p2pay: {
+      hero: {
+        title: 'P2PAY',
+        subtitle: 'Mercado peer-to-peer impulsado por IA con garantía automatizada y arbitraje sin confianza',
+      },
+      requirement: {
+        tier1: 'Requiere Verificación Nivel 1 (ID Privado)',
+      },
+      howItWorks: {
+        title: 'Cómo Funciona el Agente',
+        subtitle: 'Agente IA autónomo facilita intercambios seguros entre dos partes',
+        step1: {
+          title: 'Creación de Orden',
+          description: 'Usuario inicia orden de compra/venta vía bot de Telegram con monto deseado',
+        },
+        step2: {
+          title: 'Agente Cotiza Precio',
+          description: 'Agente IA obtiene tasa de CoinGecko y aplica comisión del 0.1%',
+        },
+        step3: {
+          title: 'Transferencia de Fondos',
+          description: 'Usuario envía fiat o USDC a billetera de garantía del agente en Base',
+        },
+        step4: {
+          title: 'Verificación del Agente',
+          description: 'Agente confirma recepción e inicia transferencia de contraparte',
+        },
+        step5: {
+          title: 'Liquidación y Reputación',
+          description: 'Intercambio completado, reputación registrada on-chain vía ERC-8004',
+        },
+      },
+      features: {
+        title: 'Características Clave',
+        subtitle: 'Construido para confianza, velocidad y seguridad en comercio P2P',
+        agent: {
+          title: 'Agente IA Autónomo',
+          description: 'Billetera Agéntica Coinbase en Base actúa como árbitro neutral, eliminando riesgo de contraparte y asegurando ejecución justa.',
+        },
+        reputation: {
+          title: 'Reputación ERC-8004',
+          description: 'Sistema de reputación on-chain inmutable registra todos los intercambios y feedback, construyendo confianza a través de transparencia.',
+        },
+        escrow: {
+          title: 'Sistema de Garantía Inteligente',
+          description: 'Fondos mantenidos seguros por billetera del agente hasta que ambas partes confirmen, protegiendo compradores y vendedores por igual.',
+        },
+        telegram: {
+          title: 'Integración con Telegram',
+          description: 'Experiencia de comercio fluida a través de interfaz familiar de Telegram con notificaciones instantáneas.',
+        },
+      },
+      architecture: {
+        title: 'Arquitectura del Agente',
+        subtitle: 'Impulsado por tecnología blockchain e IA de vanguardia',
+        wallet: {
+          title: 'Billetera Agéntica Coinbase',
+          description: 'Billetera del agente autocustodiada en Base para ejecución autónoma de transacciones',
+        },
+        escrow: {
+          title: 'Protocolo de Garantía',
+          description: 'Garantía basada en contratos inteligentes asegurando custodia de fondos sin confianza',
+        },
+        pricing: {
+          title: 'Precios de Oráculo',
+          description: 'Precios API CoinGecko en tiempo real con spread transparente del 0.1%',
+        },
+      },
+      currencies: {
+        title: 'Monedas Soportadas',
+        subtitle: 'Comercializa USDC contra las principales monedas fiat latinoamericanas',
+      },
+      cta: {
+        title: '¿Listo para Comenzar a Comerciar?',
+        description: 'Conéctate con nuestro agente IA en Telegram y experimenta comercio P2P sin confianza',
+        startTrading: 'Comenzar a Comerciar en Telegram',
+        getVerified: 'Verificarse Primero',
       },
     },
   },

@@ -5,11 +5,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Products() {
   const { t } = useLanguage();
-  
+
   const products = [
     {
       titleKey: 'products.digitalIds.title',
-      icon: '🆔',
       descriptionKey: 'products.digitalIds.description',
       featureKeys: [
         'products.digitalIds.feature1',
@@ -17,12 +16,11 @@ export default function Products() {
         'products.digitalIds.feature3',
         'products.digitalIds.feature4',
       ],
-      gradient: 'from-convexo-purple to-convexo-blue',
       href: '/products/digital-ids',
+      tag: 'Identity',
     },
     {
       titleKey: 'products.treasury.title',
-      icon: '💱',
       descriptionKey: 'products.treasury.description',
       featureKeys: [
         'products.treasury.feature1',
@@ -30,12 +28,11 @@ export default function Products() {
         'products.treasury.feature3',
         'products.treasury.feature4',
       ],
-      gradient: 'from-convexo-blue to-convexo-lightblue',
       href: '/products/treasury',
+      tag: 'Treasury',
     },
     {
       titleKey: 'products.stablecoins.title',
-      icon: '🪙',
       descriptionKey: 'products.stablecoins.description',
       featureKeys: [
         'products.stablecoins.feature1',
@@ -43,12 +40,11 @@ export default function Products() {
         'products.stablecoins.feature3',
         'products.stablecoins.feature4',
       ],
-      gradient: 'from-convexo-lightblue to-convexo-purple',
       href: '/products/stablecoins',
+      tag: 'Currency',
     },
     {
       titleKey: 'products.eloans.title',
-      icon: '💳',
       descriptionKey: 'products.eloans.description',
       featureKeys: [
         'products.eloans.feature1',
@@ -56,68 +52,91 @@ export default function Products() {
         'products.eloans.feature3',
         'products.eloans.feature4',
       ],
-      gradient: 'from-convexo-navy to-convexo-blue',
       href: '/products/eloans',
+      tag: 'Credit',
+    },
+    {
+      titleKey: 'products.realEstateVaults.title',
+      descriptionKey: 'products.realEstateVaults.description',
+      featureKeys: [
+        'products.realEstateVaults.feature1',
+        'products.realEstateVaults.feature2',
+        'products.realEstateVaults.feature3',
+        'products.realEstateVaults.feature4',
+      ],
+      href: '/products/real-estate-vaults',
+      tag: 'RWA',
+    },
+    {
+      titleKey: 'products.p2pay.title',
+      descriptionKey: 'products.p2pay.description',
+      featureKeys: [
+        'products.p2pay.feature1',
+        'products.p2pay.feature2',
+        'products.p2pay.feature3',
+        'products.p2pay.feature4',
+      ],
+      href: '/products/p2pay',
+      tag: 'Payments',
     },
   ];
 
   return (
-    <section id="products" className="py-24 bg-convexo-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-convexo-navy mb-4">
+    <section id="products" className="section-padding border-t border-border">
+      <div className="section-container">
+        {/* Header */}
+        <div className="mb-16">
+          <div className="heading-section mb-4">Solutions</div>
+          <h2 className="heading-lg text-primary-text mb-4">
             {t('products.title')}
           </h2>
-          <p className="text-xl text-convexo-blue max-w-3xl mx-auto">
+          <p className="body-text max-w-lg">
             {t('products.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Product grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-base p-7 hover:bg-surface-hover transition-colors duration-300 group"
             >
-              <div className={`h-2 bg-gradient-to-r ${product.gradient}`}></div>
-              <div className="p-8">
-                <div className="text-5xl mb-4">{product.icon}</div>
-                <h3 className="text-3xl font-bold text-convexo-navy mb-4">
-                  {t(product.titleKey)}
-                </h3>
-                <p className="text-convexo-blue mb-6 text-lg">
-                  {t(product.descriptionKey)}
-                </p>
-                <ul className="space-y-3">
-                  {product.featureKeys.map((featureKey, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg
-                        className="w-6 h-6 text-convexo-purple mr-3 flex-shrink-0 mt-0.5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-gray-700">{t(featureKey)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <Link
-                    href={product.href}
-                    className="inline-flex items-center text-convexo-purple hover:text-convexo-blue font-semibold transition-colors duration-200"
-                  >
-                    {t('products.learnMore')}
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
+              {/* Tag */}
+              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-authority-blue mb-4">
+                {product.tag}
               </div>
+
+              {/* Title */}
+              <h3 className="text-base font-medium text-primary-text mb-3 group-hover:text-data-blue transition-colors">
+                {t(product.titleKey)}
+              </h3>
+
+              {/* Description */}
+              <p className="text-xs text-muted-light leading-relaxed mb-5">
+                {t(product.descriptionKey)}
+              </p>
+
+              {/* Features */}
+              <ul className="space-y-2 mb-6">
+                {product.featureKeys.map((featureKey, idx) => (
+                  <li key={idx} className="flex items-start text-xs">
+                    <span className="w-1 h-1 rounded-full bg-authority-blue/80 mr-2.5 mt-1.5 flex-shrink-0" />
+                    <span className="text-muted">{t(featureKey)}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Link */}
+              <Link
+                href={product.href}
+                className="inline-flex items-center text-xs font-medium text-authority-blue hover:text-data-blue transition-colors duration-200"
+              >
+                {t('products.learnMore')}
+                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
           ))}
         </div>
@@ -125,4 +144,3 @@ export default function Products() {
     </section>
   );
 }
-

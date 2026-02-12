@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const nunito = Nunito({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: '--font-nunito',
+  variable: '--font-space-grotesk',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
-  title: "Convexo Protocol | Institutional DeFi Solutions",
-  description: "Access international funding through tokenized corporate bonds, digital asset treasury services, and institutional-grade DeFi solutions for LATAM enterprises.",
-  keywords: "DeFi, tokenized bonds, corporate bonds, stablecoins, digital assets, LATAM, blockchain, institutional finance",
+  title: "Convexo Protocol | Institutional Financial Infrastructure",
+  description: "Sovereign-grade digital asset infrastructure for institutional capital markets. AI-driven financial intelligence on Ethereum-native architecture.",
+  keywords: "institutional DeFi, tokenized bonds, digital assets, LATAM, blockchain infrastructure, capital markets, AI finance",
   icons: {
     icon: '/branding/logologo.png',
     shortcut: '/branding/logologo.png',
@@ -25,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
-        <script 
-          src="https://widgets.coingecko.com/gecko-coin-price-static-headline-widget.js" 
+        <script
+          src="https://widgets.coingecko.com/gecko-coin-price-static-headline-widget.js"
           async
         ></script>
       </head>
-      <body className={`${nunito.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} font-sans antialiased bg-base text-primary-text`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
@@ -40,4 +41,3 @@ export default function RootLayout({
     </html>
   );
 }
-

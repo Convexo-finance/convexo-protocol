@@ -5,168 +5,115 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function LatamFundingGap() {
   const { t } = useLanguage();
-  
+
+  const challenges = [
+    { title: t('fundingGap.challenge1Title'), desc: t('fundingGap.challenge1Desc') },
+    { title: t('fundingGap.challenge2Title'), desc: t('fundingGap.challenge2Desc') },
+    { title: t('fundingGap.challenge3Title'), desc: t('fundingGap.challenge3Desc') },
+    { title: t('fundingGap.challenge4Title'), desc: t('fundingGap.challenge4Desc') },
+  ];
+
+  const solutions = [
+    { title: t('fundingGap.solution1Title'), desc: t('fundingGap.solution1Desc') },
+    { title: t('fundingGap.solution2Title'), desc: t('fundingGap.solution2Desc') },
+    { title: t('fundingGap.solution3Title'), desc: t('fundingGap.solution3Desc') },
+    { title: t('fundingGap.solution4Title'), desc: t('fundingGap.solution4Desc') },
+  ];
+
+  const stats = [
+    { value: '$2.5T', label: t('fundingGap.stat1'), desc: t('fundingGap.stat1Desc') },
+    { value: '67%', label: t('fundingGap.stat2'), desc: t('fundingGap.stat2Desc') },
+    { value: '15–25%', label: t('fundingGap.stat3'), desc: t('fundingGap.stat3Desc') },
+  ];
+
   return (
-    <section className="py-20 bg-convexo-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-convexo-blue/10 text-convexo-blue px-4 py-2 rounded-full text-sm font-semibold mb-4">
+    <section className="section-padding">
+      <div className="section-container">
+        {/* Header */}
+        <div className="mb-16">
+          <div className="heading-section mb-4">
             {t('fundingGap.badge')}
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-convexo-navy mb-6">
+          <h2 className="heading-lg text-primary-text mb-4">
             {t('fundingGap.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="body-text max-w-xl">
             {t('fundingGap.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-convexo-navy mb-6">{t('fundingGap.challengeTitle')}</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-red-100 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Challenge vs Solution */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border rounded-lg overflow-hidden mb-20">
+          {/* Challenges */}
+          <div className="bg-base p-8">
+            <h3 className="text-sm font-medium text-primary-text mb-6 uppercase tracking-[0.1em]">
+              {t('fundingGap.challengeTitle')}
+            </h3>
+            <div className="space-y-5">
+              {challenges.map((item, idx) => (
+                <div key={idx} className="flex items-start">
+                  <div className="w-5 h-5 rounded-sm bg-red-500/10 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                    <svg className="w-2.5 h-2.5 text-red-400/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge1Title')}</h4>
-                    <p className="text-gray-600">{t('fundingGap.challenge1Desc')}</p>
+                    <h4 className="text-xs font-medium text-primary-text mb-0.5">{item.title}</h4>
+                    <p className="text-xs text-muted/50 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="bg-red-100 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge2Title')}</h4>
-                    <p className="text-gray-600">{t('fundingGap.challenge2Desc')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-red-100 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge3Title')}</h4>
-                    <p className="text-gray-600">{t('fundingGap.challenge3Desc')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-red-100 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-convexo-navy mb-1">{t('fundingGap.challenge4Title')}</h4>
-                    <p className="text-gray-600">{t('fundingGap.challenge4Desc')}</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
-            <div className="bg-gradient-to-br from-convexo-purple to-convexo-blue rounded-2xl p-8 text-white shadow-xl">
-              <h3 className="text-2xl font-bold mb-6">{t('fundingGap.solutionTitle')}</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-green-400 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Solutions */}
+          <div className="bg-layer/40 p-8">
+            <h3 className="text-sm font-medium text-data-blue mb-6 uppercase tracking-[0.1em]">
+              {t('fundingGap.solutionTitle')}
+            </h3>
+            <div className="space-y-5">
+              {solutions.map((item, idx) => (
+                <div key={idx} className="flex items-start">
+                  <div className="w-5 h-5 rounded-sm bg-authority-blue/15 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                    <svg className="w-2.5 h-2.5 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{t('fundingGap.solution1Title')}</h4>
-                    <p className="text-white/90">{t('fundingGap.solution1Desc')}</p>
+                    <h4 className="text-xs font-medium text-primary-text mb-0.5">{item.title}</h4>
+                    <p className="text-xs text-muted/50 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="bg-green-400 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{t('fundingGap.solution2Title')}</h4>
-                    <p className="text-white/90">{t('fundingGap.solution2Desc')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-green-400 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{t('fundingGap.solution3Title')}</h4>
-                    <p className="text-white/90">{t('fundingGap.solution3Desc')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-green-400 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{t('fundingGap.solution4Title')}</h4>
-                    <p className="text-white/90">{t('fundingGap.solution4Desc')}</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Key Statistics */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-          <h3 className="text-3xl font-bold text-convexo-navy mb-8 text-center">{t('fundingGap.impactTitle')}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-convexo-cream rounded-xl">
-              <div className="text-5xl font-bold text-convexo-purple mb-2">$2.5T</div>
-              <div className="text-gray-600 font-medium">{t('fundingGap.stat1')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('fundingGap.stat1Desc')}</p>
-            </div>
-            <div className="text-center p-6 bg-convexo-cream rounded-xl">
-              <div className="text-5xl font-bold text-convexo-blue mb-2">67%</div>
-              <div className="text-gray-600 font-medium">{t('fundingGap.stat2')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('fundingGap.stat2Desc')}</p>
-            </div>
-            <div className="text-center p-6 bg-convexo-cream rounded-xl">
-              <div className="text-5xl font-bold text-convexo-purple mb-2">15-25%</div>
-              <div className="text-gray-600 font-medium">{t('fundingGap.stat3')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('fundingGap.stat3Desc')}</p>
-            </div>
+        {/* Stats */}
+        <div className="mb-16">
+          <h3 className="text-sm font-medium text-primary-text mb-8 uppercase tracking-[0.1em] text-center">
+            {t('fundingGap.impactTitle')}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-border pt-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl font-medium text-data-blue mb-1">{stat.value}</div>
+                <div className="text-xs font-medium text-primary-text mb-1">{stat.label}</div>
+                <p className="text-[11px] text-muted/40">{stat.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-convexo-navy mb-4">
+        <div className="text-center card p-10">
+          <h3 className="text-lg font-medium text-primary-text mb-3">
             {t('fundingGap.ctaTitle')}
           </h3>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="body-text max-w-md mx-auto mb-6">
             {t('fundingGap.ctaDesc')}
           </p>
-          <Link
-            href="/products/tokenized-bonds"
-            className="inline-block bg-gradient-to-r from-convexo-purple to-convexo-blue text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-          >
+          <Link href="/products/tokenized-bonds" className="btn-primary">
             {t('fundingGap.ctaButton')}
           </Link>
         </div>
@@ -174,4 +121,3 @@ export default function LatamFundingGap() {
     </section>
   );
 }
-

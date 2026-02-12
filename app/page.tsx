@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <ChainDeployments />
       <CoinPriceWidget />
+      <Products />
       <CryptoRails />
       <LatamFundingGap />
-      <Products />
       <Footer />
     </main>
   );
