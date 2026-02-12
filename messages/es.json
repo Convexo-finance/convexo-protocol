@@ -2,6 +2,7 @@
   "nav": {
     "home": "Inicio",
     "products": "Productos",
+    "services": "Servicios",
     "about": "Nosotros",
     "technology": "Tecnología",
     "launchApp": "Abrir App",
@@ -170,6 +171,11 @@
       "feature3": "Sistema de reputación on-chain ERC-8004",
       "feature4": "Comisión del 0.1% en todos los intercambios"
     }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Servicios financieros de grado institucional impulsados por tecnología blockchain",
+    "badge": "Servicios"
   },
   "footer": {
     "description": "Soluciones DeFi institucionales conectando empresas LATAM con mercados de capital globales.",
