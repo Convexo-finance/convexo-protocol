@@ -102,7 +102,7 @@ export default function TechnologyPage() {
             <h1 className="heading-xl text-primary-text mb-6">
               Built on Proven Infrastructure
             </h1>
-            <p className="text-base text-muted leading-relaxed">
+            <p className="text-base text-muted-light leading-relaxed">
               Convexo Protocol integrates best-in-class blockchain infrastructure,
               institutional custody, and compliance providers to deliver sovereign-grade
               financial services.
@@ -148,7 +148,7 @@ export default function TechnologyPage() {
                 <h3 className="text-base font-medium text-primary-text mb-2">
                   {chain.name}
                 </h3>
-                <p className="text-xs text-muted leading-relaxed">
+                <p className="text-xs text-muted-light leading-relaxed">
                   {chain.description}
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function TechnologyPage() {
                 <h3 className="text-sm font-medium text-primary-text mb-2">
                   {provider.name}
                 </h3>
-                <p className="text-xs text-muted/60 leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed">
                   {provider.description}
                 </p>
               </div>
@@ -222,7 +222,7 @@ export default function TechnologyPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-primary-text mb-2">Security First</h3>
-                    <p className="text-xs text-muted leading-relaxed">
+                    <p className="text-xs text-muted-light leading-relaxed">
                       Multi-signature custody, zero-knowledge proofs, and institutional-grade
                       key management ensure sovereign control of digital assets.
                     </p>
@@ -239,7 +239,7 @@ export default function TechnologyPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-primary-text mb-2">Compliance Native</h3>
-                    <p className="text-xs text-muted leading-relaxed">
+                    <p className="text-xs text-muted-light leading-relaxed">
                       KYC/KYB verification, AML screening, and regulatory compliance built
                       into every layer of the protocol.
                     </p>
@@ -256,7 +256,7 @@ export default function TechnologyPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-primary-text mb-2">High Performance</h3>
-                    <p className="text-xs text-muted leading-relaxed">
+                    <p className="text-xs text-muted-light leading-relaxed">
                       Sub-second settlement, L2 scaling, and optimized smart contracts for
                       institutional trading volumes.
                     </p>

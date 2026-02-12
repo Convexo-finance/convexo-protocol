@@ -27,11 +27,9 @@ const config: Config = {
           hover: 'rgba(255,255,255,0.12)',
           accent: 'rgba(51,78,172,0.3)',
         },
-        muted: {
-          DEFAULT: 'rgba(186,214,235,0.7)',  // Increased from 0.5 to 0.7 for better contrast
-          light: 'rgba(186,214,235,0.85)',   // Even lighter for body text
-          dark: 'rgba(186,214,235,0.4)',     // Darker for less important text
-        },
+        muted: 'rgba(186,214,235,0.7)',          // Increased contrast
+        'muted-light': 'rgba(186,214,235,0.85)', // Body text
+        'muted-dark': 'rgba(186,214,235,0.4)',   // Secondary text
       },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],

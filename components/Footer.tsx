@@ -47,7 +47,7 @@ export default function Footer() {
               height={32}
               className="h-5 w-auto opacity-70 mb-5"
             />
-            <p className="text-xs text-muted/40 max-w-xs leading-relaxed mb-6">
+            <p className="text-xs text-muted max-w-xs leading-relaxed mb-6">
               {t('footer.description')}
             </p>
             <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted/30 hover:text-muted/60 transition-colors duration-200"
+                  className="text-muted-dark hover:text-muted transition-colors duration-200"
                   aria-label={social.name}
                 >
                   <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Products */}
           <div className="md:col-span-3">
-            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted/40 mb-4">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
               {t('footer.productsTitle')}
             </h3>
             <ul className="space-y-2">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200"
+                    className="text-xs text-muted hover:text-primary-text transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -89,17 +89,17 @@ export default function Footer() {
 
           {/* Company */}
           <div className="md:col-span-2">
-            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted/40 mb-4">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
               {t('footer.companyTitle')}
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200">
+                <Link href="/about" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200">
+                <Link href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   Launch App
                 </Link>
               </li>
@@ -108,22 +108,22 @@ export default function Footer() {
 
           {/* Connect */}
           <div className="md:col-span-2">
-            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted/40 mb-4">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
               Connect
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://x.com/convexoprotocol" target="_blank" rel="noopener noreferrer" className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200">
+                <a href="https://x.com/convexoprotocol" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   X / Twitter
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/convexo-protocol/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200">
+                <a href="https://www.linkedin.com/company/convexo-protocol/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Convexo-finance" target="_blank" rel="noopener noreferrer" className="text-xs text-muted/50 hover:text-primary-text transition-colors duration-200">
+                <a href="https://github.com/Convexo-finance" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   GitHub
                 </a>
               </li>
@@ -132,10 +132,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] text-muted/30 uppercase tracking-[0.15em]">
+          <p className="text-[10px] text-muted-dark uppercase tracking-[0.15em]">
             &copy; {new Date().getFullYear()} Convexo Protocol. {t('footer.copyright')}.
           </p>
-          <p className="text-[10px] text-muted/20 uppercase tracking-[0.15em]">
+          <p className="text-[10px] text-muted-dark uppercase tracking-[0.15em]">
             Institutional Financial Infrastructure
           </p>
         </div>

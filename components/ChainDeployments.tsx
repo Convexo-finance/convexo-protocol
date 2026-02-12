@@ -61,7 +61,7 @@ export default function ChainDeployments() {
                     />
                   )}
                 </div>
-                <span className="text-xs font-medium text-primary-text/60 group-hover:text-primary-text/80 transition-colors hidden sm:block">
+                <span className="text-xs font-medium text-primary-text/70 group-hover:text-primary-text transition-colors hidden sm:block">
                   {chain.name}
                 </span>
               </a>

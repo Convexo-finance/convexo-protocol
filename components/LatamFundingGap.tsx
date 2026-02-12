@@ -59,7 +59,7 @@ export default function LatamFundingGap() {
                   </div>
                   <div>
                     <h4 className="text-xs font-medium text-primary-text mb-0.5">{item.title}</h4>
-                    <p className="text-xs text-muted/50 leading-relaxed">{item.desc}</p>
+                    <p className="text-xs text-muted leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -81,7 +81,7 @@ export default function LatamFundingGap() {
                   </div>
                   <div>
                     <h4 className="text-xs font-medium text-primary-text mb-0.5">{item.title}</h4>
-                    <p className="text-xs text-muted/50 leading-relaxed">{item.desc}</p>
+                    <p className="text-xs text-muted leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -99,7 +99,7 @@ export default function LatamFundingGap() {
               <div key={index} className="text-center">
                 <div className="text-3xl font-medium text-data-blue mb-1">{stat.value}</div>
                 <div className="text-xs font-medium text-primary-text mb-1">{stat.label}</div>
-                <p className="text-[11px] text-muted/40">{stat.desc}</p>
+                <p className="text-[11px] text-muted-dark">{stat.desc}</p>
               </div>
             ))}
           </div>
