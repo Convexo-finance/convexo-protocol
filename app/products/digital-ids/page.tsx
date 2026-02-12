@@ -108,14 +108,14 @@ export default function DigitalIDsPage() {
                             href={provider.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-layer rounded-lg p-4 hover:bg-surface-hover transition-colors"
+                            className="bg-primary-text rounded-lg p-4 hover:opacity-90 transition-opacity"
                           >
                             <div className="relative w-20 h-10">
                               <Image
                                 src={provider.logo}
                                 alt={provider.alt}
                                 fill
-                                className="object-contain opacity-80"
+                                className="object-contain"
                               />
                             </div>
                           </Link>
@@ -140,15 +140,17 @@ export default function DigitalIDsPage() {
                               href={subTier.provider.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-block hover:opacity-70 transition-opacity"
+                              className="inline-block"
                             >
-                              <div className="relative w-16 h-8">
-                                <Image
-                                  src={subTier.provider.logo}
-                                  alt={subTier.provider.alt}
-                                  fill
-                                  className="object-contain opacity-80"
-                                />
+                              <div className="bg-primary-text rounded-lg p-3 hover:opacity-90 transition-opacity">
+                                <div className="relative w-16 h-8">
+                                  <Image
+                                    src={subTier.provider.logo}
+                                    alt={subTier.provider.alt}
+                                    fill
+                                    className="object-contain"
+                                  />
+                                </div>
                               </div>
                             </Link>
                           </div>

@@ -28,9 +28,9 @@ export default function Navbar() {
             <Image
               src="/branding/convexohorizontal.png"
               alt="Convexo"
-              width={140}
-              height={36}
-              className="h-6 w-auto opacity-90"
+              width={160}
+              height={40}
+              className="h-7 sm:h-8 w-auto opacity-90"
               priority
             />
           </Link>

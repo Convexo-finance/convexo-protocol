@@ -102,55 +102,36 @@ export default function TechnologyPage() {
             <h1 className="heading-xl text-primary-text mb-6">
               Built on Proven Infrastructure
             </h1>
-            <p className="text-base text-muted-light leading-relaxed">
+            <p className="text-base text-muted-light leading-relaxed mb-8">
               Convexo Protocol integrates best-in-class blockchain infrastructure,
               institutional custody, and compliance providers to deliver sovereign-grade
               financial services.
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Blockchain Networks */}
-      <section className="section-padding border-b border-border">
-        <div className="section-container">
-          <div className="mb-12">
-            <div className="heading-section mb-4">Blockchain Networks</div>
-            <h2 className="heading-lg text-primary-text mb-4">
-              Multi-Chain Architecture
-            </h2>
-            <p className="body-text max-w-xl">
-              Deployed across Ethereum, Base, and UniChain for maximum accessibility
-              and efficiency.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {chains.map((chain, index) => (
-              <div key={index} className="card p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Image
-                    src={chain.logo}
-                    alt={chain.name}
-                    width={64}
-                    height={64}
-                    className="object-contain opacity-80"
-                  />
+            {/* Chains - Lighter Display */}
+            <div className="inline-flex items-center gap-3 flex-wrap">
+              <span className="text-xs text-muted uppercase tracking-[0.15em]">Deployed on</span>
+              {chains.map((chain, index) => (
+                <div key={index} className="flex items-center gap-2 bg-layer rounded-lg px-3 py-2">
+                  <div className="w-5 h-5 flex items-center justify-center">
+                    <Image
+                      src={chain.logo}
+                      alt={chain.name}
+                      width={20}
+                      height={20}
+                      className="object-contain opacity-70"
+                    />
+                  </div>
+                  <span className="text-xs text-primary-text font-medium">{chain.name}</span>
                 </div>
-                <h3 className="text-base font-medium text-primary-text mb-2">
-                  {chain.name}
-                </h3>
-                <p className="text-xs text-muted-light leading-relaxed">
-                  {chain.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Infrastructure Providers */}
-      <section className="section-padding">
+      <section className="section-padding border-b border-border">
         <div className="section-container">
           <div className="mb-12">
             <div className="heading-section mb-4">Infrastructure Partners</div>
@@ -196,7 +177,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* Technical Stack */}
-      <section className="section-padding border-t border-border">
+      <section className="section-padding">
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
             <div className="heading-section mb-6 text-center">Technical Architecture</div>
