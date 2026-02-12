@@ -32,21 +32,6 @@ export default function Products() {
       tag: 'Currency',
     },
     {
-      titleKey: 'products.treasury.title',
-      descriptionKey: 'products.treasury.description',
-      featureKeys: [
-        'products.treasury.feature1',
-        'products.treasury.feature2',
-        'products.treasury.feature3',
-        'products.treasury.feature4',
-      ],
-      href: '/products/treasury',
-      tag: 'Treasury',
-    },
-  ];
-
-  const services = [
-    {
       titleKey: 'products.eloans.title',
       descriptionKey: 'products.eloans.description',
       featureKeys: [
@@ -57,6 +42,21 @@ export default function Products() {
       ],
       href: '/products/eloans',
       tag: 'Credit',
+    },
+  ];
+
+  const services = [
+    {
+      titleKey: 'products.treasury.title',
+      descriptionKey: 'products.treasury.description',
+      featureKeys: [
+        'products.treasury.feature1',
+        'products.treasury.feature2',
+        'products.treasury.feature3',
+        'products.treasury.feature4',
+      ],
+      href: '/products/treasury',
+      tag: 'Treasury',
     },
     {
       titleKey: 'products.realEstateVaults.title',
