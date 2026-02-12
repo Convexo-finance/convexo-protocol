@@ -24,11 +24,11 @@
     "chainlinkSub": "Oracles",
     "badge": "Institutional Financial Infrastructure",
     "viewProducts": "View Products",
-    "networks": "Networks",
+    "networks": "Accumulated Volume Traded",
     "settlement": "Settlement",
     "coverage": "Coverage",
     "availability": "Availability",
-    "networksValue": "Ethereum, Base, UniChain",
+    "networksValue": "+3MM USD",
     "settlementValue": "~15 minutes",
     "coverageValue": "20 countries",
     "availabilityValue": "24 / 7 / 365"

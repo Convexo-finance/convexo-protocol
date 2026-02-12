@@ -24,11 +24,11 @@
     "chainlinkSub": "Oráculos",
     "badge": "Infraestructura Financiera Institucional",
     "viewProducts": "Ver Productos",
-    "networks": "Redes",
+    "networks": "Volumen Acumulado Operado",
     "settlement": "Liquidación",
     "coverage": "Cobertura",
     "availability": "Disponibilidad",
-    "networksValue": "Ethereum, Base, UniChain",
+    "networksValue": "+3MM USD",
     "settlementValue": "~15 minutos",
     "coverageValue": "20 países",
     "availabilityValue": "24 / 7 / 365"
