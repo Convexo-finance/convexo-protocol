@@ -203,8 +203,8 @@ const translations = {
         feature3: 'Institutional-grade asset management',
         feature4: 'Transparent blockchain-based valuations',
       },
-      p2pay: {
-        title: 'P2PAY',
+      p2pai: {
+        title: 'P2P-AI',
         description: 'Agentic P2P marketplace where an AI agent acts as trusted arbitrator, holding funds in escrow for secure crypto-fiat trades.',
         feature1: 'AI agent arbitrator with Coinbase wallet',
         feature2: 'Telegram-based trading interface',
@@ -314,9 +314,9 @@ const translations = {
         learnVerification: 'Learn About Verification',
       },
     },
-    p2pay: {
+    p2pai: {
       hero: {
-        title: 'P2PAY',
+        title: 'P2P-AI',
         subtitle: 'AI-powered peer-to-peer marketplace with automated escrow and trustless arbitration',
       },
       requirement: {
@@ -632,8 +632,8 @@ const translations = {
         feature3: 'Gestión de activos de grado institucional',
         feature4: 'Valuaciones transparentes basadas en blockchain',
       },
-      p2pay: {
-        title: 'P2PAY',
+      p2pai: {
+        title: 'P2P-AI',
         description: 'Mercado P2P agéntico donde un agente IA actúa como árbitro confiable, manteniendo fondos en garantía para intercambios seguros cripto-fiat.',
         feature1: 'Agente árbitro IA con billetera Coinbase',
         feature2: 'Interfaz de comercio basada en Telegram',
@@ -838,9 +838,9 @@ const translations = {
         learnVerification: 'Conocer Sobre Verificación',
       },
     },
-    p2pay: {
+    p2pai: {
       hero: {
-        title: 'P2PAY',
+        title: 'P2P-AI',
         subtitle: 'Mercado peer-to-peer impulsado por IA con garantía automatizada y arbitraje sin confianza',
       },
       requirement: {

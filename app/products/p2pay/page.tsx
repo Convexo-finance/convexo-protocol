@@ -5,53 +5,53 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-export default function P2PayPage() {
+export default function P2PAIPage() {
   const { t } = useLanguage();
 
   const features = [
     {
-      titleKey: 'p2pay.features.agent.title',
-      descriptionKey: 'p2pay.features.agent.description',
+      titleKey: 'p2pai.features.agent.title',
+      descriptionKey: 'p2pai.features.agent.description',
     },
     {
-      titleKey: 'p2pay.features.reputation.title',
-      descriptionKey: 'p2pay.features.reputation.description',
+      titleKey: 'p2pai.features.reputation.title',
+      descriptionKey: 'p2pai.features.reputation.description',
     },
     {
-      titleKey: 'p2pay.features.escrow.title',
-      descriptionKey: 'p2pay.features.escrow.description',
+      titleKey: 'p2pai.features.escrow.title',
+      descriptionKey: 'p2pai.features.escrow.description',
     },
     {
-      titleKey: 'p2pay.features.telegram.title',
-      descriptionKey: 'p2pay.features.telegram.description',
+      titleKey: 'p2pai.features.telegram.title',
+      descriptionKey: 'p2pai.features.telegram.description',
     },
   ];
 
   const howItWorks = [
     {
       step: 1,
-      titleKey: 'p2pay.howItWorks.step1.title',
-      descriptionKey: 'p2pay.howItWorks.step1.description',
+      titleKey: 'p2pai.howItWorks.step1.title',
+      descriptionKey: 'p2pai.howItWorks.step1.description',
     },
     {
       step: 2,
-      titleKey: 'p2pay.howItWorks.step2.title',
-      descriptionKey: 'p2pay.howItWorks.step2.description',
+      titleKey: 'p2pai.howItWorks.step2.title',
+      descriptionKey: 'p2pai.howItWorks.step2.description',
     },
     {
       step: 3,
-      titleKey: 'p2pay.howItWorks.step3.title',
-      descriptionKey: 'p2pay.howItWorks.step3.description',
+      titleKey: 'p2pai.howItWorks.step3.title',
+      descriptionKey: 'p2pai.howItWorks.step3.description',
     },
     {
       step: 4,
-      titleKey: 'p2pay.howItWorks.step4.title',
-      descriptionKey: 'p2pay.howItWorks.step4.description',
+      titleKey: 'p2pai.howItWorks.step4.title',
+      descriptionKey: 'p2pai.howItWorks.step4.description',
     },
     {
       step: 5,
-      titleKey: 'p2pay.howItWorks.step5.title',
-      descriptionKey: 'p2pay.howItWorks.step5.description',
+      titleKey: 'p2pai.howItWorks.step5.title',
+      descriptionKey: 'p2pai.howItWorks.step5.description',
     },
   ];
 
@@ -67,12 +67,12 @@ export default function P2PayPage() {
           
           <div className="relative z-10 section-container">
             <div className="max-w-2xl">
-              <div className="heading-section mb-6">P2Pay</div>
+              <div className="heading-section mb-6">P2P-AI</div>
               <h1 className="heading-xl text-primary-text mb-6">
-                {t('p2pay.hero.title')}
+                {t('p2pai.hero.title')}
               </h1>
               <p className="text-base text-muted-light leading-relaxed mb-8">
-                {t('p2pay.hero.subtitle')}
+                {t('p2pai.hero.subtitle')}
               </p>
 
               {/* Key Stats */}
@@ -92,7 +92,7 @@ export default function P2PayPage() {
               </div>
 
               <div className="inline-block bg-authority-blue/10 border-l-2 border-authority-blue px-4 py-3 rounded">
-                <p className="text-sm font-medium text-primary-text">{t('p2pay.requirement.tier1')}</p>
+                <p className="text-sm font-medium text-primary-text">{t('p2pai.requirement.tier1')}</p>
               </div>
             </div>
           </div>
@@ -104,18 +104,18 @@ export default function P2PayPage() {
             <div className="max-w-3xl mx-auto mb-12 text-center">
               <div className="heading-section mb-4">Process</div>
               <h2 className="heading-lg text-primary-text mb-4">
-                {t('p2pay.howItWorks.title')}
+                {t('p2pai.howItWorks.title')}
               </h2>
               <p className="body-text">
-                {t('p2pay.howItWorks.subtitle')}
+                {t('p2pai.howItWorks.subtitle')}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
               {howItWorks.map((step, index) => (
                 <div key={index} className="card p-5 text-center">
-                  <div className="w-10 h-10 rounded bg-authority-blue/10 flex items-center justify-center mx-auto mb-3">
-                    <span className="text-base font-medium text-authority-blue">{step.step}</span>
+                  <div className="w-10 h-10 rounded bg-primary-text flex items-center justify-center mx-auto mb-3">
+                    <span className="text-base font-medium text-base">{step.step}</span>
                   </div>
                   <h3 className="text-sm font-medium text-primary-text mb-2">
                     {t(step.titleKey)}
@@ -135,10 +135,10 @@ export default function P2PayPage() {
             <div className="max-w-3xl mx-auto mb-12 text-center">
               <div className="heading-section mb-4">Features</div>
               <h2 className="heading-lg text-primary-text mb-4">
-                {t('p2pay.features.title')}
+                {t('p2pai.features.title')}
               </h2>
               <p className="body-text">
-                {t('p2pay.features.subtitle')}
+                {t('p2pai.features.subtitle')}
               </p>
             </div>
 
@@ -163,10 +163,10 @@ export default function P2PayPage() {
             <div className="max-w-3xl mx-auto mb-12 text-center">
               <div className="heading-section mb-4">Currencies</div>
               <h2 className="heading-lg text-primary-text mb-4">
-                {t('p2pay.currencies.title')}
+                {t('p2pai.currencies.title')}
               </h2>
               <p className="body-text">
-                {t('p2pay.currencies.subtitle')}
+                {t('p2pai.currencies.subtitle')}
               </p>
             </div>
 
@@ -188,10 +188,10 @@ export default function P2PayPage() {
           <div className="section-container">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="heading-lg text-primary-text mb-4">
-                {t('p2pay.cta.title')}
+                {t('p2pai.cta.title')}
               </h2>
               <p className="body-text mb-8">
-                {t('p2pay.cta.description')}
+                {t('p2pai.cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -203,13 +203,13 @@ export default function P2PayPage() {
                   <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
                   </svg>
-                  {t('p2pay.cta.startTrading')}
+                  {t('p2pai.cta.startTrading')}
                 </Link>
                 <Link
                   href="/products/digital-ids"
                   className="btn-secondary inline-flex items-center justify-center"
                 >
-                  {t('p2pay.cta.getVerified')}
+                  {t('p2pai.cta.getVerified')}
                 </Link>
               </div>
             </div>

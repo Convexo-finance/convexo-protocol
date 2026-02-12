@@ -13,7 +13,7 @@ export default function Footer() {
     { name: 'Stablecoins', href: '/products/stablecoins' },
     { name: 'E-LOANS', href: '/products/eloans' },
     { name: 'Real Estate Vaults', href: '/products/real-estate-vaults' },
-    { name: 'P2Pay', href: '/products/p2pay' },
+    { name: 'P2P-AI', href: '/products/p2pay' },
   ];
 
   const socialLinks = [
