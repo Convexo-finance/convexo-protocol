@@ -163,15 +163,11 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden relative z-[102] p-2 text-primary-text/70 hover:text-primary-text transition-colors"
+            className="lg:hidden relative z-[102] p-2 text-primary-text/70 hover:text-primary-text"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
@@ -192,21 +188,6 @@ export default function Navbar() {
             className="fixed top-0 right-0 bottom-0 w-[320px] max-w-[85vw] bg-base border-l border-border shadow-2xl overflow-y-auto z-[101]"
             style={{ height: '100dvh' }}
           >
-            {/* Header */}
-            <div className="bg-base border-b border-border">
-              <div className="flex items-center justify-between p-5">
-                <span className="text-lg font-semibold text-primary-text tracking-wide">MENU</span>
-                <button
-                  onClick={() => setIsMenuOpen(false)}
-                  className="p-2 -mr-2 text-primary-text/60 hover:text-primary-text hover:bg-surface-hover rounded-lg transition-colors"
-                  aria-label="Close menu"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
 
             {/* Navigation Links */}
             <div className="px-4 py-6 space-y-2">
