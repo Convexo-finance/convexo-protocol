@@ -7,11 +7,14 @@ import { useTranslations } from 'next-intl';
 export default function Footer() {
   const t = useTranslations();
 
-  const productLinks = [
+  const products = [
     { nameKey: 'products.digitalIds.title', href: '/products/digital-ids' },
-    { nameKey: 'products.treasury.title', href: '/products/treasury' },
     { nameKey: 'products.stablecoins.title', href: '/products/stablecoins' },
     { nameKey: 'products.eloans.title', href: '/products/eloans' },
+  ];
+
+  const services = [
+    { nameKey: 'products.treasury.title', href: '/products/treasury' },
     { nameKey: 'products.realEstateVaults.title', href: '/products/real-estate-vaults' },
     { nameKey: 'products.p2pai.title', href: '/products/p2pay' },
   ];
@@ -39,7 +42,7 @@ export default function Footer() {
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <Image
               src="/branding/convexoblanco.png"
               alt="Convexo"
@@ -69,12 +72,12 @@ export default function Footer() {
           </div>
 
           {/* Products */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
               {t('footer.productsTitle')}
             </h3>
             <ul className="space-y-2">
-              {productLinks.map((item) => (
+              {products.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -87,22 +90,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Services */}
           <div className="md:col-span-2">
             <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
-              {t('footer.companyTitle')}
+              {t('footer.servicesTitle')}
             </h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
-                  {t('footer.about')}
-                </Link>
-              </li>
-              <li>
-                <a href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
-                  {t('footer.launchApp')}
-                </a>
-              </li>
+              {services.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-xs text-muted hover:text-primary-text transition-colors duration-200"
+                  >
+                    {t(item.nameKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Compliance */}
+          <div className="md:col-span-2">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-dark mb-4">
+              {t('footer.legalComplianceTitle')}
+            </h3>
+            <ul className="space-y-2">
               <li>
                 <Link href="/privacy" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   {t('footer.privacy')}
@@ -111,6 +123,11 @@ export default function Footer() {
               <li>
                 <Link href="/terms" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   {t('footer.terms')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/aml-cft" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
+                  {t('footer.amlCft')}
                 </Link>
               </li>
             </ul>

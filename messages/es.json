@@ -180,14 +180,87 @@
   "footer": {
     "description": "Soluciones DeFi institucionales conectando empresas LATAM con mercados de capital globales.",
     "productsTitle": "Productos",
-    "companyTitle": "Empresa",
+    "servicesTitle": "Servicios",
+    "legalComplianceTitle": "Cumplimiento Legal",
     "copyright": "Todos los derechos reservados",
     "about": "Nosotros",
     "launchApp": "Abrir App",
     "privacy": "Política de Privacidad",
     "terms": "Términos y Condiciones",
+    "amlCft": "Política AML/CFT",
     "connect": "Conectar",
     "tagline": "Infraestructura Financiera Institucional"
+  },
+  "amlCft": {
+    "title": "Política AML/CFT",
+    "subtitle": "Nuestro compromiso con el cumplimiento Anti-Lavado de Dinero y Contra-Financiamiento del Terrorismo",
+    "overview": {
+      "title": "Resumen",
+      "description": "Convexo Protocol está comprometido con mantener los más altos estándares de cumplimiento con las regulaciones Anti-Lavado de Dinero (AML) y Contra-Financiamiento del Terrorismo (CFT). Esta política describe nuestro enfoque integral para prevenir actividades ilícitas y garantizar el cumplimiento regulatorio en todas nuestras operaciones."
+    },
+    "aml": {
+      "title": "Política Anti-Lavado de Dinero",
+      "description": "Implementamos medidas AML robustas para detectar y prevenir actividades de lavado de dinero dentro de nuestro ecosistema. Nuestro enfoque incluye evaluación integral de riesgos, debida diligencia del cliente y monitoreo continuo de todas las transacciones.",
+      "requirements": {
+        "title": "Requisitos AML",
+        "req1": "Verificación de Identidad del Cliente a través de niveles KYC progresivos",
+        "req2": "Verificación de origen de fondos para transacciones de alto valor",
+        "req3": "Monitoreo continuo de transacciones y reporte de actividad sospechosa",
+        "req4": "Revisión y actualización regular de perfiles de riesgo del cliente"
+      }
+    },
+    "cft": {
+      "title": "Contra-Financiamiento del Terrorismo",
+      "description": "Nuestras medidas CFT están diseñadas para identificar y prevenir cualquier actividad de financiamiento relacionada con el terrorismo. Mantenemos estricto cumplimiento con sanciones internacionales y listas de vigilancia.",
+      "measures": {
+        "title": "Medidas CFT",
+        "measure1": "Verificación contra listas de sanciones internacionales (OFAC, ONU, UE)",
+        "measure2": "Debida diligencia reforzada para jurisdicciones de alto riesgo",
+        "measure3": "Monitoreo en tiempo real de patrones sospechosos en transacciones",
+        "measure4": "Reporte inmediato de cualquier actividad sospechosa de financiamiento terrorista"
+      }
+    },
+    "kyc": {
+      "title": "Requisitos Conozca a su Cliente (KYC)",
+      "description": "Nuestro sistema KYC progresivo asegura la identificación adecuada del cliente mientras mantiene la privacidad del usuario a través de pruebas de conocimiento cero y técnicas criptográficas avanzadas.",
+      "individual": {
+        "title": "Usuarios Individuales",
+        "req1": "Verificación de identificación emitida por el gobierno",
+        "req2": "Verificación de comprobante de domicilio",
+        "req3": "Verificación mejorada para límites de transacción más altos"
+      },
+      "enterprise": {
+        "title": "Clientes Empresariales",
+        "req1": "Documentos de registro corporativo",
+        "req2": "Identificación de beneficiarios reales",
+        "req3": "Licencia comercial y aprobaciones regulatorias",
+        "req4": "Estados financieros e informes de auditoría"
+      }
+    },
+    "monitoring": {
+      "title": "Monitoreo de Transacciones y Reportes",
+      "description": "Empleamos análisis avanzados y algoritmos de aprendizaje automático para monitorear todas las transacciones en busca de actividades sospechosas. Nuestro sistema de monitoreo opera 24/7 para garantizar la detección en tiempo real de actividades potencialmente ilícitas.",
+      "activities": {
+        "title": "Actividades de Monitoreo",
+        "activity1": "Análisis de transacciones en tiempo real usando puntuación de riesgo con IA",
+        "activity2": "Reconocimiento de patrones para comportamientos de transacción inusuales",
+        "activity3": "Alertas automatizadas para transacciones de alto riesgo",
+        "activity4": "Reportes regulares a unidades de inteligencia financiera relevantes"
+      }
+    },
+    "compliance": {
+      "title": "Cumplimiento y Actualizaciones Regulares",
+      "description": "Esta política se revisa y actualiza regularmente para garantizar el cumplimiento con los requisitos regulatorios en evolución en todas las jurisdicciones donde operamos.",
+      "updates": "Última actualización: Marzo 2026. Esta política está sujeta a cambios según evolucionen las regulaciones y se expandan nuestros servicios."
+    },
+    "contact": {
+      "title": "Contacto de Cumplimiento",
+      "description": "Para cualquier consulta relacionada con cumplimiento o para reportar actividades sospechosas, por favor contacte nuestro equipo de cumplimiento:",
+      "email": {
+        "label": "Email:",
+        "value": "compliance@convexo.xyz"
+      }
+    }
   },
   "chains": {
     "deployed": "Desplegado En",

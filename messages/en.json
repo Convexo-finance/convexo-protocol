@@ -180,14 +180,87 @@
   "footer": {
     "description": "Institutional DeFi solutions connecting LATAM enterprises with global capital markets.",
     "productsTitle": "Products",
-    "companyTitle": "Company",
+    "servicesTitle": "Services",
+    "legalComplianceTitle": "Legal Compliance",
     "copyright": "All rights reserved",
     "about": "About",
     "launchApp": "Launch App",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
+    "amlCft": "AML/CFT Policy",
     "connect": "Connect",
     "tagline": "Institutional Financial Infrastructure"
+  },
+  "amlCft": {
+    "title": "AML/CFT Policy",
+    "subtitle": "Our commitment to Anti-Money Laundering and Counter-Financing of Terrorism compliance",
+    "overview": {
+      "title": "Overview",
+      "description": "Convexo Protocol is committed to maintaining the highest standards of compliance with Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) regulations. This policy outlines our comprehensive approach to preventing illicit activities and ensuring regulatory compliance across all our operations."
+    },
+    "aml": {
+      "title": "Anti-Money Laundering Policy",
+      "description": "We implement robust AML measures to detect and prevent money laundering activities within our ecosystem. Our approach includes comprehensive risk assessment, customer due diligence, and ongoing monitoring of all transactions.",
+      "requirements": {
+        "title": "AML Requirements",
+        "req1": "Customer Identity Verification through progressive KYC tiers",
+        "req2": "Source of funds verification for high-value transactions",
+        "req3": "Ongoing transaction monitoring and suspicious activity reporting",
+        "req4": "Regular review and updating of customer risk profiles"
+      }
+    },
+    "cft": {
+      "title": "Counter-Financing of Terrorism",
+      "description": "Our CFT measures are designed to identify and prevent any financing activities related to terrorism. We maintain strict compliance with international sanctions and watchlists.",
+      "measures": {
+        "title": "CFT Measures",
+        "measure1": "Screening against international sanctions lists (OFAC, UN, EU)",
+        "measure2": "Enhanced due diligence for high-risk jurisdictions",
+        "measure3": "Real-time transaction monitoring for suspicious patterns",
+        "measure4": "Immediate reporting of any suspected terrorist financing activities"
+      }
+    },
+    "kyc": {
+      "title": "Know Your Customer (KYC) Requirements",
+      "description": "Our progressive KYC system ensures proper customer identification while maintaining user privacy through zero-knowledge proofs and advanced cryptographic techniques.",
+      "individual": {
+        "title": "Individual Users",
+        "req1": "Government-issued ID verification",
+        "req2": "Proof of address verification",
+        "req3": "Enhanced verification for higher transaction limits"
+      },
+      "enterprise": {
+        "title": "Enterprise Clients",
+        "req1": "Corporate registration documents",
+        "req2": "Beneficial ownership identification",
+        "req3": "Business license and regulatory approvals",
+        "req4": "Financial statements and audit reports"
+      }
+    },
+    "monitoring": {
+      "title": "Transaction Monitoring and Reporting",
+      "description": "We employ advanced analytics and machine learning algorithms to monitor all transactions for suspicious activities. Our monitoring system operates 24/7 to ensure real-time detection of potentially illicit activities.",
+      "activities": {
+        "title": "Monitoring Activities",
+        "activity1": "Real-time transaction analysis using AI-powered risk scoring",
+        "activity2": "Pattern recognition for unusual transaction behaviors",
+        "activity3": "Automated alerts for high-risk transactions",
+        "activity4": "Regular reporting to relevant financial intelligence units"
+      }
+    },
+    "compliance": {
+      "title": "Compliance and Regular Updates",
+      "description": "This policy is regularly reviewed and updated to ensure compliance with evolving regulatory requirements across all jurisdictions where we operate.",
+      "updates": "Last updated: March 2026. This policy is subject to change as regulations evolve and our services expand."
+    },
+    "contact": {
+      "title": "Compliance Contact",
+      "description": "For any compliance-related inquiries or to report suspicious activities, please contact our compliance team:",
+      "email": {
+        "label": "Email:",
+        "value": "compliance@convexo.xyz"
+      }
+    }
   },
   "chains": {
     "deployed": "Deployed On",
