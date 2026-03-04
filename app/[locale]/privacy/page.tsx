@@ -83,16 +83,24 @@ export default async function PrivacyPage({ params }: Props) {
                     <p className="text-sm text-muted-light leading-relaxed">
                       {t(`sections.${key}.content`)}
                     </p>
-                    {t.raw(`sections.${key}.items`) && (
-                      <ul className="space-y-2 mt-3">
-                        {(t.raw(`sections.${key}.items`) as string[]).map((item: string, i: number) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-muted-light">
-                            <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-authority-blue/60" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    {(() => {
+                      try {
+                        const items = t.raw(`sections.${key}.items`) as string[];
+                        if (!Array.isArray(items) || items.length === 0) return null;
+                        return (
+                          <ul className="space-y-2 mt-3">
+                            {items.map((item: string, i: number) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-light">
+                                <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-authority-blue/60" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        );
+                      } catch {
+                        return null;
+                      }
+                    })()}
                   </div>
                 </div>
               ))}
