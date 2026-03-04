@@ -184,6 +184,8 @@
     "copyright": "All rights reserved",
     "about": "About",
     "launchApp": "Launch App",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
     "connect": "Connect",
     "tagline": "Institutional Financial Infrastructure"
   },
@@ -455,6 +457,304 @@
       "description": "Connect with our AI agent on Telegram and experience trustless P2P trading",
       "startTrading": "Start Trading on Telegram",
       "getVerified": "Get Verified First"
+    }
+  },
+  "privacy": {
+    "badge": "Legal",
+    "title": "Privacy Policy",
+    "subtitle": "How Convexo Protocol collects, uses, and protects your personal information.",
+    "lastUpdated": "Last Updated",
+    "intro": "Convexo Protocol SAS (\"Convexo\", \"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services, including our blockchain-based financial infrastructure for institutional clients in Latin America. Please read this policy carefully. By accessing or using our services, you agree to the terms of this Privacy Policy.",
+    "sections": {
+      "dataCollection": {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, information collected automatically through your use of our services, and information from third-party verification providers.",
+        "items": [
+          "Identity information: full name, date of birth, nationality, and government-issued ID documents for KYC/KYB verification",
+          "Contact information: email address, phone number, and physical address",
+          "Business information: company name, registration number, business type, financial statements, and ownership structure",
+          "Wallet information: blockchain wallet addresses associated with your account",
+          "Transaction data: history of trades, swaps, OTC orders, and on-chain interactions",
+          "Device and usage data: IP address, browser type, operating system, and usage patterns",
+          "Verification data: biometric data processed by third-party providers (Veriff, Sumsub) for identity verification"
+        ]
+      },
+      "dataUse": {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to provide, maintain, and improve our services, comply with legal obligations, and protect against fraud.",
+        "items": [
+          "To verify your identity and comply with KYC/KYB and AML regulatory requirements",
+          "To process transactions and provide access to our DeFi services",
+          "To issue and manage NFT-based digital identity certificates (Convexo Passport, LP NFTs, E-Credit NFTs)",
+          "To generate AI-powered credit scores for business clients",
+          "To send service notifications, security alerts, and administrative messages",
+          "To detect, investigate, and prevent fraudulent or illegal activity",
+          "To comply with applicable laws in jurisdictions where we operate including the United States, Colombia, and Hong Kong",
+          "To improve our platform and develop new features"
+        ]
+      },
+      "dataSharing": {
+        "title": "Information Sharing and Disclosure",
+        "content": "We do not sell, trade, or otherwise transfer your personal information to outside parties except as described in this policy.",
+        "items": [
+          "Verification providers: Veriff (individual KYC) and Sumsub (business KYB) receive identity documents and biometric data solely for verification purposes",
+          "Blockchain networks: wallet addresses and transaction data are inherently public on-chain (Base, Ethereum, UniChain)",
+          "Legal compliance: we may disclose information when required by law, subpoena, or government authority",
+          "Business transfers: in the event of a merger or acquisition, your information may be transferred as a business asset",
+          "Consent: we may share information with your explicit consent for purposes not listed here"
+        ]
+      },
+      "blockchain": {
+        "title": "Blockchain and On-Chain Data",
+        "content": "Our services operate on public blockchains. Certain information is permanently recorded on-chain and cannot be deleted or modified. You should be aware of the following when using our blockchain services.",
+        "items": [
+          "Wallet addresses, transaction amounts, and timestamps are publicly visible on Base, Ethereum, and UniChain",
+          "NFT minting events and transfers are permanently recorded on-chain",
+          "Zero-knowledge proofs used in zkPassport verification protect your underlying identity data while confirming verification status",
+          "On-chain data is outside our control and cannot be erased upon request",
+          "Smart contract interactions are immutable and cannot be reversed"
+        ]
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction.",
+        "items": [
+          "Encryption of sensitive data at rest and in transit using AES-256 and TLS 1.3",
+          "Multi-signature wallet infrastructure for institutional asset custody",
+          "JWT-based authentication with short-lived access tokens and secure refresh token rotation",
+          "Redis-based token blacklisting for immediate session invalidation",
+          "Regular security audits and penetration testing",
+          "Strict access controls limiting employee access to personal data on a need-to-know basis"
+        ]
+      },
+      "userRights": {
+        "title": "Your Rights and Choices",
+        "content": "Depending on your jurisdiction, you may have certain rights regarding your personal information. We honor rights under GDPR, Colombian Law 1581 of 2012, and other applicable privacy regulations.",
+        "items": [
+          "Right of Access: request a copy of the personal data we hold about you",
+          "Right of Rectification: request correction of inaccurate or incomplete data",
+          "Right of Erasure: request deletion of your personal data where legally permissible (note: on-chain data cannot be deleted)",
+          "Right to Restrict Processing: request limitation of how we process your data",
+          "Right to Data Portability: receive your data in a structured, machine-readable format",
+          "Right to Object: object to processing of your personal data for certain purposes",
+          "Right to Withdraw Consent: withdraw consent where processing is based on consent",
+          "To exercise any of these rights, contact us at legal@convexo.xyz"
+        ]
+      },
+      "cookies": {
+        "title": "Cookies and Tracking Technologies",
+        "content": "We use cookies and similar tracking technologies to enhance your experience on our platform and analyze usage patterns.",
+        "items": [
+          "Essential cookies: necessary for the platform to function, including session management and security",
+          "Analytics cookies: help us understand how visitors interact with our platform (we use privacy-respecting analytics tools)",
+          "Preference cookies: remember your language and display preferences",
+          "You can control cookies through your browser settings; disabling essential cookies may affect platform functionality"
+        ]
+      },
+      "retention": {
+        "title": "Data Retention",
+        "content": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy and to comply with legal obligations.",
+        "items": [
+          "KYC/KYB verification records: minimum 5 years after account closure as required by AML regulations",
+          "Transaction records: minimum 7 years for tax and regulatory compliance",
+          "Account information: retained for the duration of your account and 3 years thereafter",
+          "Communication records: 2 years from the date of communication",
+          "On-chain data: permanently stored on the blockchain and cannot be deleted"
+        ]
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "content": "Our platform integrates with third-party services that have their own privacy policies. We encourage you to review the privacy practices of these providers.",
+        "items": [
+          "Veriff — Individual identity verification: veriff.com/privacy-policy",
+          "Sumsub — Business KYB verification: sumsub.com/privacy-notice",
+          "Chainlink — Decentralized oracle data: chain.link/privacy-policy",
+          "Uniswap — Decentralized exchange infrastructure: uniswap.org/privacy-policy",
+          "Pinata — IPFS document storage: pinata.cloud/privacy",
+          "Resend — Transactional email delivery"
+        ]
+      },
+      "changes": {
+        "title": "Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of material changes by posting the new policy on our website and updating the 'Last Updated' date. For significant changes, we will provide additional notice via email or in-platform notification. Your continued use of our services after the effective date of any changes constitutes your acceptance of the updated policy."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact our Data Protection team.",
+        "items": [
+          "Email: legal@convexo.xyz",
+          "Colombia: Calle 36 #128-321, Zona Franca Zonaamerica, Cali, Valle del Cauca",
+          "United States: 159 North Wolcott Street, Suite 133, Casper, WY",
+          "Hong Kong: Spaces, 8 Queens Road East, Hong Kong",
+          "We will respond to all legitimate requests within 30 days"
+        ]
+      }
+    },
+    "contactCta": {
+      "title": "Questions About Privacy?",
+      "description": "Our Data Protection team is available to answer any questions about how we handle your personal information."
+    }
+  },
+  "terms": {
+    "badge": "Legal",
+    "title": "Terms and Conditions",
+    "subtitle": "Please read these terms carefully before using the Convexo Protocol platform and services.",
+    "lastUpdated": "Last Updated",
+    "intro": "These Terms and Conditions (\"Terms\") constitute a legally binding agreement between you (\"User\", \"you\") and Convexo Protocol SAS (\"Convexo\", \"we\", \"our\", \"us\"), a company incorporated in Colombia with registered address at Calle 36 #128-321, Zona Franca Zonaamerica, Cali, Valle del Cauca. By accessing or using our platform, smart contracts, digital identity system, or any associated services, you agree to be bound by these Terms. If you do not agree, do not use our services.",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By creating an account, connecting a wallet, minting a Digital Identity NFT, or otherwise using Convexo Protocol services, you confirm that you have read, understood, and agree to these Terms, our Privacy Policy, and any additional guidelines or rules posted on our platform. These Terms may be updated periodically, and your continued use constitutes acceptance of any changes."
+      },
+      "eligibility": {
+        "title": "Eligibility and Account Requirements",
+        "content": "To use Convexo Protocol services, you must meet the following eligibility requirements:",
+        "items": [
+          "Be at least 18 years of age",
+          "Have legal capacity to enter into binding contracts in your jurisdiction",
+          "Not be a resident or citizen of a jurisdiction subject to comprehensive OFAC sanctions (including Cuba, Iran, North Korea, Syria, and the Crimea region)",
+          "Not be listed on any government sanctions list or classified as a Politically Exposed Person (PEP) without prior disclosure",
+          "Be acting on your own behalf or be duly authorized to act on behalf of a legal entity",
+          "Have successfully completed the required verification tier for the services you wish to access"
+        ]
+      },
+      "services": {
+        "title": "Description of Services",
+        "content": "Convexo Protocol provides a suite of institutional DeFi services built on blockchain infrastructure. Our services include:",
+        "items": [
+          "Digital Identity (NFTs): Progressive KYC/KYB verification with Convexo Passport (Tier 1), LP NFTs for individuals and businesses (Tier 2), and E-Credit NFT for credit-scored businesses (Tier 3)",
+          "Digital Asset Treasury: Swaps via Uniswap V4 compliant liquidity pools, local stablecoin monetization via Chainlink CCIP, and OTC trading services",
+          "Tokenized Corporate Bonds: Access to international funding through blockchain-based corporate bond issuance for verified business clients",
+          "E-LOANS: Electronic credit and contract services using EIP-4626 vaults with minimum 12% APY, requiring Tier 3 verification",
+          "Real Estate Vaults: Tokenized fractional real estate investment products requiring Tier 2 verification",
+          "P2P-AI: AI-powered peer-to-peer marketplace with automated escrow via Telegram, requiring Tier 1 verification",
+          "Local Stablecoins: ECOP (Colombian Peso stablecoin) and other LATAM-focused stablecoins"
+        ]
+      },
+      "verification": {
+        "title": "Identity Verification and KYC/KYB",
+        "content": "Access to certain services requires successful completion of our identity verification process. You agree to:",
+        "items": [
+          "Provide accurate, current, and complete information during the verification process",
+          "Promptly update your information if it changes",
+          "Submit genuine, unaltered documents for identity verification",
+          "Consent to biometric processing by our third-party providers (Veriff for individuals, Sumsub for businesses) for KYC/KYB purposes",
+          "Allow us to perform ongoing monitoring for AML and sanctions compliance",
+          "Understand that false information may result in immediate account termination and may be reported to relevant authorities",
+          "Accept that verification decisions are final and subject to our compliance policies"
+        ]
+      },
+      "risks": {
+        "title": "Risk Disclosures",
+        "content": "Using Convexo Protocol involves significant financial and technological risks. By using our services, you acknowledge and accept the following risks:",
+        "items": [
+          "Cryptocurrency and digital asset values can be highly volatile and you may lose part or all of your investment",
+          "Smart contract code may contain bugs or vulnerabilities; we conduct audits but cannot guarantee complete security",
+          "Blockchain transactions are irreversible; errors in wallet addresses or transaction parameters cannot be reversed",
+          "Regulatory changes may affect the availability of our services in your jurisdiction",
+          "DeFi protocols may be subject to exploits, flash loan attacks, or liquidity crises beyond our control",
+          "Local stablecoins (including ECOP) are subject to smart contract risk, oracle failure, and market risks",
+          "Cross-chain operations via Chainlink CCIP may experience delays or failures",
+          "AI-generated credit scores are tools for evaluation and do not constitute financial advice or guarantee funding approval"
+        ]
+      },
+      "prohibitedUse": {
+        "title": "Prohibited Activities",
+        "content": "You may not use Convexo Protocol services for any unlawful or prohibited purpose. The following activities are strictly forbidden:",
+        "items": [
+          "Money laundering, terrorist financing, or any activity in violation of AML/CTF laws",
+          "Sanctions evasion or transacting with sanctioned individuals or entities",
+          "Market manipulation, wash trading, or any form of deceptive trading",
+          "Creating fake identities or providing fraudulent documents for verification",
+          "Using our platform to facilitate tax evasion",
+          "Attempting to hack, exploit, or disrupt our smart contracts or platform infrastructure",
+          "Using automated bots or scripts to access our services without prior written consent",
+          "Reselling or white-labeling our services without an executed partnership agreement"
+        ]
+      },
+      "fees": {
+        "title": "Fees and Charges",
+        "content": "Convexo Protocol charges fees for certain services. All fees are disclosed prior to transaction confirmation and are subject to change with notice.",
+        "items": [
+          "OTC Trading: 1.5% fixed spread over market price",
+          "Uniswap V4 Swaps: 0.3% swap fee on compliant liquidity pool transactions",
+          "P2P-AI: 0.1% commission on all trades processed through the AI agent",
+          "NFT Minting: Gas fees applicable on the respective blockchain network (Base, Ethereum, or UniChain)",
+          "E-LOANS: Interest rates are set by the loan creator with a minimum APY of 12%",
+          "All fees are non-refundable once a transaction has been confirmed on-chain",
+          "Gas fees paid to blockchain networks are outside our control and may vary significantly"
+        ]
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "All content, software, smart contract code, and materials on the Convexo Protocol platform are owned by or licensed to Convexo Protocol SAS and are protected by intellectual property laws.",
+        "items": [
+          "The Convexo Protocol brand, logo, and trademarks are proprietary to Convexo Protocol SAS",
+          "Our smart contract code on GitHub is available under the applicable open-source license",
+          "You may not reproduce, distribute, or create derivative works from our proprietary materials without written permission",
+          "NFTs minted through our platform grant you ownership of the token; they do not transfer intellectual property rights in associated content"
+        ]
+      },
+      "disclaimers": {
+        "title": "Disclaimers and No Financial Advice",
+        "content": "Convexo Protocol provides infrastructure and tools; we do not provide financial, investment, legal, or tax advice. Our services are provided 'as is' and 'as available' without warranties of any kind.",
+        "items": [
+          "We disclaim all warranties, express or implied, including merchantability and fitness for a particular purpose",
+          "AI-powered credit scores are informational tools and do not constitute financial advice",
+          "Past performance of any asset or product on our platform does not guarantee future results",
+          "We do not guarantee continuous or uninterrupted access to our services",
+          "We are not responsible for losses caused by third-party service failures, blockchain network issues, or force majeure events"
+        ]
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "To the maximum extent permitted by applicable law, Convexo Protocol SAS, its directors, officers, employees, and partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or digital assets. Our total aggregate liability to you for any claims arising from use of our services shall not exceed the fees you paid to us in the three months preceding the claim. Some jurisdictions do not allow these limitations; in such cases, liability is limited to the maximum extent permitted by law."
+      },
+      "indemnification": {
+        "title": "Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless Convexo Protocol SAS and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising from your use of our services, violation of these Terms, infringement of third-party rights, or provision of false or misleading information during verification."
+      },
+      "governing": {
+        "title": "Governing Law and Dispute Resolution",
+        "content": "These Terms are governed by the laws of the Republic of Colombia. For any disputes arising from these Terms or your use of our services:",
+        "items": [
+          "We encourage you to first contact us at legal@convexo.xyz to resolve disputes informally",
+          "If informal resolution fails, disputes will be submitted to binding arbitration in Cali, Colombia under the rules of the Colombian Chamber of Commerce",
+          "For users located in the European Union, mandatory consumer protection laws of your country of residence may also apply",
+          "Class action waivers: to the extent permitted by law, you waive the right to participate in class action lawsuits against Convexo Protocol"
+        ]
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We reserve the right to suspend or terminate your access to Convexo Protocol services at any time, with or without notice, for any of the following reasons:",
+        "items": [
+          "Violation of these Terms or our Acceptable Use Policy",
+          "Failure to pass or maintain KYC/KYB verification requirements",
+          "Detection of fraudulent, illegal, or suspicious activity on your account",
+          "Compliance with a legal order or regulatory requirement",
+          "Extended inactivity of your account (more than 24 months)",
+          "Upon termination, your access to platform features will be revoked; however, NFTs in your wallet and on-chain assets remain under your custody"
+        ]
+      },
+      "changes": {
+        "title": "Changes to These Terms",
+        "content": "We may revise these Terms from time to time. We will provide at least 14 days' notice of material changes via email or prominent in-platform notification. The updated Terms will be effective on the date specified in the notice. If you do not agree to the revised Terms, you must stop using our services before the effective date. Continued use after the effective date constitutes acceptance of the revised Terms."
+      },
+      "contact": {
+        "title": "Contact Information",
+        "content": "For questions, concerns, or legal notices regarding these Terms, please contact us through the following channels:",
+        "items": [
+          "Legal inquiries: legal@convexo.xyz",
+          "General support: hello@convexo.xyz",
+          "WhatsApp: +57 318 6766035",
+          "Telegram: @convexoprotocol",
+          "Registered address: Calle 36 #128-321, Zona Franca Zonaamerica, Cali, Valle del Cauca, Colombia"
+        ]
+      }
+    },
+    "contactCta": {
+      "title": "Have Legal Questions?",
+      "description": "Our legal team is available to clarify any questions about these Terms and Conditions."
     }
   },
   "about": {

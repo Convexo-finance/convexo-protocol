@@ -45,7 +45,6 @@ export default function Footer() {
               alt="Convexo"
               width={150}
               height={50}
-
               className="w-auto opacity-90 mb-5"
             />
             <p className="text-xs text-muted max-w-xs leading-relaxed mb-6">
@@ -103,6 +102,16 @@ export default function Footer() {
                 <a href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
                   {t('footer.launchApp')}
                 </a>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
+                  {t('footer.privacy')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-xs text-muted hover:text-primary-text transition-colors duration-200">
+                  {t('footer.terms')}
+                </Link>
               </li>
             </ul>
           </div>
