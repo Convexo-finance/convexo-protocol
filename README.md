@@ -1,116 +1,131 @@
-# Convexo Protocol
+# Convexo Protocol Website
 
-Institutional financial infrastructure. Sovereign-grade digital asset services on Ethereum-native architecture.
-
----
-
-## Brand System
-
-### Color Palette
-
-| Token            | Hex         | Usage                                          |
-|------------------|-------------|------------------------------------------------|
-| Base             | `#0B0F3B`   | Primary background                             |
-| Layer            | `#081F5C`   | Elevated surfaces, secondary backgrounds       |
-| Accent Purple    | `#401777`   | Sparingly -- hover states, deep accents        |
-| Authority Blue   | `#334EAC`   | Primary buttons, links, interactive elements   |
-| Data Blue        | `#BAD6EB`   | Section headers, highlights, data emphasis     |
-| Primary Text     | `#FFF9EF`   | Headlines, primary content                     |
-
-### Functional Colors
-
-| Token            | Value                      | Usage                        |
-|------------------|----------------------------|------------------------------|
-| Surface          | `rgba(255,255,255, 0.03)`  | Card backgrounds             |
-| Surface Hover    | `rgba(255,255,255, 0.05)`  | Card hover states            |
-| Border           | `rgba(255,255,255, 0.08)`  | 1px dividers, card borders   |
-| Border Hover     | `rgba(255,255,255, 0.12)`  | Interactive border states    |
-| Muted            | `rgba(186,214,235, 0.5)`   | Body text, secondary content |
-
-### Typography
-
-- **Font**: Space Grotesk (Google Fonts) -- geometric sans-serif
-- **Weights**: 300 (light), 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
-- **Headings**: Medium weight (500), letter-spacing: -0.02em
-- **Section headers**: Uppercase, tracking: 0.2em, 10-12px, Data Blue
-- **Body**: 14px, Light/Regular, color: muted
-
-### Design Principles
-
-- **Dark institutional**: `#0B0F3B` base, never pure black
-- **Subtle depth**: Gradient transitions from `#401777` to `#081F5C` fading into `#0B0F3B`
-- **1px dividers**: `rgba(255,255,255, 0.08)` -- never heavier
-- **Rounded corners**: 8-12px maximum
-- **No heavy glass blur**: Minimal `backdrop-blur-sm` only on nav
-- **Precision spacing**: Consistent 4px grid
-- **Minimal animation**: Subtle fades, no bounce or spring
-- **Cards**: Surface + border pattern, no shadows on dark theme
-- **Buttons**: Solid Authority Blue fill, hover to Accent Purple
-- **Grid system**: Products use `gap-px bg-border` technique for seamless borders
-
-### Logo Assets
-
-| File                    | Usage                     |
-|-------------------------|---------------------------|
-| `convexoblanco.png`     | Dark backgrounds (nav, footer) |
-| `convexohorizontal.png` | Light backgrounds         |
-| `logologo.png`          | Favicon / app icon        |
+Institutional DeFi infrastructure for Latin America. Sovereign-grade digital asset services on Ethereum-native architecture.
 
 ---
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 3.4
-- **Font**: Space Grotesk (Google Fonts)
-- **Deployment**: Vercel
+| Layer | Tool |
+|---|---|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| i18n | next-intl — EN / ES bilingual, `localePrefix: always` |
+| Fonts | Local fonts via `next/font/local` (no Google Fonts) |
+| Deployment | Vercel |
 
-## Products
+---
 
-- **Digital IDs** -- Progressive KYC/KYB verification with on-chain identity
-- **Treasury Services** -- Digital asset treasury, OTC, and stablecoin swaps
-- **Stablecoins** -- ECOP (Colombia) powered by Uniswap V4 + Chainlink
-- **E-LOANS** -- On-chain credit using EIP-4626 with AI scoring
-- **Real Estate Vaults** -- Tokenized real estate investment
-- **P2Pay** -- AI-agent P2P marketplace with automated escrow
+## Design System
 
-## Getting Started
+**Aesthetic:** "The Sovereign Vault" — institutional, editorial, high-finance. Bloomberg Terminal meets DeFi.
 
-```bash
-npm install
-npm run dev
-```
+### Color Palette
 
-Open [http://localhost:3000](http://localhost:3000)
+| Token | Hex | Usage |
+|---|---|---|
+| `surface` | `#0A0D3A` | Page background — deep navy, never pure black |
+| `surface-container-low` | `#131742` | Layout section backgrounds |
+| `surface-container` | `#171B46` | Mid-level containers |
+| `surface-container-high` | `#222651` | Elevated containers |
+| `surface-container-highest` | `#2D315D` | Cards, data modules |
+| `surface-container-lowest` | `#040735` | Deepest background (inputs, dark panels) |
+| `primary` | `#B7C4FF` | CTAs, high-visibility data, active states |
+| `secondary` | `#D6BAFF` | Technical accents, sophisticated highlights |
+| `on-surface` | `#FFF9EF` | Warm white — all body text |
+
+**No pure black (#000000) anywhere. No opaque 1px section borders.**
+
+### Typography
+
+All fonts loaded locally from `public/branding/fonts/`:
+
+| Font | Variable | Role |
+|---|---|---|
+| Akira Expanded | `--font-akira` | Hero headlines, brand wordmark — uppercase only |
+| Poppins (300–700) | `--font-poppins` | Body copy, headings, labels — default font |
+| Nunito (variable) | `--font-nunito` | Supporting font |
+
+### Key Utility Classes
+
+`.heading-display` · `.label-institutional` · `.body-text` · `.glass-panel` · `.metallic-edge` · `.chip` · `.btn-primary` · `.btn-secondary` · `.section-container`
+
+---
 
 ## Project Structure
 
 ```
 app/
-  layout.tsx              Root layout (Space Grotesk, dark base)
-  page.tsx                Home page
-  globals.css             Design tokens, component classes
-  about/                  About page
-  products/               Product pages (6 products)
+  layout.tsx                  Root layout — font loading, metadata
+  globals.css                 Design tokens, Tailwind @layer utilities
+  [locale]/
+    layout.tsx                NextIntlClientProvider
+    page.tsx                  Home
+    about/page.tsx
+    compliance/page.tsx       Unified Compliance Hub
+    privacy/page.tsx
+    terms/page.tsx
+    aml-cft/page.tsx
+    technology/page.tsx
+    products/
+      page.tsx                Products Hub
+      payments/page.tsx
+      c-bonds/page.tsx
+      real-estate/page.tsx
+      eth-fund/page.tsx       Coming Soon
+      p2p/page.tsx            Coming Soon
+
 components/
-  Navbar.tsx              Fixed nav, dark, uppercase tracking
-  Hero.tsx                Full-screen dark hero, data bar
-  ChainDeployments.tsx    Chain logos, subtle opacity
-  CoinPriceWidget.tsx     CoinGecko dark mode widget
-  CryptoRails.tsx         Feature cards, stats divider
-  Products.tsx            3-col gap-px grid
-  LatamFundingGap.tsx     Challenge/Solution split
-  Footer.tsx              4-col dark footer
-contexts/
-  LanguageContext.tsx      EN/ES translations
-tailwind.config.ts        Color tokens, animations
+  Navbar.tsx                  Fixed nav — Products dropdown, EN/ES switcher, Launch App
+  Footer.tsx                  5-column footer — brand, products, tech, legal, connect
+  ComplianceHub.tsx           Client component — tabbed Privacy/Terms/AML hub
+
+messages/
+  en.json                     English translations
+  es.json                     Spanish translations
+
+stitch_convexo_design_strategy/   HTML prototypes (read-only design reference)
+public/branding/                  Logos, fonts, brand assets
 ```
-
-## Links
-
-- **App**: [protocol.convexo.xyz](https://protocol.convexo.xyz)
 
 ---
 
-Convexo Protocol &copy; 2024
+## Products
+
+| Product | Route | App | Status |
+|---|---|---|---|
+| Payments Convexo | `/products/payments` | pay.convexo.xyz | Live |
+| Tokenized C-Bonds | `/products/c-bonds` | loans.convexo.xyz | Live |
+| Real Estate Vaults | `/products/real-estate` | realstate.convexo.xyz | Live |
+| ETH Fund Convexo | `/products/eth-fund` | fund.convexo.xyz | Coming Soon |
+| P2P AI | `/products/p2p` | p2p.convexo.xyz | Coming Soon |
+
+---
+
+## Navigation
+
+- **Navbar:** Logo → Products (dropdown) · Technology · About · Compliance → EN/ES switcher → Launch App
+- **Footer:** Brand + socials · Products · Technology · Legal · Connect + Verification badges
+- **Language routing:** `localePrefix: always` — all routes prefixed `/en/...` and `/es/...`
+- Internal links use `Link` from `@/navigation` (locale-aware — never `next/link`)
+
+---
+
+## Development
+
+```bash
+npm install
+npm run dev       # localhost:3000 → redirects to /en/
+npm run build     # production build (must pass with zero errors)
+```
+
+---
+
+## Agent Guide
+
+See `CLAUDE.md` for the full agent specification: design system rules, page reference map to Stitch prototypes, code rules, and maintenance commands.
+
+---
+
+Convexo Protocol © 2025

@@ -1,128 +1,65 @@
-import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-export default async function AmlCftPage() {
-  const t = await getTranslations();
+export const metadata: Metadata = {
+  title: 'AML/CFT Policy | Convexo Protocol',
+  description: 'Convexo Protocol Anti-Money Laundering and Counter-Terrorism Financing policy.',
+};
 
+const sections = [
+  { title: 'Overview', content: 'Convexo Protocol maintains a strict Anti-Money Laundering (AML) and Counter-Terrorism Financing (CFT) compliance program. We are committed to preventing the use of our platform for financial crimes.' },
+  { title: 'AML Policy', content: 'We implement comprehensive AML procedures including transaction monitoring, suspicious activity reporting, enhanced due diligence for high-risk clients, and regular compliance training for all staff.' },
+  { title: 'CFT Policy', content: 'We screen all users and transactions against international sanctions lists (OFAC, UN, EU) and terrorism financing databases via OpenSanctions. Any matches trigger immediate review and potential account suspension.' },
+  {
+    title: 'KYC Requirements — Individual',
+    content: 'Individual users must complete Tier 1 (zkPassport + sanctions screening) for basic access, or Tier 2 (Veriff identity verification) for full product access. Tier 3 (AI credit scoring) is required for lending products.',
+  },
+  {
+    title: 'KYC Requirements — Enterprise',
+    content: 'Corporate clients must complete Tier 2 via Sumsub enterprise KYB, providing: certificate of incorporation, beneficial ownership structure (UBOs), authorized signatory documentation, and source of funds declaration.',
+  },
+  { title: 'Transaction Monitoring', content: 'All transactions are monitored in real-time for suspicious patterns including structuring, rapid fund movement, and connections to high-risk jurisdictions. Suspicious activity is reported to relevant authorities.' },
+  { title: 'Reporting', content: 'We file Suspicious Activity Reports (SARs) as required by applicable law. We cooperate fully with law enforcement and regulatory authorities in investigations related to financial crime.' },
+  { title: 'Record Keeping', content: 'KYC/AML records are retained for a minimum of 5 years following account closure, or as required by applicable law. Transaction records are retained for 10 years.' },
+  { title: 'Compliance Updates', content: 'Our AML/CFT program is reviewed and updated regularly to reflect changes in regulatory requirements and emerging financial crime typologies.' },
+  { title: 'Contact', content: 'For compliance-related inquiries, contact our legal and compliance team at legal@convexo.xyz.' },
+];
+
+export default function AmlCftPage() {
   return (
-    <div className="min-h-screen bg-base">
-      {/* Hero Section */}
-      <div className="relative pt-24 pb-16">
-        <div className="section-container">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
-              {t('amlCft.title')}
-            </h1>
-            <p className="text-lg text-muted text-center max-w-2xl mx-auto">
-              {t('amlCft.subtitle')}
-            </p>
+    <div className="min-h-screen bg-surface text-on-surface">
+      <Navbar />
+      <main className="pt-20">
+        <section className="section-container pt-24 pb-16 border-b border-outline-variant/10">
+          <div className="flex flex-wrap gap-3 mb-8">
+            <span className="chip">Legal</span>
+            <span className="chip">Compliance</span>
           </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="pb-24">
-        <div className="section-container">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-invert prose-lg max-w-none">
-              
-              {/* Overview */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.overview.title')}</h2>
-                <p className="text-muted mb-4">{t('amlCft.overview.description')}</p>
-              </section>
-
-              {/* AML Policy */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.aml.title')}</h2>
-                <div className="space-y-4">
-                  <p className="text-muted">{t('amlCft.aml.description')}</p>
-                  
-                  <h3 className="text-xl font-medium mt-8 mb-4">{t('amlCft.aml.requirements.title')}</h3>
-                  <ul className="space-y-2 text-muted">
-                    <li>• {t('amlCft.aml.requirements.req1')}</li>
-                    <li>• {t('amlCft.aml.requirements.req2')}</li>
-                    <li>• {t('amlCft.aml.requirements.req3')}</li>
-                    <li>• {t('amlCft.aml.requirements.req4')}</li>
-                  </ul>
+          <h1 className="heading-display text-[clamp(2.5rem,6vw,5rem)] text-on-surface mb-6">
+            AML/<span className="text-primary">CFT</span> Policy
+          </h1>
+          <p className="body-text text-base max-w-2xl">
+            Convexo Protocol&apos;s Anti-Money Laundering and Counter-Terrorism Financing
+            program. We maintain the highest compliance standards to protect the integrity
+            of LATAM financial markets.
+          </p>
+        </section>
+        <section className="section-container py-20">
+          <div className="max-w-3xl space-y-10">
+            {sections.map((s, i) => (
+              <div key={s.title} className="flex gap-8">
+                <span className="label-institutional text-primary flex-shrink-0 mt-1 w-6">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <h2 className="font-headline text-base font-black uppercase tracking-tight text-on-surface mb-4">{s.title}</h2>
+                  <p className="body-text leading-relaxed">{s.content}</p>
                 </div>
-              </section>
-
-              {/* CFT Policy */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.cft.title')}</h2>
-                <div className="space-y-4">
-                  <p className="text-muted">{t('amlCft.cft.description')}</p>
-                  
-                  <h3 className="text-xl font-medium mt-8 mb-4">{t('amlCft.cft.measures.title')}</h3>
-                  <ul className="space-y-2 text-muted">
-                    <li>• {t('amlCft.cft.measures.measure1')}</li>
-                    <li>• {t('amlCft.cft.measures.measure2')}</li>
-                    <li>• {t('amlCft.cft.measures.measure3')}</li>
-                    <li>• {t('amlCft.cft.measures.measure4')}</li>
-                  </ul>
-                </div>
-              </section>
-
-              {/* KYC Requirements */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.kyc.title')}</h2>
-                <div className="space-y-4">
-                  <p className="text-muted">{t('amlCft.kyc.description')}</p>
-                  
-                  <h3 className="text-xl font-medium mt-8 mb-4">{t('amlCft.kyc.individual.title')}</h3>
-                  <ul className="space-y-2 text-muted">
-                    <li>• {t('amlCft.kyc.individual.req1')}</li>
-                    <li>• {t('amlCft.kyc.individual.req2')}</li>
-                    <li>• {t('amlCft.kyc.individual.req3')}</li>
-                  </ul>
-
-                  <h3 className="text-xl font-medium mt-8 mb-4">{t('amlCft.kyc.enterprise.title')}</h3>
-                  <ul className="space-y-2 text-muted">
-                    <li>• {t('amlCft.kyc.enterprise.req1')}</li>
-                    <li>• {t('amlCft.kyc.enterprise.req2')}</li>
-                    <li>• {t('amlCft.kyc.enterprise.req3')}</li>
-                    <li>• {t('amlCft.kyc.enterprise.req4')}</li>
-                  </ul>
-                </div>
-              </section>
-
-              {/* Monitoring and Reporting */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.monitoring.title')}</h2>
-                <div className="space-y-4">
-                  <p className="text-muted">{t('amlCft.monitoring.description')}</p>
-                  
-                  <h3 className="text-xl font-medium mt-8 mb-4">{t('amlCft.monitoring.activities.title')}</h3>
-                  <ul className="space-y-2 text-muted">
-                    <li>• {t('amlCft.monitoring.activities.activity1')}</li>
-                    <li>• {t('amlCft.monitoring.activities.activity2')}</li>
-                    <li>• {t('amlCft.monitoring.activities.activity3')}</li>
-                    <li>• {t('amlCft.monitoring.activities.activity4')}</li>
-                  </ul>
-                </div>
-              </section>
-
-              {/* Compliance and Updates */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.compliance.title')}</h2>
-                <p className="text-muted mb-4">{t('amlCft.compliance.description')}</p>
-                <p className="text-muted">{t('amlCft.compliance.updates')}</p>
-              </section>
-
-              {/* Contact Information */}
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">{t('amlCft.contact.title')}</h2>
-                <p className="text-muted mb-4">{t('amlCft.contact.description')}</p>
-                <div className="bg-layer p-6 rounded-lg">
-                  <p className="font-medium mb-2">{t('amlCft.contact.email.label')}</p>
-                  <p className="text-muted mb-4">{t('amlCft.contact.email.value')}</p>
-                </div>
-              </section>
-
-            </div>
+              </div>
+            ))}
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }

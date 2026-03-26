@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OTC Trading Desk | Convexo Protocol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.cdnfonts.com/css/akira-expanded');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0D3A;
+            color: #FFF9EF;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .font-akira {
+            font-family: 'Akira Expanded', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(45, 49, 93, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .technical-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(183, 196, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(183, 196, 255, 0.3), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed": "#001552",
+                "surface-variant": "#2d315d",
+                "primary": "#b7c4ff",
+                "surface-dim": "#0a0d3a",
+                "surface-container-lowest": "#040735",
+                "secondary-fixed-dim": "#d6baff",
+                "on-tertiary-fixed": "#001e2d",
+                "surface-bright": "#313561",
+                "on-tertiary": "#173344",
+                "on-surface-variant": "#c5c5d4",
+                "inverse-primary": "#3d57b6",
+                "on-primary-fixed-variant": "#213e9d",
+                "on-error": "#690005",
+                "inverse-on-surface": "#282c58",
+                "tertiary-fixed": "#cae6fc",
+                "on-secondary-fixed-variant": "#57328f",
+                "tertiary-fixed-dim": "#aecadf",
+                "on-primary-container": "#bcc8ff",
+                "primary-container": "#334eac",
+                "on-secondary-fixed": "#280056",
+                "surface-tint": "#b7c4ff",
+                "outline-variant": "#444652",
+                "on-surface": "#e0e0ff",
+                "inverse-surface": "#e0e0ff",
+                "surface-container": "#171b46",
+                "surface": "#0a0d3a",
+                "on-error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#2f4a5b",
+                "secondary-fixed": "#ecdcff",
+                "secondary-container": "#593491",
+                "primary-fixed-dim": "#b7c4ff",
+                "primary-fixed": "#dce1ff",
+                "outline": "#8f909e",
+                "on-background": "#e0e0ff",
+                "surface-container-low": "#131742",
+                "on-tertiary-container": "#b3cfe4",
+                "on-secondary": "#401677",
+                "on-secondary-container": "#cba8ff",
+                "tertiary-container": "#3e596b",
+                "surface-container-highest": "#2d315d",
+                "surface-container-high": "#222651",
+                "error": "#ffb4ab",
+                "tertiary": "#aecadf",
+                "background": "#0a0d3a",
+                "secondary": "#d6baff",
+                "on-primary": "#002682",
+                "error-container": "#93000a"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0D3A]/40 backdrop-blur-xl shadow-[0_12px_40px_0_rgba(0,0,0,0.06)] bg-gradient-to-b from-[#FFF9EF]/5 to-transparent">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#FFF9EF] tracking-widest uppercase font-akira">
+                Convexo Protocol
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base" href="#">Products</a>
+<a class="text-[#B7C4FF] border-b-2 border-[#B7C4FF] pb-1 font-bold font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base" href="#">Services</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base" href="#">Technology</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all" data-icon="notifications">notifications</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label uppercase tracking-wider text-xs font-bold hover:brightness-110 active:scale-95 duration-200 transition-all">
+                    Connect Vault
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-[1440px] mx-auto technical-grid min-h-screen">
+<!-- Hero Section -->
+<header class="mb-20 relative">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-sm mb-6">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-label uppercase tracking-[0.2em] text-primary">Live Settlement Desk</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-akira tracking-tighter mb-4 text-[#FFF9EF] leading-none">
+                    OTC <span class="text-primary">TRADING</span> DESK
+                </h1>
+<p class="max-w-2xl text-on-surface-variant font-body text-lg leading-relaxed">
+                    Sovereign-grade liquidity for LATAM's institutional giants. High-volume execution with minimal slippage and direct settlement into non-custodial vaults.
+                </p>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<!-- Trading Interface -->
+<div class="md:col-span-8 glass-panel rounded-lg p-8 gradient-border flex flex-col justify-between">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h2 class="font-akira text-xl mb-2">Request Quote</h2>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest">Institutional Direct Channel</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-primary font-label uppercase mb-1">Spread Advantage</p>
+<p class="text-3xl font-headline font-bold">1.5%</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/20">
+<label class="block text-[10px] font-label uppercase tracking-widest text-outline mb-4">You Send</label>
+<div class="flex justify-between items-center">
+<input class="bg-transparent border-none text-3xl font-headline focus:ring-0 p-0 w-full text-white" type="number" value="100000"/>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded">
+<span class="font-bold text-sm">USDT</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/20">
+<label class="block text-[10px] font-label uppercase tracking-widest text-outline mb-4">You Receive (Est.)</label>
+<div class="flex justify-between items-center">
+<input class="bg-transparent border-none text-3xl font-headline focus:ring-0 p-0 w-full text-primary" readonly="" type="number" value="1.542"/>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded">
+<span class="font-bold text-sm">WBTC</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-primary/5 rounded-lg border border-primary/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+<span class="text-xs font-label uppercase tracking-tighter">Settlement Speed: ~30s</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<span class="text-xs font-label uppercase tracking-tighter">Verified Institutional Counterparty</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-akira tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-3">
+                        INITIALIZE OTC SETTLEMENT
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Market Depth Card -->
+<div class="md:col-span-4 bg-surface-container-high rounded-lg overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/10">
+<h3 class="font-akira text-sm tracking-widest">Protocol Depth</h3>
+</div>
+<div class="flex-grow relative min-h-[300px]">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Abstract 3D digital visualization of financial data flows and network nodes in deep blue and lavender tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaVpdWK-s3wAYZVVgzPOxEkAjJ9YTCRmE9TfTNDkJM-YEsyai6Uij2X5qnZT8J03C5lbEEEFBmToHa0UqlmTBtlzoZPycr2JU4E3NucNCFt5BWmbQXmckiBVdGFwusPF0M0rU8uCRt-09HWfJ6t3F_d_E3gSvEQgd4fx2T6mWu-UKTYL1cypb32tgTeK3cHyoLbZioKlNAYnyUaXJpipdVN2ZWKwsAMKpmQ9eYWmyoZvKbtvON9cBmyXK0HvZcniur-VHBE_kmwzl2"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-surface-container-high via-transparent to-transparent">
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] font-label uppercase text-outline">Total TVL Accessible</span>
+<span class="font-headline text-xl">$4.2B+</span>
+</div>
+<div class="h-1 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%]"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant leading-relaxed">
+                                Convexo leverages aggregate liquidity across 12 major protocols to ensure your orders move the market by 0%.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Agentic Channels -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-lg p-8 flex flex-col gap-6">
+<div>
+<h3 class="font-akira text-lg mb-2">Direct Agentic Channels</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Encrypted communication layer</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-high rounded border-l-2 border-primary">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<p class="text-sm font-bold">Execution Agent 01</p>
+<p class="text-[10px] text-outline uppercase">Optimizing Spread</p>
+</div>
+</div>
+<span class="text-[10px] text-primary px-2 py-1 bg-primary/10 rounded">Online</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-high/50 rounded border-l-2 border-transparent hover:border-outline-variant transition-all">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<p class="text-sm font-bold">Desk Manager</p>
+<p class="text-[10px] text-outline uppercase">Human Oversight</p>
+</div>
+</div>
+<span class="text-[10px] text-outline px-2 py-1 bg-surface-container-highest rounded">Standby</span>
+</div>
+</div>
+<button class="mt-auto border border-outline-variant/30 py-3 text-xs font-label uppercase tracking-widest hover:bg-surface-container-highest transition-all">
+                    Open Secure Terminal
+                </button>
+</div>
+<!-- Stats & Info -->
+<div class="md:col-span-7 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-6 rounded-lg flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-8" data-icon="database">database</span>
+<div>
+<p class="text-3xl font-headline font-bold mb-1">99.9%</p>
+<p class="text-[10px] font-label uppercase tracking-widest text-outline">Uptime Reliability</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-8" data-icon="speed">speed</span>
+<div>
+<p class="text-3xl font-headline font-bold mb-1">&lt; 1s</p>
+<p class="text-[10px] font-label uppercase tracking-widest text-outline">Quote Latency</p>
+</div>
+</div>
+<div class="col-span-2 bg-[#D6BAFF]/5 p-8 rounded-lg border border-[#D6BAFF]/10 flex items-center gap-8">
+<div class="hidden sm:block">
+<img class="w-32 h-32 rounded object-cover opacity-80" data-alt="Close up of a clean digital dashboard with purple financial line charts against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwruKPFxQVuEd8QDIfpJskG_GhmAjwrngtp8gizaR6GqRFQifh_bYTLPgrIGLgldR_qDohYadiFamEXyESliacrzIRD5HyWSLgOaz5Fetaq6EIJM-hnBIDupwFBzkJF105jBdRwNsPPbQogPV-8-z6I8MemLPGknEUq7fZzy0Y_esKzYV8L8yrenH7uhxXF9NXBOAPntCWZoNog8uNcPhH-q9Of_A4HRsh1arW5GtZzkxtXJeQugY128yzUBtZA-niSR0W22qtxglz"/>
+</div>
+<div>
+<h4 class="font-akira text-sm mb-3">Institutional Compliance</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            Full SOC2 Type II compliance. Integrated AML/KYC modules for swift onboarding of Latin American corporate entities and family offices.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Section -->
+<section class="mt-32 border-t border-outline-variant/10 pt-16">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div>
+<h3 class="font-akira text-lg mb-4">Deep Liquidity</h3>
+<p class="text-sm text-on-surface-variant">Convexo sources from a proprietary network of institutional market makers and dark pools, ensuring that even $10M+ orders are executed without slippage.</p>
+</div>
+<div>
+<h3 class="font-akira text-lg mb-4">Sovereign Custody</h3>
+<p class="text-sm text-on-surface-variant">Your assets never touch our balance sheet. Settlements happen atomicly via multi-sig smart contracts, moving directly to your institutional vault.</p>
+</div>
+<div>
+<h3 class="font-akira text-lg mb-4">LATAM Focus</h3>
+<p class="text-sm text-on-surface-variant">Specialized rails for major regional currencies (BRL, MXN, CLP) allowing for seamless transitions between local fiat and global DeFi liquidity.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0D3A] w-full border-t border-[#FFF9EF]/10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-16 w-full max-w-[1920px] mx-auto">
+<div class="col-span-1 lg:col-span-1">
+<div class="font-['Akira_Expanded'] text-lg text-[#B7C4FF] mb-6">Convexo Protocol</div>
+<p class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 leading-relaxed max-w-xs">
+                    © 2024 Convexo Protocol. Sovereign Vault Institutional DeFi.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-[#FFF9EF] font-bold text-xs uppercase tracking-widest mb-6">Platform</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Governance</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Documentation</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Risk Parameters</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="text-[#FFF9EF] font-bold text-xs uppercase tracking-widest mb-6">Security</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Security Audits</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Bug Bounty</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Network Status</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="text-[#FFF9EF] font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Privacy Policy</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

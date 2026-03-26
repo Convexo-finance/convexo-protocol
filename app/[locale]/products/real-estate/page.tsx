@@ -1,0 +1,107 @@
+import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Real Estate Vaults | Convexo Protocol',
+  description: 'Tokenized fractional real estate investment in LATAM. 18% Annual APY. Powered by ERC-4626 vaults.',
+};
+
+const propertyTypes = [
+  { type: 'Commercial',   desc: 'Office buildings, retail centers, and logistics hubs across major LATAM cities.' },
+  { type: 'Residential',  desc: 'Premium residential developments in high-growth urban corridors.' },
+  { type: 'Mixed-Use',    desc: 'Integrated developments combining retail, residential, and office space.' },
+];
+
+export default function RealEstatePage() {
+  return (
+    <div className="min-h-screen bg-surface text-on-surface overflow-x-hidden">
+      <Navbar />
+
+      <main className="pt-20">
+        <div className="absolute inset-0 technical-grid opacity-20 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-tertiary/6 rounded-full blur-[140px] pointer-events-none translate-x-1/3" />
+
+        {/* ── HERO ─────────────────────────────────────────────── */}
+        <section className="relative z-10 section-container pt-28 pb-24">
+          <div className="flex flex-wrap gap-3 mb-10">
+            <span className="chip">Live</span>
+            <span className="chip">realstate.convexo.xyz</span>
+            <span className="chip">RWA</span>
+          </div>
+          <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8 max-w-3xl">
+            Real Estate<br />
+            <span className="text-tertiary">Vaults</span>
+          </h1>
+          <p className="font-body text-xl text-on-surface-variant font-light leading-relaxed max-w-2xl mb-14">
+            Fractional ownership of premium LATAM real estate — fully tokenized, legally
+            backed, and accessible to institutional investors worldwide. 18% Annual APY.
+          </p>
+          <div className="flex flex-wrap gap-5">
+            <a href="https://realstate.convexo.xyz" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4">
+              Open App
+            </a>
+            <a href="https://t.me/convexoprotocol" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4">
+              Investment Inquiry
+            </a>
+          </div>
+        </section>
+
+        {/* ── KPI BAR ──────────────────────────────────────────── */}
+        <section className="relative z-10 w-full bg-surface-container-lowest border-y border-outline-variant/10 py-14">
+          <div className="section-container grid grid-cols-2 md:grid-cols-4 gap-10">
+            {[
+              { value: '18%',    label: 'Annual APY' },
+              { value: '70%',    label: '5-Year Projected Return' },
+              { value: 'Tier 2', label: 'Identity Required' },
+              { value: 'ERC-4626', label: 'Vault Standard' },
+            ].map((s) => (
+              <div key={s.label} className="flex flex-col gap-2">
+                <span className="font-headline text-2xl font-black text-tertiary tracking-tight">{s.value}</span>
+                <span className="label-institutional">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── PROPERTY TYPES ───────────────────────────────────── */}
+        <section className="relative z-10 section-container section-padding">
+          <h2 className="heading-lg text-2xl mb-16 flex items-center gap-6">
+            <span className="section-rule" />
+            Property Types
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {propertyTypes.map((p) => (
+              <div key={p.type} className="group p-10 bg-surface-container-high rounded-xl metallic-edge hover:bg-surface-container-highest transition-all">
+                <h3 className="font-headline text-lg font-black uppercase tracking-tight text-on-surface mb-4 group-hover:text-tertiary transition-colors">{p.type}</h3>
+                <p className="body-text leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* How it works */}
+          <h2 className="heading-lg text-2xl mb-12 flex items-center gap-6">
+            <span className="section-rule" />
+            How It Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+            {[
+              { step: '01', title: 'Verify Identity', desc: 'Complete Digital ID Tier 2 via Veriff (individual) or Sumsub (enterprise).' },
+              { step: '02', title: 'Choose Vault',    desc: 'Select a property vault based on type, location, and risk profile.' },
+              { step: '03', title: 'Deposit',         desc: 'Deposit capital. Receive ERC-4626 vault tokens representing your ownership.' },
+              { step: '04', title: 'Earn Yield',      desc: 'Receive rental yield distributions automatically. Exit at any time.' },
+            ].map((s) => (
+              <div key={s.step} className="p-8 bg-surface-container-highest rounded-xl metallic-edge">
+                <span className="label-institutional text-tertiary block mb-4">{s.step}</span>
+                <h3 className="font-headline text-sm font-black uppercase tracking-tight text-on-surface mb-3">{s.title}</h3>
+                <p className="body-text text-xs leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Akira+Expanded&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Akira_Expanded';
+            src: local('Akira Expanded'), local('Akira-Expanded');
+            /* Fallback to high-weight Space Grotesk if local font is missing */
+        }
+        .font-akira { font-family: 'Akira_Expanded', 'Space Grotesk', sans-serif; font-weight: 900; }
+        body { background-color: #0A0D3A; color: #FFF9EF; font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(45, 49, 93, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(183, 196, 255, 0.08), transparent),
+                        radial-gradient(circle at bottom left, rgba(214, 186, 255, 0.05), transparent);
+        }
+        .technical-chip {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 0.05em;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed": "#001552",
+                "surface-variant": "#2d315d",
+                "primary": "#b7c4ff",
+                "surface-dim": "#0a0d3a",
+                "surface-container-lowest": "#040735",
+                "secondary-fixed-dim": "#d6baff",
+                "on-tertiary-fixed": "#001e2d",
+                "surface-bright": "#313561",
+                "on-tertiary": "#173344",
+                "on-surface-variant": "#c5c5d4",
+                "inverse-primary": "#3d57b6",
+                "on-primary-fixed-variant": "#213e9d",
+                "on-error": "#690005",
+                "inverse-on-surface": "#282c58",
+                "tertiary-fixed": "#cae6fc",
+                "on-secondary-fixed-variant": "#57328f",
+                "tertiary-fixed-dim": "#aecadf",
+                "on-primary-container": "#bcc8ff",
+                "primary-container": "#334eac",
+                "on-secondary-fixed": "#280056",
+                "surface-tint": "#b7c4ff",
+                "outline-variant": "#444652",
+                "on-surface": "#e0e0ff",
+                "inverse-surface": "#e0e0ff",
+                "surface-container": "#171b46",
+                "surface": "#0a0d3a",
+                "on-error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#2f4a5b",
+                "secondary-fixed": "#ecdcff",
+                "secondary-container": "#593491",
+                "primary-fixed-dim": "#b7c4ff",
+                "primary-fixed": "#dce1ff",
+                "outline": "#8f909e",
+                "on-background": "#e0e0ff",
+                "surface-container-low": "#131742",
+                "on-tertiary-container": "#b3cfe4",
+                "on-secondary": "#401677",
+                "on-secondary-container": "#cba8ff",
+                "tertiary-container": "#3e596b",
+                "surface-container-highest": "#2d315d",
+                "surface-container-high": "#222651",
+                "error": "#ffb4ab",
+                "tertiary": "#aecadf",
+                "background": "#0a0d3a",
+                "secondary": "#d6baff",
+                "on-primary": "#002682",
+                "error-container": "#93000a"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0D3A]/40 backdrop-blur-xl bg-gradient-to-b from-[#FFF9EF]/5 to-transparent shadow-[0_12px_40px_0_rgba(0,0,0,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#FFF9EF] tracking-widest uppercase font-akira">
+                Convexo Protocol
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base text-[#B7C4FF] border-b-2 border-[#B7C4FF] pb-1 font-bold" href="#">Products</a>
+<a class="font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">Services</a>
+<a class="font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">Technology</a>
+<a class="font-['Akira_Expanded'] tracking-tighter uppercase text-sm md:text-base text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 text-[#B7C4FF]">
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">account_balance_wallet</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">notifications</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label font-bold uppercase tracking-widest text-xs border border-primary/20 hover:brightness-110 active:scale-95 transition-all duration-200">
+                    Connect Vault
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 hero-gradient">
+<!-- Hero Section / Context -->
+<header class="max-w-[1920px] mx-auto px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-16 items-end">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="w-12 h-[1px] bg-secondary"></span>
+<span class="text-secondary font-label uppercase tracking-widest text-sm">Real Estate Vaults</span>
+</div>
+<h1 class="font-akira text-4xl md:text-6xl lg:text-7xl leading-tight text-white mb-8 tracking-tighter">
+                    TOKENIZED<br/>PROPERTY<br/>EQUITY
+                </h1>
+<p class="text-on-surface-variant font-body text-lg max-w-xl leading-relaxed opacity-80 mb-10">
+                    Sovereign access to institutional-grade commercial and residential assets. Our ERC-4626 standard vaults provide automated yields through rental income and architectural appreciation.
+                </p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-surface-container-highest px-6 py-4 border border-outline-variant/20">
+<div class="text-primary font-headline text-3xl font-bold">18%</div>
+<div class="text-on-surface-variant text-xs uppercase tracking-widest mt-1">Target Annual APY</div>
+</div>
+<div class="bg-surface-container-highest px-6 py-4 border border-outline-variant/20">
+<div class="text-secondary font-headline text-3xl font-bold">70%</div>
+<div class="text-on-surface-variant text-xs uppercase tracking-widest mt-1">5-Year Projected Return</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/10 blur-[100px] rounded-full -z-10"></div>
+<div class="glass-panel p-8 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="font-headline text-2xl font-bold">Compliance Status</h3>
+<p class="text-on-surface-variant text-sm mt-1">Institutional Verification Hub</p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Verification Level</span>
+<span class="text-white font-headline font-bold">Tier 2 ID Required</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Protocol Standard</span>
+<span class="text-white font-headline font-bold">ERC-4626 Tokenized Vault</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Minting Status</span>
+<span class="text-primary flex items-center gap-2 font-bold uppercase text-xs">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                                Live / Open
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Grid Property Vaults -->
+<section class="max-w-[1920px] mx-auto px-8 py-12">
+<h2 class="font-akira text-2xl mb-12 tracking-widest text-[#FFF9EF]/40">Active Vault Destinations</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto lg:h-[800px]">
+<!-- Main Commercial Vault -->
+<div class="md:col-span-7 lg:col-span-8 group relative overflow-hidden bg-surface-container border border-outline-variant/10">
+<img alt="Commercial Glass Skyscraper" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Futuristic glass skyscraper in a metropolitan city at twilight with blue ambient lights and sharp architectural reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSIGSSwiwy0fct3HFvcPf_F1KhQ2QKXgbJ4Q0QaErt34wBCplF0kPm180KQlh8IRXz4_PTGOJwcrtW6edLZQjoR1osyvGT5T1PWJpYNqbfm_N_ZsFOWAXIJEU4QobqU3NgVxmy7-XSvT91BWuVGRJNJJg8GEt_AtB5II7eDVhC8OxDIxKOFfY7w8RVI2LTYz-zeSToiS1XsMbUP9UQOxuvtks1imkiJJRuYr2oHt_fHxzedV964Hd8rQ5tVpr4zgIC2q4j60OKwPMn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute top-8 left-8 flex gap-3">
+<span class="bg-primary/20 backdrop-blur-md text-primary px-3 py-1 text-[10px] uppercase tracking-tighter font-bold border border-primary/30">Commercial</span>
+<span class="bg-black/40 backdrop-blur-md text-white px-3 py-1 text-[10px] uppercase tracking-tighter font-bold border border-white/20">Occupancy: 98.2%</span>
+</div>
+<div class="absolute bottom-10 left-10 right-10">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-akira text-3xl text-white mb-2">Metropolis Core I</h3>
+<p class="text-on-surface-variant text-sm max-w-md">Institutional office spaces with long-term anchor tenants in Singapore's financial district.</p>
+</div>
+<div class="text-right">
+<div class="text-primary font-headline text-5xl font-bold">21.4%</div>
+<div class="text-on-surface-variant text-[10px] uppercase tracking-[0.2em]">Current APR</div>
+</div>
+</div>
+<button class="mt-8 bg-[#FFF9EF] text-surface px-8 py-3 font-label font-bold uppercase tracking-widest text-xs hover:bg-primary transition-colors">
+                            Enter Vault
+                        </button>
+</div>
+</div>
+<!-- Residential Asset -->
+<div class="md:col-span-5 lg:col-span-4 group relative overflow-hidden bg-surface-container border border-outline-variant/10">
+<img alt="Luxury Modern Villa" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Ultra-modern luxury villa with clean white lines, large glass windows, and a turquoise infinity pool at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2JGJIoYzksYqSR_iWxExgk9RVDYNqqIBrlV04f1b40BohK7MWgRVCYoiBEMshKB0D5oKw6ej6MDpSI1aEyXAErYWn5i2iEf-_I4VFhrvpgPLDWEGhD8jCxDcDy2yWSnSsn_yFtt84zIpcNsV94yyRT-r0aRo4LGmh2x85A4nhbGJl5kDtq1j9u9CKx7dNo6EXyKCn1o7leXa07KIEUU6s1SI-1k5OTSf6ib_NrcsRFz35kxmlSnQi4_fbmvQUvG4J3p7kaZ_O75Cr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<span class="bg-secondary/20 backdrop-blur-md text-secondary px-3 py-1 text-[10px] uppercase tracking-tighter font-bold border border-secondary/30">Residential</span>
+<h3 class="font-akira text-xl text-white mt-4 mb-2">Azure Estates</h3>
+<p class="text-on-surface-variant text-xs leading-relaxed mb-6">High-yield short-term luxury rentals in coastal Mediterranean hubs.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-3">
+<div class="text-white font-headline text-lg font-bold">14.8%</div>
+<div class="text-[9px] uppercase tracking-widest text-on-surface-variant">Yield</div>
+</div>
+<div class="bg-white/5 p-3">
+<div class="text-white font-headline text-lg font-bold">6.2M</div>
+<div class="text-[9px] uppercase tracking-widest text-on-surface-variant">TVL (USD)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mixed Use / Future -->
+<div class="md:col-span-12 group relative overflow-hidden h-64 lg:h-auto bg-surface-container border border-outline-variant/10">
+<div class="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-outline-variant/10">
+<div class="relative overflow-hidden">
+<img alt="Mixed use development" class="w-full h-full object-cover opacity-40" data-alt="Modern architectural rendering of a mixed-use development with retail on ground floor and luxury apartments above, aerial view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT6td_FGOqXAONXANIk38NWruaieNR_LvmUnIySDE9Wld60k9RCiWFSYFBtaBqMdzlmdteSpD8ljr9UlavyryGOcSRfbRdTzXp7TnLfw88oH6k2-lS4E66-8nkoB_zejCV385OfD8iy3CsvPNqUY507iYhR5FCiHHKUC6iPxcqWm74TU5BwzgUBtg-NEMDhsLdd7VGxLzlKGf6VLc8sJFQdNlIjXVJSmOEyGLwdiYS3LAahC9zj4GS_nz_wOIA_M_SMpbBtOi1eKjr"/>
+</div>
+<div class="relative overflow-hidden flex items-center justify-center bg-surface-container-high px-12">
+<div class="text-center">
+<span class="bg-tertiary/20 text-tertiary px-3 py-1 text-[10px] uppercase tracking-tighter font-bold border border-tertiary/30 mb-4 inline-block">Mixed-Use</span>
+<h3 class="font-akira text-2xl text-white mb-2">Omni District</h3>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">Opening Q4 2024</p>
+</div>
+</div>
+<div class="hidden md:block relative overflow-hidden">
+<img alt="Modern Office Lobby" class="w-full h-full object-cover opacity-40" data-alt="Interior of a high-tech corporate office lobby with smooth concrete, glass walls, and minimalist furniture in cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh9uy-_AMwQ9BGCWbzgG3MRgbEEjbFHv6ly1kAz4-FmQ1FZsA0k2AYyadVX6grzMwkk73UXdBiR8iSx1GKnJNa9UJY2BrniLw6RPdaA4qBpSebvRFXqBOF8Kh6z2cSEozp-8wPprbeXxs3pYqftB5eaY9CHBJOiu8VO6u4xeaFpTP1RlJzWLiSU9NNsZiyehYjzZi6kNOOFsepDawJecdIh18rHMm5GgP8pMjNtpCD-rZ0FaI7Ee4F3n71xKjURAM86xguaQ44KX4v"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Details Section -->
+<section class="max-w-[1920px] mx-auto px-8 py-20">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-1 space-y-8">
+<h2 class="font-akira text-3xl leading-none">THE<br/>MECHANICS</h2>
+<p class="text-on-surface-variant leading-relaxed">Convexo leverages the ERC-4626 standard to provide a seamless yield-bearing token experience. Each share represents fractional ownership in a diversified pool of real-world assets.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">shield_with_heart</span>
+<div>
+<h4 class="font-bold text-white mb-1">On-Chain Deeds</h4>
+<p class="text-sm text-on-surface-variant">Legal ownership is mirrored on-chain via smart-contract lien structures.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">account_tree</span>
+<div>
+<h4 class="font-bold text-white mb-1">Automated Rebalancing</h4>
+<p class="text-sm text-on-surface-variant">Rental income is automatically compounded back into the vault liquidity.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-8 border border-outline-variant/10 flex flex-col justify-between h-[400px]">
+<div>
+<span class="font-akira text-[10px] text-primary tracking-widest">Projection Model</span>
+<h3 class="font-headline text-4xl font-light mt-4">70% RETURN</h3>
+<p class="text-on-surface-variant text-sm mt-2">Historical data based on 5-year appreciation cycles in Tier 1 LATAM markets.</p>
+</div>
+<div class="mt-auto h-40 flex items-end gap-1">
+<div class="bg-primary/20 w-full h-[30%]"></div>
+<div class="bg-primary/30 w-full h-[45%]"></div>
+<div class="bg-primary/40 w-full h-[60%]"></div>
+<div class="bg-primary/60 w-full h-[80%]"></div>
+<div class="bg-primary w-full h-[100%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/10 relative overflow-hidden">
+<div class="relative z-10">
+<span class="font-akira text-[10px] text-secondary tracking-widest">Protocol Audit</span>
+<h3 class="font-headline text-3xl font-bold mt-4">SECURE VAULT<br/>ARCHITECTURE</h3>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-xs uppercase tracking-widest">OpenZeppelin Standard</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-xs uppercase tracking-widest">Multi-Sig Asset Custody</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-xs uppercase tracking-widest">Real-time Oracle Valuations</span>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 100;">lock</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0D3A] w-full border-t border-[#FFF9EF]/10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-16 w-full max-w-[1920px] mx-auto">
+<div class="lg:col-span-1">
+<div class="font-['Akira_Expanded'] text-lg text-[#B7C4FF] mb-6">Convexo Protocol</div>
+<p class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 leading-relaxed">
+                    Sovereign Vault Institutional DeFi. Redefining property ownership through cryptographic certainty.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-akira text-[10px] text-white tracking-[0.3em] mb-2">Protocol</h4>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Governance</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Documentation</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Risk Parameters</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-akira text-[10px] text-white tracking-[0.3em] mb-2">Legal</h4>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Security Audits</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/40 hover:text-[#B7C4FF] transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-akira text-[10px] text-white tracking-[0.3em] mb-2">Community</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">hub</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">public</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">terminal</span>
+</div>
+<p class="font-['Poppins'] text-[10px] tracking-wide uppercase text-[#FFF9EF]/30 mt-4">
+                    © 2024 Convexo Protocol. Sovereign Vault Institutional DeFi.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,253 +1,212 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
-import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { Link } from '@/navigation';
 
-type Props = {
-  params: Promise<{ locale: string }>;
+export const metadata: Metadata = {
+  title: 'Technology | Convexo Protocol',
+  description: 'The sovereign technology stack powering Convexo Protocol — Digital IDs, Stablecoins, Vaults, OTC Agentic Channels, and 10 trusted infrastructure providers.',
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'technology' });
+const ownTech = [
+  {
+    id: 'digital-ids',
+    label: '01',
+    title: 'Digital Identity System',
+    subtitle: 'zkPassport · Sumsub · Veriff',
+    desc: 'A 3-tier identity infrastructure that balances privacy with compliance. From zero-knowledge anonymous verification to full enterprise KYB.',
+    tiers: [
+      { tier: 'Tier 1', name: 'zkPassport + OpenSanctions', detail: 'Privacy-preserving. No document upload required.' },
+      { tier: 'Tier 2', name: 'Veriff / Sumsub', detail: 'Full KYC for individuals and enterprises.' },
+      { tier: 'Tier 3', name: 'AI Credit Scoring', detail: 'E-Credit assessment. Unlocks Tokenized C-Bonds.' },
+    ],
+    accent: 'primary',
+  },
+  {
+    id: 'stablecoins',
+    label: '02',
+    title: 'Local Stablecoins',
+    subtitle: 'ECOP · Chainlink CCIP · Proof of Reserves',
+    desc: 'LATAM-native stablecoins pegged to regional currencies. Fully collateral-backed with on-chain proof of reserves and cross-chain interoperability.',
+    tiers: [
+      { tier: 'ECOP', name: 'Colombian Peso Stablecoin', detail: 'USD/COP data feeds via Google Finance API.' },
+      { tier: 'CCIP', name: 'Chainlink Cross-Chain', detail: 'Seamless cross-chain transfers and bridging.' },
+      { tier: 'Reserves', name: 'Proof of Reserves', detail: 'Real-time on-chain collateral verification.' },
+    ],
+    accent: 'secondary',
+  },
+  {
+    id: 'vaults',
+    label: '03',
+    title: 'EIP-4626 Vaults',
+    subtitle: 'Yield Infrastructure · Tokenized Assets',
+    desc: 'Standardized vault infrastructure powering all yield-bearing products. EIP-4626 ensures composability, transparency, and institutional-grade security.',
+    tiers: [
+      { tier: 'C-Bonds', name: 'Tokenized Credit Bonds', detail: '12%+ APY for lenders.' },
+      { tier: 'Real Estate', name: 'Property Vaults', detail: '18% Annual APY via RWA tokenization.' },
+      { tier: 'ETH Fund', name: 'Ethereum Yield', detail: 'Institutional-grade ETH exposure.' },
+    ],
+    accent: 'tertiary',
+  },
+  {
+    id: 'otc',
+    label: '04',
+    title: 'OTC Agentic Channels',
+    subtitle: 'AI-Driven · 24/7 · Multi-Channel',
+    desc: 'AI-powered over-the-counter order routing and execution. Autonomous agents handle large-block trades across Telegram, WhatsApp, Signal, and DEX liquidity pools.',
+    tiers: [
+      { tier: 'OTC',  name: 'Direct OTC Orders', detail: '1.5% spread. Via Telegram/WhatsApp/Signal.' },
+      { tier: 'DEX',  name: 'Uniswap V4 Swaps', detail: '0.3% spread. Private persistent pools.' },
+      { tier: 'CCIP', name: 'Stablecoin Monetization', detail: 'Cross-chain via Chainlink CCIP.' },
+    ],
+    accent: 'primary',
+  },
+];
 
-  return {
-    title: `${t('hero.title')} | Convexo Protocol`,
-    description: t('hero.subtitle'),
-  };
-}
+const providers = [
+  { name: 'Chainlink',    category: 'Oracles & CCIP',         logo: '/technology/chainlink.png' },
+  { name: 'Uniswap',     category: 'Decentralized Exchange',  logo: '/technology/uniswap.png' },
+  { name: 'Sumsub',      category: 'KYB / Compliance',        logo: '/technology/sumsub.png' },
+  { name: 'Veriff',      category: 'Identity Verification',   logo: '/technology/veriff.png' },
+  { name: 'zkPassport',  category: 'Privacy Identity',        logo: '/technology/zkpassport.png' },
+  { name: 'Safe',        category: 'Institutional Custody',   logo: '/technology/safe.png' },
+  { name: 'Circle USDC', category: 'Stablecoins',             logo: '/technology/usdc.png' },
+  { name: 'CoinGecko',   category: 'Price Oracles',           logo: '/technology/coingecko.png' },
+  { name: 'HashKey',     category: 'Institutional Custody',   logo: '/technology/hashkey.png' },
+  { name: 'OKX',         category: 'Liquidity',               logo: '/technology/okx.png' },
+];
 
-export default async function TechnologyPage({ params }: Props) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'technology' });
-  const providers = [
-    {
-      name: 'Chainlink',
-      logo: '/providers/chainlink.png',
-      category: 'Oracles',
-      description: 'Decentralized oracle network for price feeds and proof of reserves',
-    },
-    {
-      name: 'Uniswap',
-      logo: '/providers/uniswap.png',
-      category: 'DEX Infrastructure',
-      description: 'Uniswap V4 powers our liquidity pools and stablecoin swaps',
-    },
-    {
-      name: 'Sumsub',
-      logo: '/providers/sumsub.jpg',
-      category: 'KYB Verification',
-      description: 'Enterprise KYB/KYC verification for institutional clients',
-    },
-    {
-      name: 'Veriff',
-      logo: '/providers/verifffondoblanco.png',
-      category: 'Identity Verification',
-      description: 'Individual identity verification with AI-powered authentication',
-    },
-    {
-      name: 'zkPassport',
-      logo: '/providers/zkpassportid.png',
-      category: 'Privacy Identity',
-      description: 'Zero-knowledge proof identity for privacy-persistent verification',
-    },
-    {
-      name: 'Safe',
-      logo: '/providers/safe_logo.png',
-      category: 'Custody',
-      description: 'Multi-signature smart contract wallets for institutional security',
-    },
-    {
-      name: 'Circle USDC',
-      logo: '/providers/acceptusdc.png',
-      category: 'Stablecoins',
-      description: 'USD Coin for fiat-backed stablecoin infrastructure',
-    },
-    {
-      name: 'CoinGecko',
-      logo: '/providers/CoinGecko.png',
-      category: 'Price Oracles',
-      description: 'Real-time cryptocurrency price data and market analytics',
-    },
-    {
-      name: 'HashKey',
-      logo: '/providers/hashkey_logo.png',
-      category: 'Custody',
-      description: 'Institutional-grade digital asset custody and infrastructure',
-    },
-    {
-      name: 'OKX',
-      logo: '/providers/okx_logo.png',
-      category: 'Liquidity',
-      description: 'Deep liquidity provider for institutional trading',
-    },
-  ];
+const chains = ['Ethereum', 'Base', 'UniChain'];
 
-  const chains = [
-    {
-      name: 'Ethereum',
-      logo: '/providers/chains/ethereum.png',
-      description: 'Primary settlement layer for tokenized assets',
-    },
-    {
-      name: 'Base',
-      logo: '/providers/chains/base_logo.svg',
-      description: 'Coinbase L2 for efficient transaction execution',
-    },
-    {
-      name: 'UniChain',
-      logo: '/providers/chains/unichain.png',
-      description: 'Uniswap native chain for optimized DEX operations',
-    },
-  ];
-
+export default function TechnologyPage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen bg-surface text-on-surface overflow-x-hidden">
       <Navbar />
 
-      {/* Hero */}
-      <section className="section-padding pt-32 border-b border-border">
-        <div className="section-container">
-          <div className="max-w-2xl">
-            <div className="heading-section mb-6">{t('badge')}</div>
-            <h1 className="heading-xl text-primary-text mb-6">
-              {t('hero.title')}
+      <main className="pt-20">
+        {/* ── HERO ─────────────────────────────────────────────── */}
+        <section className="relative flex flex-col items-center justify-center px-6 sm:px-8 lg:px-12 py-36 overflow-hidden">
+          <div className="absolute inset-0 technical-grid opacity-30 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/8 rounded-full blur-[120px] pointer-events-none" />
+          <div className="relative z-10 text-center max-w-4xl">
+            {/* Chain badges */}
+            <div className="flex justify-center flex-wrap gap-3 mb-12">
+              {chains.map((c) => (
+                <span key={c} className="px-4 py-1.5 bg-surface-container-highest metallic-edge text-secondary label-institutional">
+                  {c}
+                </span>
+              ))}
+            </div>
+            <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8">
+              Sovereign<br />
+              <span className="text-primary">Tech</span> Stack
             </h1>
-            <p className="text-base text-muted-light leading-relaxed mb-8">
-              {t('hero.subtitle')}
+            <p className="font-body text-lg text-on-surface-variant font-light leading-relaxed max-w-2xl mx-auto">
+              Purpose-built primitives and best-in-class infrastructure providers,
+              working together to deliver institutional-grade DeFi infrastructure
+              across Latin America.
+            </p>
+          </div>
+        </section>
+
+        {/* ── OUR TECHNOLOGY ───────────────────────────────────── */}
+        <section id="our-technology" className="section-container section-padding">
+          <h2 className="heading-lg text-2xl mb-6 flex items-center gap-6">
+            <span className="section-rule" />
+            Our Technology
+          </h2>
+          <p className="body-text text-base max-w-2xl mb-20">
+            Four core primitives built and owned by Convexo Protocol — the foundation
+            powering every product in the ecosystem.
+          </p>
+
+          <div className="space-y-8">
+            {ownTech.map((t) => (
+              <div key={t.id} className="group grid grid-cols-1 lg:grid-cols-12 gap-0 bg-surface-container-high rounded-xl metallic-edge overflow-hidden hover:bg-surface-container-highest transition-all duration-300">
+                {/* Left — label + title */}
+                <div className="lg:col-span-4 p-10 lg:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant/10">
+                  <div>
+                    <span className="label-institutional text-primary block mb-4">{t.label}</span>
+                    <h3 className="font-headline text-2xl font-black uppercase tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">
+                      {t.title}
+                    </h3>
+                    <p className="font-body text-xs text-on-surface-variant font-light">{t.subtitle}</p>
+                  </div>
+                  <p className="body-text leading-relaxed mt-8 hidden lg:block">{t.desc}</p>
+                </div>
+
+                {/* Right — tier details */}
+                <div className="lg:col-span-8 p-10 lg:p-12">
+                  <p className="body-text leading-relaxed mb-8 lg:hidden">{t.desc}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    {t.tiers.map((tier) => (
+                      <div key={tier.tier} className="p-5 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+                        <span className="label-institutional text-primary block mb-2">{tier.tier}</span>
+                        <p className="font-label text-xs font-bold text-on-surface mb-2 uppercase tracking-tight">{tier.name}</p>
+                        <p className="font-body text-[11px] text-on-surface-variant leading-relaxed">{tier.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── INFRASTRUCTURE PROVIDERS ─────────────────────────── */}
+        <section id="providers" className="w-full bg-surface-container-low py-32">
+          <div className="section-container">
+            <h2 className="heading-lg text-2xl mb-6 flex items-center gap-6">
+              <span className="section-rule" />
+              Infrastructure Providers
+            </h2>
+            <p className="body-text text-base max-w-2xl mb-20">
+              10 best-in-class protocols powering the Convexo stack. Each selected for
+              institutional-grade security, reliability, and LATAM compatibility.
             </p>
 
-            {/* Chains - Lighter Display */}
-            <div className="inline-flex items-center gap-3 flex-wrap">
-              <span className="text-xs text-muted uppercase tracking-[0.15em]">{t('hero.deployedOn')}</span>
-              {chains.map((chain, index) => (
-                <div key={index} className="flex items-center gap-2 bg-layer rounded-lg px-3 py-2">
-                  <div className="w-5 h-5 flex items-center justify-center">
-                    <Image
-                      src={chain.logo}
-                      alt={chain.name}
-                      width={20}
-                      height={20}
-                      className="object-contain opacity-70"
-                    />
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {providers.map((p) => (
+                <div
+                  key={p.name}
+                  className="group flex flex-col items-center gap-4 p-8 bg-surface-container-highest rounded-xl metallic-edge hover:bg-surface-variant transition-all duration-300 text-center"
+                >
+                  {/* Logo placeholder — replace with actual Image when assets are confirmed */}
+                  <div className="w-12 h-12 bg-surface-container-lowest rounded-full flex items-center justify-center metallic-edge">
+                    <span className="text-primary text-lg font-headline font-black uppercase">
+                      {p.name.charAt(0)}
+                    </span>
                   </div>
-                  <span className="text-xs text-primary-text font-medium">{chain.name}</span>
+                  <div>
+                    <p className="font-label text-xs font-bold text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">
+                      {p.name}
+                    </p>
+                    <p className="font-body text-[10px] text-on-surface-variant mt-1">{p.category}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Infrastructure Providers */}
-      <section className="section-padding border-b border-border">
-        <div className="section-container">
-          <div className="mb-12">
-            <div className="heading-section mb-4">{t('partners.badge')}</div>
-            <h2 className="heading-lg text-primary-text mb-4">
-              {t('partners.title')}
-            </h2>
-            <p className="body-text max-w-xl">
-              {t('partners.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {providers.map((provider, index) => (
-              <div
-                key={index}
-                className="bg-base p-6 rounded-lg border border-border hover:border-border-hover transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-16 h-16 rounded-lg bg-white flex items-center justify-center p-3">
-                    <Image
-                      src={provider.logo}
-                      alt={provider.name}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="text-[9px] font-semibold uppercase tracking-[0.15em] text-authority-blue">
-                    {provider.category}
-                  </div>
-                </div>
-                <h3 className="text-sm font-medium text-primary-text mb-2">
-                  {provider.name}
-                </h3>
-                <p className="text-xs text-muted leading-relaxed">
-                  {provider.description}
-                </p>
+        {/* ── ARCHITECTURE PILLARS ─────────────────────────────── */}
+        <section className="section-container section-padding">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: 'Security',    desc: 'Multi-sig custody via Safe, zero-knowledge proofs via zkPassport, and continuous smart contract auditing across all vaults and protocol layers.' },
+              { title: 'Compliance',  desc: 'KYC/AML embedded at protocol level. 3-tier Digital ID system meets regulatory requirements across 20 LATAM jurisdictions.' },
+              { title: 'Performance', desc: 'Built on Base L2 and Ethereum Mainnet for optimal throughput. ~15 minute settlement times. 99.9% uptime across the network.' },
+            ].map((a) => (
+              <div key={a.title} className="p-10 bg-surface-container-high rounded-xl metallic-edge hover:bg-surface-container-highest transition-all">
+                <h3 className="font-headline text-xl font-black uppercase tracking-tight text-on-surface mb-5">{a.title}</h3>
+                <p className="body-text leading-relaxed">{a.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Technical Stack */}
-      <section className="section-padding">
-        <div className="section-container">
-          <div className="max-w-3xl mx-auto">
-            <div className="heading-section mb-6 text-center">{t('architecture.badge')}</div>
-            <h2 className="heading-lg text-primary-text mb-8 text-center">
-              {t('architecture.title')}
-            </h2>
-
-            <div className="space-y-6">
-              <div className="card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded bg-authority-blue/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.security.title')}</h3>
-                    <p className="text-xs text-muted-light leading-relaxed">
-                      {t('architecture.security.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded bg-authority-blue/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.compliance.title')}</h3>
-                    <p className="text-xs text-muted-light leading-relaxed">
-                      {t('architecture.compliance.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded bg-authority-blue/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-authority-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-medium text-primary-text mb-2">{t('architecture.performance.title')}</h3>
-                    <p className="text-xs text-muted-light leading-relaxed">
-                      {t('architecture.performance.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 }

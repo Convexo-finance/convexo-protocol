@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>E-LOANS | Convexo Protocol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Akira+Expanded&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#001552",
+                        "surface-variant": "#2d315d",
+                        "primary": "#b7c4ff",
+                        "surface-dim": "#0a0d3a",
+                        "surface-container-lowest": "#040735",
+                        "secondary-fixed-dim": "#d6baff",
+                        "on-tertiary-fixed": "#001e2d",
+                        "surface-bright": "#313561",
+                        "on-tertiary": "#173344",
+                        "on-surface-variant": "#c5c5d4",
+                        "inverse-primary": "#3d57b6",
+                        "on-primary-fixed-variant": "#213e9d",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#282c58",
+                        "tertiary-fixed": "#cae6fc",
+                        "on-secondary-fixed-variant": "#57328f",
+                        "tertiary-fixed-dim": "#aecadf",
+                        "on-primary-container": "#bcc8ff",
+                        "primary-container": "#334eac",
+                        "on-secondary-fixed": "#280056",
+                        "surface-tint": "#b7c4ff",
+                        "outline-variant": "#444652",
+                        "on-surface": "#e0e0ff",
+                        "inverse-surface": "#e0e0ff",
+                        "surface-container": "#171b46",
+                        "surface": "#0a0d3a",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#2f4a5b",
+                        "secondary-fixed": "#ecdcff",
+                        "secondary-container": "#593491",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "primary-fixed": "#dce1ff",
+                        "outline": "#8f909e",
+                        "on-background": "#e0e0ff",
+                        "surface-container-low": "#131742",
+                        "on-tertiary-container": "#b3cfe4",
+                        "on-secondary": "#401677",
+                        "on-secondary-container": "#cba8ff",
+                        "tertiary-container": "#3e596b",
+                        "surface-container-highest": "#2d315d",
+                        "surface-container-high": "#222651",
+                        "error": "#ffb4ab",
+                        "tertiary": "#aecadf",
+                        "background": "#0a0d3a",
+                        "secondary": "#d6baff",
+                        "on-primary": "#002682",
+                        "error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "akira": ["Akira Expanded"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .font-akira { font-family: 'Akira Expanded', sans-serif; }
+        .glass-panel {
+            background: rgba(45, 49, 93, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(183, 196, 255, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(214, 186, 255, 0.05), transparent 40%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0D3A]/40 backdrop-blur-xl shadow-[0_12px_40px_0_rgba(0,0,0,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#FFF9EF] tracking-widest uppercase font-akira">Convexo Protocol</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#B7C4FF] border-b-2 border-[#B7C4FF] pb-1 font-bold text-sm tracking-tighter uppercase font-akira" href="#">Products</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors text-sm tracking-tighter uppercase font-akira" href="#">Services</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors text-sm tracking-tighter uppercase font-akira" href="#">Technology</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors text-sm tracking-tighter uppercase font-akira" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">account_balance_wallet</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">notifications</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-akira text-xs tracking-tighter uppercase hover:opacity-90 transition-all active:scale-95 border border-primary/20">Connect Vault</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 min-h-screen hero-gradient">
+<!-- Hero Section -->
+<section class="px-8 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-sm mb-6">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-akira tracking-widest uppercase text-primary">SME Credit Infrastructure</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-akira leading-none text-[#FFF9EF] mb-8 tracking-tighter">
+                    INSTITUTIONAL <br/> <span class="text-primary">E-LOANS</span> FOR LATAM
+                </h1>
+<p class="max-w-2xl text-on-surface-variant text-lg leading-relaxed">
+                    Bridging liquidity from global capital markets to the backbone of the Latin American economy. Secure, on-chain lending powered by E-Credits and real-world legal integration.
+                </p>
+</div>
+<div class="lg:col-span-4 glass-panel p-8 border border-white/5 rounded-lg">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] font-akira uppercase text-on-surface-variant mb-1">Standardized Vault</p>
+<h3 class="text-2xl font-headline font-bold">EIP-4626</h3>
+</div>
+<div class="bg-primary/20 p-2">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-sm text-on-surface-variant">Target APY</span>
+<span class="text-xl font-headline font-bold text-primary">12.00% MIN</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-sm text-on-surface-variant">Liquidity Lock</span>
+<span class="text-sm font-headline">90 DAYS</span>
+</div>
+<div class="flex justify-between items-center py-3">
+<span class="text-sm text-on-surface-variant">Asset Class</span>
+<span class="text-sm font-headline">RWA / SME DEBT</span>
+</div>
+</div>
+<button class="w-full mt-6 bg-primary-container text-on-primary-container py-4 font-akira text-xs uppercase tracking-widest hover:bg-primary transition-colors">Supply Liquidity</button>
+</div>
+</section>
+<!-- Fluid 4-Step Process Section -->
+<section class="px-8 md:px-12 py-24 bg-surface-container-low/50 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] pointer-events-none"></div>
+<h2 class="text-3xl font-akira mb-16 text-center">Disbursement <span class="text-secondary">Orchestration</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+<!-- Step 1 -->
+<div class="group relative p-8 bg-surface-container-highest/30 border border-white/5 hover:border-primary/30 transition-all duration-500">
+<div class="absolute top-4 right-4 text-4xl font-akira text-white/5 group-hover:text-primary/10 transition-colors">01</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">analytics</span>
+<h4 class="font-akira text-sm mb-4">AI Scoring</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Real-time analysis of tax records and transactional data via secure API endpoints.</p>
+<div class="flex items-center gap-2">
+<div class="h-1 w-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+<span class="text-[10px] font-headline">782</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group relative p-8 bg-surface-container-highest/30 border border-white/5 hover:border-primary/30 transition-all duration-500 md:mt-12">
+<div class="absolute top-4 right-4 text-4xl font-akira text-white/5 group-hover:text-primary/10 transition-colors">02</div>
+<span class="material-symbols-outlined text-secondary mb-6 text-4xl">description</span>
+<h4 class="font-akira text-sm mb-4">E-Contract Mint</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Legal anchoring of debt obligations through local jurisdiction smart legal contracts.</p>
+<div class="flex gap-2">
+<span class="text-[9px] px-2 py-1 bg-secondary/10 text-secondary border border-secondary/20 rounded-sm">LEGAL-ID</span>
+<span class="text-[9px] px-2 py-1 bg-secondary/10 text-secondary border border-secondary/20 rounded-sm">IPFS-DOC</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group relative p-8 bg-surface-container-highest/30 border border-white/5 hover:border-primary/30 transition-all duration-500 lg:mt-6">
+<div class="absolute top-4 right-4 text-4xl font-akira text-white/5 group-hover:text-primary/10 transition-colors">03</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">account_balance</span>
+<h4 class="font-akira text-sm mb-4">Vault Funding</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Capital deployment via EIP-4626 standard ensuring transparent yield distribution.</p>
+<div class="bg-surface-container-lowest p-3 rounded-sm flex justify-between items-center">
+<span class="text-[10px] text-primary">FUNDING_READY</span>
+<span class="w-2 h-2 rounded-full bg-green-400"></span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="group relative p-8 bg-surface-container-highest/30 border border-white/5 hover:border-primary/30 transition-all duration-500 md:mt-12 lg:mt-24">
+<div class="absolute top-4 right-4 text-4xl font-akira text-white/5 group-hover:text-primary/10 transition-colors">04</div>
+<span class="material-symbols-outlined text-secondary mb-6 text-4xl">currency_exchange</span>
+<h4 class="font-akira text-sm mb-4">Instant Payout</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Final disbursement to the SME's local bank account through partner on-ramps.</p>
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-primary/20 border border-surface"></div>
+<div class="w-6 h-6 rounded-full bg-secondary/20 border border-surface"></div>
+<div class="w-6 h-6 rounded-full bg-on-surface/20 border border-surface"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- SME Portfolio Bento Grid -->
+<section class="px-8 md:px-12 py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-akira mb-2">Active <span class="text-primary">E-Credits</span></h2>
+<p class="text-on-surface-variant max-w-md">Institutional-grade SME debt opportunities currently open for participation.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-4 py-2 border border-outline-variant text-xs font-akira hover:bg-white/5">Filter: Mexico</button>
+<button class="px-4 py-2 border border-outline-variant text-xs font-akira hover:bg-white/5">Filter: Brazil</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-2 glass-panel p-8 border border-white/5 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2 aspect-video bg-surface-container-lowest relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="Modern high-tech industrial manufacturing facility in Latin America with clean lines and soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCahJv-7BJ46D4bHNwApgzsvjG6dZrHLmFMos7GVCtwMrZb9VOO7l4xsVdPPg2yTWqC6d9HhLLrSXmQbUygT4y4DctB4EN8Ah5U7jJWrniiYq1rDxp-8Chf8HfONg4bV2hYoX4GFV2v47lbJyRk2-DbU01VuEPLxbOgHTLCCKBPfN3hDrP13hk-gvqg6Iu-9CgAiQLlEbPNmmfe1oWYXpg7FkColXZgcxrzCje7mgD7NJAZoKgS8gSgAOgqXjLg7kN-BVoBmoqjGvkb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-[10px] font-akira bg-primary text-on-primary px-2 py-1">Featured Asset</span>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="flex justify-between mb-4">
+<h3 class="font-akira text-lg leading-tight">Agro-Logistics <br/> Expansion</h3>
+<span class="text-primary font-headline font-bold">14.2% APY</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Scaling cold-chain storage solutions for export-ready avocado producers in Michoacán.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div>
+<p class="text-[9px] font-akira text-on-surface-variant mb-1 uppercase">Rating</p>
+<p class="font-headline font-bold text-green-400">AA+</p>
+</div>
+<div>
+<p class="text-[9px] font-akira text-on-surface-variant mb-1 uppercase">Term</p>
+<p class="font-headline font-bold">12 MO</p>
+</div>
+</div>
+<button class="w-full border border-primary text-primary py-3 font-akira text-[10px] tracking-widest hover:bg-primary hover:text-on-primary transition-all">View E-Contracts</button>
+</div>
+</div>
+<!-- Vertical Card -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between border border-white/5">
+<div>
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-secondary">memory</span>
+<span class="text-[10px] font-akira text-secondary">Tech Credit</span>
+</div>
+<h3 class="font-akira text-base mb-4">FinTech Infrastructure Braz.</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Working capital for São Paulo based payment processor scaling to 10M users.</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex justify-between text-xs font-headline">
+<span>$1,200,000</span>
+<span class="text-on-surface-variant">Target</span>
+</div>
+<div class="h-1 bg-surface-container-lowest">
+<div class="h-full bg-secondary w-2/3"></div>
+</div>
+<button class="w-full bg-surface-container-highest py-3 font-akira text-[10px] tracking-widest">Supply Capital</button>
+</div>
+</div>
+<!-- Wide Bottom Card -->
+<div class="md:col-span-3 glass-panel p-6 border border-white/5 flex flex-wrap gap-8 items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="p-4 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-primary scale-125">verified_user</span>
+</div>
+<div>
+<p class="font-akira text-xs">AI-DRIVEN RISK ASSESSMENT</p>
+<p class="text-xs text-on-surface-variant">99.4% historical repayment rate across on-chain pools.</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-center">
+<p class="text-[10px] font-akira text-on-surface-variant mb-1">DEFAULTS</p>
+<p class="text-xl font-headline font-bold text-error">0.58%</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] font-akira text-on-surface-variant mb-1">TOTAL VOLUME</p>
+<p class="text-xl font-headline font-bold">$42.8M</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] font-akira text-on-surface-variant mb-1">AVG. TENOR</p>
+<p class="text-xl font-headline font-bold">184D</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Compliance & Security Section -->
+<section class="px-8 md:px-12 py-24 bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-akira mb-16"><span class="text-primary">Sovereign</span> Compliance</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<div>
+<h4 class="font-akira text-xs mb-2">Legal Enforceability</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Every E-Credit is backed by a legally binding promissory note in the borrower's local jurisdiction, tokenized and hashed to the blockchain.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<div>
+<h4 class="font-akira text-xs mb-2">Hierarchical Vaults</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Risk-tranching architecture allows for Senior and Junior debt participation with varying risk-reward profiles.</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<div>
+<h4 class="font-akira text-xs mb-2">KYB / AML Compliance</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Full institutional onboarding with white-listed addresses ensures regulatory clarity for global liquidity providers.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">cloud_sync</span>
+<div>
+<h4 class="font-akira text-xs mb-2">Real-time Audits</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Live monitoring of borrower health and repayment schedules accessible via the Transparency Dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#FFF9EF]/10 bg-[#0A0D3A]">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-16 w-full">
+<div class="space-y-6">
+<div class="font-akira text-lg text-[#B7C4FF]">Convexo Protocol</div>
+<p class="font-body text-xs text-[#FFF9EF]/50 leading-relaxed uppercase tracking-wide">
+                    Sovereign Vault Institutional DeFi. <br/> Built for the next era of LATAM SME growth.
+                </p>
+</div>
+<div class="space-y-4">
+<h5 class="font-akira text-[10px] text-white/30 tracking-widest uppercase">Protocol</h5>
+<ul class="space-y-2 font-body text-xs tracking-wide uppercase text-[#FFF9EF]/40">
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Governance</li>
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Documentation</li>
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Risk Parameters</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-akira text-[10px] text-white/30 tracking-widest uppercase">Security</h5>
+<ul class="space-y-2 font-body text-xs tracking-wide uppercase text-[#FFF9EF]/40">
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Security Audits</li>
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Terms of Service</li>
+<li class="hover:text-[#B7C4FF] cursor-pointer transition-colors">Privacy Policy</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-akira text-[10px] text-white/30 tracking-widest uppercase">Connect</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#B7C4FF]/50 hover:text-[#B7C4FF] cursor-pointer transition-all">public</span>
+<span class="material-symbols-outlined text-[#B7C4FF]/50 hover:text-[#B7C4FF] cursor-pointer transition-all">hub</span>
+<span class="material-symbols-outlined text-[#B7C4FF]/50 hover:text-[#B7C4FF] cursor-pointer transition-all">terminal</span>
+</div>
+<p class="font-body text-[10px] text-[#FFF9EF]/30 mt-8 uppercase">© 2024 Convexo Protocol. Institutional DeFi.</p>
+</div>
+</div>
+</footer>
+</body></html>

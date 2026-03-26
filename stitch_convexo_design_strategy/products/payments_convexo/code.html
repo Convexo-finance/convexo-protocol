@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payments Convexo | Institutional Digital Asset Infrastructure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#e0e0ff",
+                        "inverse-primary": "#3d57b6",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e0e0ff",
+                        "surface-container-lowest": "#040735",
+                        "outline": "#8f909e",
+                        "on-primary": "#002682",
+                        "outline-variant": "#444652",
+                        "on-secondary": "#401677",
+                        "on-primary-fixed-variant": "#213e9d",
+                        "on-tertiary": "#173344",
+                        "on-secondary-container": "#cba8ff",
+                        "on-primary-fixed": "#001552",
+                        "on-error": "#690005",
+                        "background": "#0a0d3a",
+                        "secondary": "#d6baff",
+                        "on-tertiary-container": "#b3cfe4",
+                        "secondary-fixed-dim": "#d6baff",
+                        "tertiary-container": "#3e596b",
+                        "surface-tint": "#b7c4ff",
+                        "surface-bright": "#313561",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#aecadf",
+                        "on-secondary-fixed-variant": "#57328f",
+                        "primary-fixed": "#dce1ff",
+                        "tertiary": "#aecadf",
+                        "on-tertiary-fixed-variant": "#2f4a5b",
+                        "surface-container-high": "#222651",
+                        "surface": "#0a0d3a",
+                        "on-surface-variant": "#c5c5d4",
+                        "surface-container-low": "#131742",
+                        "primary": "#b7c4ff",
+                        "surface-dim": "#0a0d3a",
+                        "on-surface": "#e0e0ff",
+                        "surface-variant": "#2d315d",
+                        "on-secondary-fixed": "#280056",
+                        "secondary-container": "#593491",
+                        "on-primary-container": "#bcc8ff",
+                        "surface-container-highest": "#2d315d",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "primary-container": "#334eac",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#cae6fc",
+                        "inverse-on-surface": "#282c58",
+                        "surface-container": "#171b46",
+                        "secondary-fixed": "#ecdcff",
+                        "on-tertiary-fixed": "#001e2d"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .akira {
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(183, 196, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(45, 49, 93, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .tonal-shift {
+            background: linear-gradient(180deg, rgba(10, 13, 58, 1) 0%, rgba(19, 23, 66, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar Implementation from JSON -->
+<header class="fixed top-0 w-full z-50 bg-[#0A0D3A]/40 backdrop-blur-xl shadow-[0_12px_40px_0_rgba(0,0,0,0.06)]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto bg-gradient-to-b from-[#FFF9EF]/5 to-transparent">
+<div class="text-2xl font-black tracking-tighter text-[#B7C4FF] uppercase font-['Space_Grotesk']">
+                SOVEREIGN
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight text-[#FFF9EF]">
+<a class="text-[#B7C4FF] border-b-2 border-[#B7C4FF] pb-1 font-bold transition-all" href="#">Products</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">Services</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">Technology</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-[#FFF9EF]/70 hover:bg-[#B7C4FF]/10 rounded-lg transition-all active:scale-95 duration-200">
+                    Global
+                </button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-primary/20 active:scale-95 duration-200">
+                    Connect Vault
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-24 min-h-screen technical-grid">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 max-w-[1440px] mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-secondary-container text-on-secondary-container text-xs font-label mb-6">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        INSTITUTIONAL GRADE INFRASTRUCTURE
+                    </div>
+<h1 class="akira text-6xl md:text-8xl leading-tight text-on-surface mb-8">
+                        PAYMENTS <span class="text-primary italic">CONVEXO</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        Sovereign digital asset settlement rails for LATAM's leading institutions. Direct liquidity routing between Global Trade hubs and decentralized finance.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<div class="flex flex-col">
+<span class="text-3xl font-headline font-black text-primary tracking-tighter">~15 MIN</span>
+<span class="text-xs uppercase tracking-widest text-outline">Settlement Time</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-headline font-black text-primary tracking-tighter">1.5%</span>
+<span class="text-xs uppercase tracking-widest text-outline">Max Spread</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-headline font-black text-primary tracking-tighter">24/7</span>
+<span class="text-xs uppercase tracking-widest text-outline">Availability</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative glass-panel rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">sync_alt</span>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Transfer Routing</div>
+<div class="text-[10px] text-outline uppercase tracking-widest">Active Engine</div>
+</div>
+</div>
+<div class="text-xs font-mono text-primary">0xc4...b7ff</div>
+</div>
+<!-- Flow Diagram Simulation -->
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">public</span>
+<span class="text-sm">Global Provider</span>
+</div>
+<span class="material-symbols-outlined text-outline">arrow_forward</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<span class="text-sm">Convexo Vault</span>
+</div>
+</div>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-primary text-4xl animate-pulse">keyboard_double_arrow_down</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<span class="text-sm">AI Agent Router</span>
+</div>
+<span class="material-symbols-outlined text-outline">arrow_forward</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<span class="text-sm">LATAM Local Rail</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Radial Glow -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Product Verticals -->
+<section class="px-8 py-24 bg-surface-container-low/50">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-16">
+<h2 class="akira text-4xl mb-4">Core Rails</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Global Trade -->
+<div class="group surface-container-highest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block" data-icon="global_reach">public</span>
+<h3 class="text-2xl font-headline font-bold mb-4">International Provider Payments</h3>
+<p class="text-on-surface-variant leading-relaxed">Seamlessly pay providers in China and global hubs. Automated FX conversion and deep liquidity pools for massive trade volume.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs uppercase tracking-tighter font-bold text-primary">China/Global Trade Focus</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<!-- Collections -->
+<div class="group surface-container-highest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="instant_settlement">flash_on</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Global Collections</h3>
+<p class="text-on-surface-variant leading-relaxed">Receive payments from international clients via stablecoin rails. Instantly bridge to local fiat accounts across LATAM with zero friction.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs uppercase tracking-tighter font-bold text-secondary">Real-time Settlements</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<!-- OTC Agentic -->
+<div class="group surface-container-highest p-8 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all duration-500 flex flex-col h-full">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block" data-icon="ai_powered">psychology</span>
+<h3 class="text-2xl font-headline font-bold mb-4">OTC Agentic Services</h3>
+<p class="text-on-surface-variant leading-relaxed">AI-powered order routing for large-scale OTC transactions. Dynamic spread optimization and institutional execution desk access.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs uppercase tracking-tighter font-bold text-primary">Tailored Services</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Flow Section -->
+<section class="px-8 py-32 overflow-hidden relative">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 relative">
+<img alt="Cryptographic network visualization" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 opacity-60" data-alt="Abstract 3D rendering of complex cryptographic network nodes connected by glowing digital lines on a dark blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpVq2ncHTBtRRMRyFvyd1v-SrDy5F7UC4YRwodUTT4Eoa-eSGGnmC64PAdxLERo6jlGFvbWtTR1nRw8K6rQeBU1Qn2N4IQ9tVFDFGwOLfDFbZa5xV6NZEQFG_yQO_ba5lH4MkSkF3anE5zo3YH715I0iu2otwl49uHfJhoJ2KwJPFLRL0fI_kyXIuRrZDfL26en94Lqystjo7X9FUxQMlnfcL1lHa-TgtsO0EziQuoSLr_jReixMJGABP5NTzklZks70cAUJzr5s0t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="akira text-4xl mb-8 leading-tight">THE CROSS-BORDER <span class="text-primary">STANDARD</span></h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-highest border border-primary/20 flex items-center justify-center">
+<span class="text-primary font-bold font-headline">01</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Liquidity Aggregation</h4>
+<p class="text-on-surface-variant">Convexo pools liquidity from multiple DEXs and CEXs to ensure minimal slippage even for high-volume institutional trades.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-highest border border-primary/20 flex items-center justify-center">
+<span class="text-primary font-bold font-headline">02</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Compliance First</h4>
+<p class="text-on-surface-variant">Embedded AML/KYC logic within the transaction flow ensures every settlement meets sovereign regulatory standards.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-highest border border-primary/20 flex items-center justify-center">
+<span class="text-primary font-bold font-headline">03</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Agentic Execution</h4>
+<p class="text-on-surface-variant">Our AI agents monitor global market conditions to time executions, saving institutions significant overhead on capital management.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dashboard Teaser (Bento Grid) -->
+<section class="px-8 py-24 bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="akira text-4xl mb-4">Vault Control</h2>
+<p class="text-on-surface-variant">Enterprise interface for treasury operations.</p>
+</div>
+<a class="px-8 py-4 bg-primary text-on-primary font-bold uppercase tracking-widest hover:brightness-110 transition-all rounded-sm flex items-center gap-2" href="https://pay.convexo.xyz">
+                        Launch App <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 glass-panel border border-outline-variant/10 rounded-xl p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-8">
+<h4 class="text-outline uppercase tracking-widest text-xs font-bold">Volume Heatmap</h4>
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<div class="space-y-4">
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/2"></div>
+</div>
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-background/50 p-4 rounded-lg">
+<div class="text-xs text-outline mb-1">Total Settled</div>
+<div class="text-2xl font-headline font-black">$42.8M</div>
+</div>
+<div class="bg-background/50 p-4 rounded-lg">
+<div class="text-xs text-outline mb-1">Active Routes</div>
+<div class="text-2xl font-headline font-black">12</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 glass-panel border border-outline-variant/10 rounded-xl p-6 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-outline uppercase tracking-widest text-xs font-bold mb-4">Settlement Map</h4>
+<div class="flex items-center gap-4 text-3xl font-headline font-black">
+<span class="text-primary">SHA</span>
+<span class="material-symbols-outlined text-outline">swap_horiz</span>
+<span class="text-secondary">BUE</span>
+</div>
+<div class="mt-2 text-xs text-on-surface-variant">Shanghai Hub ↔ Buenos Aires Node</div>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-32 bg-primary/5 blur-2xl"></div>
+</div>
+<div class="glass-panel border border-outline-variant/10 rounded-xl p-6">
+<h4 class="text-outline uppercase tracking-widest text-xs font-bold mb-4">Stable Rail</h4>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-lg font-bold">USDT</span>
+</div>
+<div class="text-xs text-on-surface-variant">TRC-20 Optimization</div>
+</div>
+<div class="glass-panel border border-outline-variant/10 rounded-xl p-6">
+<h4 class="text-outline uppercase tracking-widest text-xs font-bold mb-4">Agent Status</h4>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">smart_toy</span>
+<span class="text-lg font-bold">Online</span>
+</div>
+<div class="text-xs text-on-surface-variant">Routing order #8821...</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Footer -->
+<footer class="px-8 py-20 border-t border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="akira text-2xl text-primary mb-6">CONVEXO</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Bridging institutional finance with decentralized settlement layers. Empowering the sovereign economy of LATAM.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center hover:bg-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center hover:bg-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase tracking-widest text-xs text-outline">Products</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Payments Infrastructure</a></li>
+<li><a class="hover:text-primary" href="#">OTC Services</a></li>
+<li><a class="hover:text-primary" href="#">Vault Custody</a></li>
+<li><a class="hover:text-primary" href="#">API Docs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase tracking-widest text-xs text-outline">Legal</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="#">Compliance</a></li>
+<li><a class="hover:text-primary" href="#">Institutional Access</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase tracking-widest text-xs text-outline">Newsletter</h5>
+<div class="flex bg-surface-container-high rounded-lg p-1">
+<input class="bg-transparent border-none focus:ring-0 text-sm px-4 w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-md font-bold text-xs uppercase">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-[10px] text-outline uppercase tracking-[0.3em] flex flex-col md:flex-row justify-between items-center gap-4">
+<span>© 2024 CONVEXO TECHNOLOGIES LTD. ALL RIGHTS RESERVED.</span>
+<span class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    ALL SYSTEMS OPERATIONAL
+                </span>
+</div>
+</footer>
+</main>
+<!-- SideNavBar (Contextual Hidden) -->
+<!-- Suppressed for focused landing page UX -->
+</body></html>

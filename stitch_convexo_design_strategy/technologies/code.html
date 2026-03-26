@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001552",
+              "surface-variant": "#2d315d",
+              "primary": "#b7c4ff",
+              "surface-dim": "#0a0d3a",
+              "surface-container-lowest": "#040735",
+              "secondary-fixed-dim": "#d6baff",
+              "on-tertiary-fixed": "#001e2d",
+              "surface-bright": "#313561",
+              "on-tertiary": "#173344",
+              "on-surface-variant": "#c5c5d4",
+              "inverse-primary": "#3d57b6",
+              "on-primary-fixed-variant": "#213e9d",
+              "on-error": "#690005",
+              "inverse-on-surface": "#282c58",
+              "tertiary-fixed": "#cae6fc",
+              "on-secondary-fixed-variant": "#57328f",
+              "tertiary-fixed-dim": "#aecadf",
+              "on-primary-container": "#bcc8ff",
+              "primary-container": "#334eac",
+              "on-secondary-fixed": "#280056",
+              "surface-tint": "#b7c4ff",
+              "outline-variant": "#444652",
+              "on-surface": "#e0e0ff",
+              "inverse-surface": "#e0e0ff",
+              "surface-container": "#171b46",
+              "surface": "#0a0d3a",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#2f4a5b",
+              "secondary-fixed": "#ecdcff",
+              "secondary-container": "#593491",
+              "primary-fixed-dim": "#b7c4ff",
+              "primary-fixed": "#dce1ff",
+              "outline": "#8f909e",
+              "on-background": "#e0e0ff",
+              "surface-container-low": "#131742",
+              "on-tertiary-container": "#b3cfe4",
+              "on-secondary": "#401677",
+              "on-secondary-container": "#cba8ff",
+              "tertiary-container": "#3e596b",
+              "surface-container-highest": "#2d315d",
+              "surface-container-high": "#222651",
+              "error": "#ffb4ab",
+              "tertiary": "#aecadf",
+              "background": "#0a0d3a",
+              "secondary": "#d6baff",
+              "on-primary": "#002682",
+              "error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Akira_Expanded';
+            src: url('https://fonts.cdnfonts.com/s/61665/Akira Expanded Demo.woff') format('woff');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0D3A]/40 backdrop-blur-xl bg-gradient-to-b from-[#FFF9EF]/5 to-transparent shadow-[0_12px_40px_0_rgba(0,0,0,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#FFF9EF] tracking-widest uppercase font-['Akira_Expanded']">
+                Convexo Protocol
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm" href="#">Products</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm" href="#">Services</a>
+<a class="text-[#B7C4FF] border-b-2 border-[#B7C4FF] pb-1 font-bold font-['Akira_Expanded'] tracking-tighter uppercase text-sm" href="#">Technology</a>
+<a class="text-[#FFF9EF]/70 hover:text-[#FFF9EF] transition-colors font-['Akira_Expanded'] tracking-tighter uppercase text-sm" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">account_balance_wallet</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer hover:bg-[#FFF9EF]/10 p-2 rounded-full transition-all">notifications</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-sm font-label font-bold uppercase tracking-wider text-xs active:scale-95 duration-200 transition-all border border-primary/20">
+                    Connect Vault
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex flex-col items-center justify-center px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10 text-center max-w-5xl">
+<div class="flex justify-center gap-4 mb-8">
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant/30 text-secondary text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">Ethereum Mainnet</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant/30 text-secondary text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">Base L2</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant/30 text-secondary text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">UniChain</span>
+</div>
+<h1 class="font-['Akira_Expanded'] text-4xl md:text-7xl lg:text-8xl tracking-tighter text-on-surface leading-none mb-6">
+                    INFRASTRUCTURE<br/>PRIMITIVES
+                </h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+                    Architecting the sovereign digital financial layer with institutional-grade security and cross-chain modularity.
+                </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<div class="flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl border border-outline-variant/10 shadow-2xl">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<div class="text-left">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant">System Status</div>
+<div class="text-sm font-headline font-bold text-primary">ALL NODES OPERATIONAL</div>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl border border-outline-variant/10 shadow-2xl">
+<span class="material-symbols-outlined text-secondary text-3xl">lan</span>
+<div class="text-left">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Active Instances</div>
+<div class="text-sm font-headline font-bold text-secondary">2,841 VALIDATORS</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Architecture Section -->
+<section class="px-8 py-24 max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="font-headline text-3xl md:text-5xl font-bold mb-4">Core Architecture Pillars</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Pillar 1: Security -->
+<div class="group relative bg-surface-container-low p-10 rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500">
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-8 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl">shield_lock</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Programmable Security</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Multi-layered MPC custody combined with real-time on-chain circuit breakers to mitigate systemic risks.
+                        </p>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-primary">
+<span class="text-xs font-bold uppercase tracking-widest">MPC Thresholds</span>
+<span class="font-headline text-primary text-sm">2/3 SIG</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-primary">
+<span class="text-xs font-bold uppercase tracking-widest">Audit Depth</span>
+<span class="font-headline text-primary text-sm">4+ FIRMS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pillar 2: Compliance -->
+<div class="group relative bg-surface-container-low p-10 rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500">
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-8 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary text-3xl">fact_check</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Institutional Compliance</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Native KYC/AML integration via zkPassport, enabling institutional participation without compromising privacy.
+                        </p>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-secondary">
+<span class="text-xs font-bold uppercase tracking-widest">ZK Verification</span>
+<span class="font-headline text-secondary text-sm">PASSED</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-secondary">
+<span class="text-xs font-bold uppercase tracking-widest">Regulatory Scope</span>
+<span class="font-headline text-secondary text-sm">G20 READY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pillar 3: Performance -->
+<div class="group relative bg-surface-container-low p-10 rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500">
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-tertiary/10 rounded-full flex items-center justify-center mb-8 border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary text-3xl">bolt</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Execution Performance</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Parallel transaction processing and optimized routing across global liquidity pools for sub-second finality.
+                        </p>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-tertiary">
+<span class="text-xs font-bold uppercase tracking-widest">Max Throughput</span>
+<span class="font-headline text-tertiary text-sm">12K TPS</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-sm border-l-2 border-tertiary">
+<span class="text-xs font-bold uppercase tracking-widest">Cross-Chain Latency</span>
+<span class="font-headline text-tertiary text-sm">&lt;2 SEC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Infrastructure Providers Floating Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="text-center mb-16 px-8">
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2 tracking-tight">Ecosystem Providers</h2>
+<p class="text-on-surface-variant font-body">Integrated with industry leaders to power the sovereign vault</p>
+</div>
+<div class="relative w-full h-[600px] flex items-center justify-center">
+<!-- Floating Partner Nodes -->
+<!-- Center Core -->
+<div class="absolute z-20 w-32 h-32 bg-primary/20 rounded-full flex items-center justify-center border border-primary animate-pulse">
+<div class="text-xs font-['Akira_Expanded'] text-primary text-center">CORE<br/>PRIMITIVE</div>
+</div>
+<!-- Floating Elements - Arranged asymmetrically -->
+<div class="absolute top-[10%] left-[20%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">Chainlink</span>
+<span class="text-[10px] bg-primary/20 text-primary px-2 rounded-full">ORACLE</span>
+</div>
+</div>
+<div class="absolute top-[15%] right-[15%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">Uniswap</span>
+<span class="text-[10px] bg-secondary/20 text-secondary px-2 rounded-full">LIQUIDITY</span>
+</div>
+</div>
+<div class="absolute top-[40%] left-[5%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">Safe</span>
+<span class="text-[10px] bg-primary/20 text-primary px-2 rounded-full">CUSTODY</span>
+</div>
+</div>
+<div class="absolute top-[45%] right-[5%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">Circle</span>
+<span class="text-[10px] bg-tertiary/20 text-tertiary px-2 rounded-full">SETTLEMENT</span>
+</div>
+</div>
+<div class="absolute bottom-[20%] left-[15%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">zkPassport</span>
+<span class="text-[10px] bg-secondary/20 text-secondary px-2 rounded-full">ID</span>
+</div>
+</div>
+<div class="absolute bottom-[10%] right-[20%] group">
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-3 rounded-full border border-outline-variant flex items-center gap-3 hover:border-primary transition-all cursor-default">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="font-headline font-bold text-sm">HashKey</span>
+<span class="text-[10px] bg-primary/20 text-primary px-2 rounded-full">INSTITUTIONAL</span>
+</div>
+</div>
+<!-- Lower Tier Floating Labels -->
+<div class="absolute top-[5%] left-[45%] opacity-60">
+<span class="text-[11px] font-headline tracking-widest text-on-surface-variant uppercase">Sumsub Integrated</span>
+</div>
+<div class="absolute bottom-[5%] left-[45%] opacity-60">
+<span class="text-[11px] font-headline tracking-widest text-on-surface-variant uppercase">Veriff Compliant</span>
+</div>
+<div class="absolute top-[60%] left-[30%] opacity-40">
+<span class="text-[11px] font-headline tracking-widest text-on-surface-variant uppercase">OKX Node Cluster</span>
+</div>
+<div class="absolute top-[65%] right-[30%] opacity-40">
+<span class="text-[11px] font-headline tracking-widest text-on-surface-variant uppercase">CoinGecko Feed</span>
+</div>
+<!-- Background Visual Decoration (Schematic style) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-10" preserveaspectratio="none">
+<circle cx="50%" cy="50%" fill="none" r="100" stroke="currentColor" stroke-dasharray="4 4"></circle>
+<circle cx="50%" cy="50%" fill="none" r="200" stroke="currentColor" stroke-dasharray="4 4"></circle>
+<circle cx="50%" cy="50%" fill="none" r="300" stroke="currentColor" stroke-dasharray="4 4"></circle>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="20%" y1="50%" y2="10%"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="85%" y1="50%" y2="15%"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="5%" y1="50%" y2="40%"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="95%" y1="50%" y2="45%"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="15%" y1="50%" y2="80%"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="50%" x2="80%" y1="50%" y2="90%"></line>
+</svg>
+</div>
+</section>
+<!-- Technical Schematic Image Section (Full Width) -->
+<section class="w-full h-[600px] relative mt-12 mb-24 overflow-hidden">
+<img alt="High-tech blockchain architecture schematic" class="w-full h-full object-cover opacity-60" data-alt="A futuristic digital architectural blueprint with floating circuit patterns, translucent blue and purple glass layers, and glowing technical data points in deep navy space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHn5XkzFnF_cR51uDexHVP9gLpHurFpvoIj8qLcOsAMkti0h6cQkZp6AnB9_pEYjs7Nuqp_zRtXgtbZSDRzdfHpCSIdKUuP8nuC0lJDNEk19bJqZoG16fWldNEmg7hCppAmnDV2LOqScguhI7bJktVjU_QwxqUnkbJH30ucqlmZj8WhDwR5JcaPSVe5z0FnG1eICGj5uPq6rx7ana5O0EIeEVtdVooo-MswF7cGI0pUhQFlRJ_EzmIw6U_dJVEnaI8VFJFVbYhjJF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-surface"></div>
+<div class="absolute bottom-12 left-12 max-w-xl">
+<div class="bg-surface-container-highest/60 backdrop-blur-xl p-8 rounded-xl border border-outline-variant/30">
+<h3 class="font-headline text-3xl font-bold mb-4">Programmable Financial Logic</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        The Convexo Protocol utilizes a modular VM specifically designed for multi-asset transactions, ensuring that complex financial instructions are executed with deterministic safety.
+                    </p>
+<div class="mt-6 flex gap-4">
+<button class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-primary/20 transition-all">View Docs</button>
+<button class="bg-surface-container text-on-surface border border-outline-variant/30 px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-surface-container-high transition-all">Github</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0D3A] w-full border-t border-[#FFF9EF]/10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-16 w-full max-w-[1920px] mx-auto">
+<div class="space-y-6">
+<div class="font-['Akira_Expanded'] text-lg text-[#B7C4FF]">Convexo</div>
+<p class="font-body text-xs text-[#FFF9EF]/50 leading-loose">
+                    The institutional bridge to sovereign decentralized finance. Engineered for performance, built for security.
+                </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">language</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">hub</span>
+<span class="material-symbols-outlined text-[#B7C4FF] cursor-pointer">terminal</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/80 font-bold">Governance</h4>
+<ul class="space-y-3">
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Documentation</a></li>
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Risk Parameters</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/80 font-bold">Protocol</h4>
+<ul class="space-y-3">
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Security Audits</a></li>
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Node Operators</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/80 font-bold">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-['Poppins'] text-xs tracking-wide uppercase text-[#FFF9EF]/50 hover:text-[#B7C4FF] transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#FFF9EF]/5 text-center lg:text-left">
+<span class="font-['Poppins'] text-[10px] tracking-widest uppercase text-[#FFF9EF]/30">
+                © 2024 Convexo Protocol. Sovereign Vault Institutional DeFi.
+            </span>
+</div>
+</footer>
+</body></html>
