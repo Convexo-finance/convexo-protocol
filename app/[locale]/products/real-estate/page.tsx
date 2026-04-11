@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Real Estate Vaults | Convexo Protocol',
-  description: 'Tokenized fractional real estate investment in LATAM. 18% Annual APY. Powered by ERC-4626 vaults.',
+  description: 'Tokenized fractional real estate investment in LATAM. 18% Annual APY. Powered by ERC-7540 async vaults.',
 };
 
 const propertyTypes = [
@@ -25,7 +25,7 @@ export default function RealEstatePage() {
         {/* ── HERO ─────────────────────────────────────────────── */}
         <section className="relative z-10 section-container pt-28 pb-24">
           <div className="flex flex-wrap gap-3 mb-10">
-            <span className="chip">Live</span>
+            <span className="chip">Coming Soon</span>
             <span className="chip">realstate.convexo.xyz</span>
             <span className="chip">RWA</span>
           </div>
@@ -38,10 +38,7 @@ export default function RealEstatePage() {
             backed, and accessible to institutional investors worldwide. 18% Annual APY.
           </p>
           <div className="flex flex-wrap gap-5">
-            <a href="https://realstate.convexo.xyz" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4">
-              Open App
-            </a>
-            <a href="https://t.me/convexoprotocol" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4">
+            <a href="https://t.me/convexoprotocol" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4">
               Investment Inquiry
             </a>
           </div>
@@ -54,7 +51,7 @@ export default function RealEstatePage() {
               { value: '18%',    label: 'Annual APY' },
               { value: '70%',    label: '5-Year Projected Return' },
               { value: 'Tier 2', label: 'Identity Required' },
-              { value: 'ERC-4626', label: 'Vault Standard' },
+              { value: 'ERC-7540', label: 'Vault Standard' },
             ].map((s) => (
               <div key={s.label} className="flex flex-col gap-2">
                 <span className="font-headline text-2xl font-black text-tertiary tracking-tight">{s.value}</span>
@@ -88,7 +85,7 @@ export default function RealEstatePage() {
             {[
               { step: '01', title: 'Verify Identity', desc: 'Complete Digital ID Tier 2 via Veriff (individual) or Sumsub (enterprise).' },
               { step: '02', title: 'Choose Vault',    desc: 'Select a property vault based on type, location, and risk profile.' },
-              { step: '03', title: 'Deposit',         desc: 'Deposit capital. Receive ERC-4626 vault tokens representing your ownership.' },
+              { step: '03', title: 'Deposit',         desc: 'Deposit capital. Receive ERC-7540 vault tokens representing your ownership.' },
               { step: '04', title: 'Earn Yield',      desc: 'Receive rental yield distributions automatically. Exit at any time.' },
             ].map((s) => (
               <div key={s.step} className="p-8 bg-surface-container-highest rounded-xl metallic-edge">

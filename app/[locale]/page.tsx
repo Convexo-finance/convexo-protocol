@@ -131,7 +131,7 @@ export default function HomePage() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-5">
             <a
-              href="https://protocol.convexo.xyz"
+              href="https://loans.convexo.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-10 py-4 text-sm"
@@ -384,7 +384,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-12 flex flex-wrap gap-4">
                   <a
-                    href="https://protocol.convexo.xyz"
+                    href="https://loans.convexo.xyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"

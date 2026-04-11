@@ -232,7 +232,7 @@ Navbar
 ├── About                    → /about
 ├── Compliance               → /compliance
 ├── [EN/ES language switcher]
-└── [Launch App CTA]         → https://protocol.convexo.xyz
+└── [Launch App CTA]         → https://loans.convexo.xyz
 
 Footer
 ├── Brand column (Akira wordmark, social icon buttons: X, LI, GH, TG)
@@ -277,7 +277,7 @@ Footer
 
 | Platform | Link |
 |---|---|
-| Main App | `https://protocol.convexo.xyz` |
+| Main App | `https://loans.convexo.xyz` |
 | Payments | `https://pay.convexo.xyz` |
 | C-Bonds / Loans | `https://loans.convexo.xyz` |
 | Real Estate Vaults | `https://realstate.convexo.xyz` |
