@@ -36,9 +36,9 @@ const products = [
     href: '/products/real-estate',
     appUrl: 'realstate.convexo.xyz',
     appHref: 'https://realstate.convexo.xyz',
-    status: 'Live',
+    status: 'Soon',
     desc: 'Tokenized fractional ownership of LATAM commercial and residential real estate. 18% Annual APY, 70% projected 5-year return.',
-    highlights: ['18% Annual APY', '70% 5-year projected return', 'ERC-4626 vault standard', 'Commercial, residential, mixed-use'],
+    highlights: ['18% Annual APY', '70% 5-year projected return', 'ERC-7540 async vault standard', 'Commercial, residential, mixed-use'],
     accent: 'tertiary',
     size: 'normal',
   },
@@ -80,7 +80,7 @@ export default function ProductsHubPage() {
         <section className="relative z-10 section-container pt-28 pb-24">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-container/30 border border-primary/20 rounded-sm mb-10">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="label-institutional text-primary">5 Products · 3 Live</span>
+            <span className="label-institutional text-primary">5 Products · 2 Live</span>
           </div>
           <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8 max-w-3xl">
             Product<br />

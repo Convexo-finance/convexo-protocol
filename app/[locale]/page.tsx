@@ -33,7 +33,7 @@ const products = [
     href: '/products/real-estate',
     appUrl: 'realstate.convexo.xyz',
     desc: 'On-chain exposure to premium LATAM commercial property yields via RWA tokenization. 18% Annual APY.',
-    tags: ['18% APY', 'RWA'],
+    tags: ['Soon'],
     accent: 'tertiary',
     size: 'small',
   },
@@ -217,12 +217,10 @@ export default function HomePage() {
             {/* Real Estate */}
             <Link
               href={products[2].href}
-              className="md:col-span-4 group bg-surface-container-high p-10 rounded-xl metallic-edge flex flex-col justify-between hover:bg-surface-variant transition-all duration-500"
+              className="md:col-span-4 group bg-surface-container-high p-10 rounded-xl metallic-edge flex flex-col justify-between hover:bg-surface-variant transition-all duration-500 opacity-70 hover:opacity-100"
             >
               <div>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {products[2].tags.map(t => <span key={t} className="chip">{t}</span>)}
-                </div>
+                <span className="chip mb-6 inline-block">Coming Soon</span>
                 <h3 className="font-headline text-xl font-black uppercase tracking-tight text-on-surface mb-4">
                   {products[2].name}
                 </h3>
