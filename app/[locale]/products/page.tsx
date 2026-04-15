@@ -23,8 +23,8 @@ const products = [
   {
     name: 'Tokenized C-Bonds',
     href: '/products/c-bonds',
-    appUrl: 'loans.convexo.xyz',
-    appHref: 'https://loans.convexo.xyz',
+    appUrl: 'protocol.convexo.xyz',
+    appHref: 'https://protocol.convexo.xyz',
     status: 'Live',
     desc: 'On-chain corporate credit bonds for LATAM SMEs. Lenders earn 12%+ APY. Borrowers access affordable institutional capital.',
     highlights: ['12%+ APY for lenders', 'EIP-4626 vault standard', 'AI credit scoring (Tier 3)', 'Legally binding E-Contracts'],

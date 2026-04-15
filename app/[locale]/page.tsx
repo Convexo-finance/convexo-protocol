@@ -22,7 +22,7 @@ const products = [
   {
     name: 'Tokenized C-Bonds',
     href: '/products/c-bonds',
-    appUrl: 'loans.convexo.xyz',
+    appUrl: 'protocol.convexo.xyz',
     desc: 'Fractionalized corporate debt instruments secured by on-chain collateral and verified legal frameworks. 12%+ APY.',
     tags: ['12%+ APY'],
     accent: 'secondary',
@@ -131,7 +131,7 @@ export default function HomePage() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-5">
             <a
-              href="https://loans.convexo.xyz"
+              href="https://protocol.convexo.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-10 py-4 text-sm"
@@ -382,7 +382,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-12 flex flex-wrap gap-4">
                   <a
-                    href="https://loans.convexo.xyz"
+                    href="https://protocol.convexo.xyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"

@@ -47,7 +47,7 @@
 | Product | App URL | Status |
 |---|---|---|
 | Payments Convexo | pay.convexo.xyz | Live |
-| Tokenized C-Bonds | loans.convexo.xyz | Live |
+| Tokenized C-Bonds | protocol.convexo.xyz | Live |
 | Real Estate Vaults | realstate.convexo.xyz | Live |
 | ETH Fund Convexo | fund.convexo.xyz | Coming Soon |
 | P2P AI | p2p.convexo.xyz | Coming Soon |
@@ -71,7 +71,7 @@
 
 **Purpose:** On-chain credit bonds for LATAM SMEs. Lenders earn yield; borrowers access affordable capital.
 
-**App URL:** `loans.convexo.xyz`
+**App URL:** `protocol.convexo.xyz`
 
 **Content:**
 - Built on EIP-4626 vault standard
@@ -222,7 +222,7 @@ Four core primitives built by Convexo:
 Navbar
 ├── Products (dropdown → /products as hub)
 │   ├── Payments Convexo     → /products/payments      (pay.convexo.xyz)     [Live]
-│   ├── Tokenized C-Bonds    → /products/c-bonds       (loans.convexo.xyz)   [Live]
+│   ├── Tokenized C-Bonds    → /products/c-bonds       (protocol.convexo.xyz)   [Live]
 │   ├── Real Estate Vaults   → /products/real-estate   (realstate.convexo.xyz) [Live]
 │   ├── ETH Fund Convexo     → /products/eth-fund      (fund.convexo.xyz)    [Soon]
 │   └── P2P AI               → /products/p2p           (p2p.convexo.xyz)     [Soon]
@@ -232,7 +232,7 @@ Navbar
 ├── About                    → /about
 ├── Compliance               → /compliance
 ├── [EN/ES language switcher]
-└── [Launch App CTA]         → https://loans.convexo.xyz
+└── [Launch App CTA]         → https://protocol.convexo.xyz
 
 Footer
 ├── Brand column (Akira wordmark, social icon buttons: X, LI, GH, TG)
@@ -277,9 +277,9 @@ Footer
 
 | Platform | Link |
 |---|---|
-| Main App | `https://loans.convexo.xyz` |
+| Main App | `https://protocol.convexo.xyz` |
 | Payments | `https://pay.convexo.xyz` |
-| C-Bonds / Loans | `https://loans.convexo.xyz` |
+| C-Bonds / Loans | `https://protocol.convexo.xyz` |
 | Real Estate Vaults | `https://realstate.convexo.xyz` |
 | ETH Fund | `https://fund.convexo.xyz` (soon) |
 | P2P AI | `https://p2p.convexo.xyz` (soon) |

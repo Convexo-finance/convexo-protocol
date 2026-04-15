@@ -96,7 +96,7 @@ public/branding/                  Logos, fonts, brand assets
 | Product | Route | App | Status |
 |---|---|---|---|
 | Payments Convexo | `/products/payments` | pay.convexo.xyz | Live |
-| Tokenized C-Bonds | `/products/c-bonds` | loans.convexo.xyz | Live |
+| Tokenized C-Bonds | `/products/c-bonds` | protocol.convexo.xyz | Live |
 | Real Estate Vaults | `/products/real-estate` | realstate.convexo.xyz | Live |
 | ETH Fund Convexo | `/products/eth-fund` | fund.convexo.xyz | Coming Soon |
 | P2P AI | `/products/p2p` | p2p.convexo.xyz | Coming Soon |

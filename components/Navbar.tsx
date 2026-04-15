@@ -154,7 +154,7 @@ export default function Navbar() {
                 ))}
               </div>
               <a
-                href="https://loans.convexo.xyz"
+                href="https://protocol.convexo.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary py-2.5"
@@ -268,7 +268,7 @@ export default function Navbar() {
             ))}
           </div>
           <a
-            href="https://loans.convexo.xyz"
+            href="https://protocol.convexo.xyz"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary w-full justify-center"

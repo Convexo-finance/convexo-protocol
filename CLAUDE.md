@@ -215,7 +215,7 @@ Each page has an HTML prototype from Stitch. Read these **before implementing or
 **Navbar (desktop):**
 - Left: Logo (`convexoblanco.png`)
 - Center: Products (dropdown with 5 products), Technology, About, Compliance
-- Right: EN/ES language switcher pill + "Launch App" button → `https://loans.convexo.xyz`
+- Right: EN/ES language switcher pill + "Launch App" button → `https://protocol.convexo.xyz`
 - Mobile: hamburger → slide-in panel from right (includes language switcher + all links)
 
 **Language switching:** Built into `Navbar.tsx` using `useLocale()` from `next-intl` and `useRouter().replace(pathname, { locale })` from `@/navigation`. No separate LanguageSwitcher component.
@@ -274,9 +274,9 @@ Partner logos in `public/`: Chainlink, Uniswap, Sumsub, Veriff, zkPassport, Safe
 | P2P-AI commission | 0.1% |
 
 **External links:**
-- Main app: `https://loans.convexo.xyz`
+- Main app: `https://protocol.convexo.xyz`
 - Payments: `https://pay.convexo.xyz`
-- C-Bonds: `https://loans.convexo.xyz`
+- C-Bonds: `https://protocol.convexo.xyz`
 - Real Estate: `https://realstate.convexo.xyz`
 - ETH Fund: `https://fund.convexo.xyz`
 - P2P AI: `https://p2p.convexo.xyz`

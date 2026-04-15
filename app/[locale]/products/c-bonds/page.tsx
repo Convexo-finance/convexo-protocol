@@ -20,7 +20,7 @@ export default function CBondsPage() {
         <section className="relative z-10 section-container pt-28 pb-24">
           <div className="flex flex-wrap gap-3 mb-10">
             <span className="chip">Live</span>
-            <span className="chip">loans.convexo.xyz</span>
+            <span className="chip">protocol.convexo.xyz</span>
           </div>
           <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8 max-w-3xl">
             Tokenized<br />
@@ -32,7 +32,7 @@ export default function CBondsPage() {
             Powered by EIP-4626 vaults and AI credit scoring.
           </p>
           <div className="flex flex-wrap gap-5">
-            <a href="https://loans.convexo.xyz" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4">
+            <a href="https://protocol.convexo.xyz" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4">
               Open App
             </a>
             <a href="https://t.me/convexoprotocol" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4">
