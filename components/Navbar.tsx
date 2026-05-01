@@ -8,7 +8,7 @@ import { Link, usePathname, useRouter } from '@/navigation';
 const products = [
   { name: 'Payments Convexo',  href: '/products/payments',    tag: 'Live', desc: 'International settlements & OTC' },
   { name: 'Tokenized C-Bonds', href: '/products/c-bonds',     tag: 'Live', desc: 'On-chain credit bonds, 12%+ APY' },
-  { name: 'Real Estate Vaults',href: '/products/real-estate', tag: 'Live', desc: 'Tokenized LATAM property, 18% APY' },
+  { name: 'Real Estate Vaults',href: '/products/real-estate', tag: 'Soon', desc: 'Tokenized LATAM property, 18% APY' },
   { name: 'ETH Fund Convexo',  href: '/products/eth-fund',    tag: 'Soon', desc: 'Institutional ETH yield fund' },
   { name: 'P2P AI',            href: '/products/p2p',         tag: 'Soon', desc: 'AI-powered peer-to-peer payments' },
 ];

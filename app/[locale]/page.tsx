@@ -1,12 +1,14 @@
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CoinWidget from '@/components/CoinWidget';
 import { Link } from '@/navigation';
 
 const metrics = [
-  { value: '+3MM USD',   label: 'Accumulated Volume' },
-  { value: '~15 min',   label: 'Settlement Time' },
-  { value: '20 Countries', label: 'Global Reach' },
-  { value: '24/7/365',  label: 'Network Uptime' },
+  { value: '+3MM USD',     label: 'Accumulated Volume' },
+  { value: '~15 min',     label: 'Settlement Time' },
+  { value: '20 Countries',label: 'Global Reach' },
+  { value: '24/7/365',    label: 'Network Uptime' },
 ];
 
 const products = [
@@ -155,6 +157,35 @@ export default function HomePage() {
                 <span className="label-institutional">{m.label}</span>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── 2b. CHAIN DEPLOYMENTS ───────────────────────────── */}
+        <section className="relative z-10 w-full py-12 border-b border-outline-variant/10 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <p className="label-institutional text-center text-on-surface/30 mb-8">Deployed On</p>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 hover:opacity-100 transition-all duration-500">
+              <div className="flex items-center gap-3">
+                <Image src="/providers/chains/ethereum.png" alt="Ethereum" width={28} height={28} className="w-7 h-7 object-contain" />
+                <span className="font-label text-sm font-bold uppercase tracking-wider text-on-surface/70">Ethereum</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src="/providers/chains/base_logo.svg" alt="Base" width={28} height={28} className="w-7 h-7 object-contain" />
+                <span className="font-label text-sm font-bold uppercase tracking-wider text-on-surface/70">Base</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image src="/providers/chains/unichain.png" alt="UniChain" width={28} height={28} className="w-7 h-7 object-contain" />
+                <span className="font-label text-sm font-bold uppercase tracking-wider text-on-surface/70">UniChain</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 2c. COIN PRICE TICKER ───────────────────────────── */}
+        <section className="relative z-10 w-full bg-surface-container-lowest py-6 border-b border-outline-variant/10 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <p className="label-institutional text-on-surface/30 mb-4">Live Market Prices</p>
+            <CoinWidget />
           </div>
         </section>
 

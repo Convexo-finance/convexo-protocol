@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from '@/navigation';
@@ -64,16 +65,16 @@ const ownTech = [
 ];
 
 const providers = [
-  { name: 'Chainlink',    category: 'Oracles & CCIP',         logo: '/technology/chainlink.png' },
-  { name: 'Uniswap',     category: 'Decentralized Exchange',  logo: '/technology/uniswap.png' },
-  { name: 'Sumsub',      category: 'KYB / Compliance',        logo: '/technology/sumsub.png' },
-  { name: 'Veriff',      category: 'Identity Verification',   logo: '/technology/veriff.png' },
-  { name: 'zkPassport',  category: 'Privacy Identity',        logo: '/technology/zkpassport.png' },
-  { name: 'Safe',        category: 'Institutional Custody',   logo: '/technology/safe.png' },
-  { name: 'Circle USDC', category: 'Stablecoins',             logo: '/technology/usdc.png' },
-  { name: 'CoinGecko',   category: 'Price Oracles',           logo: '/technology/coingecko.png' },
-  { name: 'HashKey',     category: 'Institutional Custody',   logo: '/technology/hashkey.png' },
-  { name: 'OKX',         category: 'Liquidity',               logo: '/technology/okx.png' },
+  { name: 'Chainlink',    category: 'Oracles & CCIP',         logo: '/providers/chainlink.png' },
+  { name: 'Uniswap',     category: 'Decentralized Exchange',  logo: '/providers/uniswap.png' },
+  { name: 'Sumsub',      category: 'KYB / Compliance',        logo: '/providers/sumsub.jpg' },
+  { name: 'Veriff',      category: 'Identity Verification',   logo: '/providers/verifffondoblanco.png' },
+  { name: 'zkPassport',  category: 'Privacy Identity',        logo: '/providers/zkpassportid.png' },
+  { name: 'Safe',        category: 'Institutional Custody',   logo: '/providers/safe_logo.png' },
+  { name: 'Circle USDC', category: 'Stablecoins',             logo: '/providers/acceptusdc.png' },
+  { name: 'CoinGecko',   category: 'Price Oracles',           logo: '/providers/CoinGecko.png' },
+  { name: 'HashKey',     category: 'Institutional Custody',   logo: '/providers/hashkey_logo.png' },
+  { name: 'OKX',         category: 'Liquidity',               logo: '/providers/okx_logo.png' },
 ];
 
 const chains = ['Ethereum', 'Base', 'UniChain'];
@@ -90,11 +91,16 @@ export default function TechnologyPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/8 rounded-full blur-[120px] pointer-events-none" />
           <div className="relative z-10 text-center max-w-4xl">
             {/* Chain badges */}
-            <div className="flex justify-center flex-wrap gap-3 mb-12">
-              {chains.map((c) => (
-                <span key={c} className="px-4 py-1.5 bg-surface-container-highest metallic-edge text-secondary label-institutional">
-                  {c}
-                </span>
+            <div className="flex justify-center flex-wrap gap-4 mb-12">
+              {[
+                { name: 'Ethereum', logo: '/providers/chains/ethereum.png' },
+                { name: 'Base',     logo: '/providers/chains/base_logo.svg' },
+                { name: 'UniChain', logo: '/providers/chains/unichain.png' },
+              ].map((c) => (
+                <div key={c.name} className="flex items-center gap-2 px-4 py-1.5 bg-surface-container-highest metallic-edge">
+                  <Image src={c.logo} alt={c.name} width={16} height={16} className="w-4 h-4 object-contain" />
+                  <span className="text-secondary label-institutional">{c.name}</span>
+                </div>
               ))}
             </div>
             <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8">
@@ -171,11 +177,15 @@ export default function TechnologyPage() {
                   key={p.name}
                   className="group flex flex-col items-center gap-4 p-8 bg-surface-container-highest rounded-xl metallic-edge hover:bg-surface-variant transition-all duration-300 text-center"
                 >
-                  {/* Logo placeholder — replace with actual Image when assets are confirmed */}
-                  <div className="w-12 h-12 bg-surface-container-lowest rounded-full flex items-center justify-center metallic-edge">
-                    <span className="text-primary text-lg font-headline font-black uppercase">
-                      {p.name.charAt(0)}
-                    </span>
+                  <div className="w-14 h-14 bg-surface-container-lowest rounded-lg flex items-center justify-center metallic-edge overflow-hidden">
+                    <Image
+                      src={p.logo}
+                      alt={p.name}
+                      width={40}
+                      height={40}
+                      className="w-9 h-9 object-contain"
+                      onError={undefined}
+                    />
                   </div>
                   <div>
                     <p className="font-label text-xs font-bold text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">

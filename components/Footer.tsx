@@ -176,7 +176,7 @@ export default function Footer() {
       <div className="border-t border-outline-variant/10">
         <div className="max-w-[1600px] mx-auto px-8 md:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-body text-[10px] text-on-surface/25 uppercase tracking-wider">
-            © 2025 Convexo Protocol — Sovereign Vault Institutional DeFi
+            © 2026 Convexo Protocol — Sovereign Vault Institutional DeFi
           </p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
