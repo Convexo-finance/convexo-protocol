@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from '@/navigation';
@@ -8,65 +9,62 @@ export const metadata: Metadata = {
   description: 'The full Convexo Protocol product suite — institutional DeFi products for Latin America.',
 };
 
-const products = [
-  {
-    name: 'Payments Convexo',
-    href: '/products/payments',
-    appUrl: 'pay.convexo.xyz',
-    appHref: 'https://pay.convexo.xyz',
-    status: 'Live',
-    desc: 'Institutional settlement layer for cross-border payments, international collections, and OTC agentic channels.',
-    highlights: ['International payments to China & beyond', 'Collections from global clients', 'OTC Agentic channels with AI routing', '1.5% OTC spread / 0.3% DEX spread'],
-    accent: 'primary',
-    size: 'large',
-  },
-  {
-    name: 'Tokenized C-Bonds',
-    href: '/products/c-bonds',
-    appUrl: 'protocol.convexo.xyz',
-    appHref: 'https://protocol.convexo.xyz',
-    status: 'Live',
-    desc: 'On-chain corporate credit bonds for LATAM SMEs. Lenders earn 12%+ APY. Borrowers access affordable institutional capital.',
-    highlights: ['12%+ APY for lenders', 'EIP-4626 vault standard', 'AI credit scoring (Tier 3)', 'Legally binding E-Contracts'],
-    accent: 'secondary',
-    size: 'normal',
-  },
-  {
-    name: 'Real Estate Vaults',
-    href: '/products/real-estate',
-    appUrl: 'realstate.convexo.xyz',
-    appHref: 'https://realstate.convexo.xyz',
-    status: 'Soon',
-    desc: 'Tokenized fractional ownership of LATAM commercial and residential real estate. 18% Annual APY, 70% projected 5-year return.',
-    highlights: ['18% Annual APY', '70% 5-year projected return', 'ERC-7540 async vault standard', 'Commercial, residential, mixed-use'],
-    accent: 'tertiary',
-    size: 'normal',
-  },
-  {
-    name: 'ETH Fund Convexo',
-    href: '/products/eth-fund',
-    appUrl: 'fund.convexo.xyz',
-    appHref: 'https://fund.convexo.xyz',
-    status: 'Soon',
-    desc: 'Institutional-grade Ethereum yield fund. Active yield optimization for large-scale ETH positions using proprietary vaults.',
-    highlights: ['Institutional ETH exposure', 'Active yield optimization', 'Proprietary vault strategies', 'Requires Tier 2 identity'],
-    accent: 'primary',
-    size: 'normal',
-  },
-  {
-    name: 'P2P AI',
-    href: '/products/p2p',
-    appUrl: 'p2p.convexo.xyz',
-    appHref: 'https://p2p.convexo.xyz',
-    status: 'Soon',
-    desc: 'AI-powered peer-to-peer payment system with on-chain arbitration across LATAM currencies. 0.1% commission.',
-    highlights: ['AI agent arbitrator', 'ERC-8004 reputation system', '0.1% commission', 'COP, ARS, MXN, BRL, CLP, PEN'],
-    accent: 'secondary',
-    size: 'normal',
-  },
-];
+export default async function ProductsHubPage() {
+  const t = await getTranslations('productsHub');
 
-export default function ProductsHubPage() {
+  const products = [
+    {
+      name: t('product1Name'),
+      href: '/products/payments',
+      appUrl: 'pay.convexo.xyz',
+      appHref: 'https://pay.convexo.xyz',
+      status: 'Live',
+      desc: t('product1Desc'),
+      highlights: [t('product1H1'), t('product1H2'), t('product1H3'), t('product1H4')],
+      accent: 'primary',
+    },
+    {
+      name: t('product2Name'),
+      href: '/products/c-bonds',
+      appUrl: 'protocol.convexo.xyz',
+      appHref: 'https://protocol.convexo.xyz',
+      status: 'Live',
+      desc: t('product2Desc'),
+      highlights: [t('product2H1'), t('product2H2'), t('product2H3'), t('product2H4')],
+      accent: 'secondary',
+    },
+    {
+      name: t('product3Name'),
+      href: '/products/real-estate',
+      appUrl: 'realstate.convexo.xyz',
+      appHref: 'https://realstate.convexo.xyz',
+      status: 'Soon',
+      desc: t('product3Desc'),
+      highlights: [t('product3H1'), t('product3H2'), t('product3H3'), t('product3H4')],
+      accent: 'tertiary',
+    },
+    {
+      name: t('product4Name'),
+      href: '/products/eth-fund',
+      appUrl: 'fund.convexo.xyz',
+      appHref: 'https://fund.convexo.xyz',
+      status: 'Soon',
+      desc: t('product4Desc'),
+      highlights: [t('product4H1'), t('product4H2'), t('product4H3'), t('product4H4')],
+      accent: 'primary',
+    },
+    {
+      name: t('product5Name'),
+      href: '/products/p2p',
+      appUrl: 'p2p.convexo.xyz',
+      appHref: 'https://p2p.convexo.xyz',
+      status: 'Soon',
+      desc: t('product5Desc'),
+      highlights: [t('product5H1'), t('product5H2'), t('product5H3'), t('product5H4')],
+      accent: 'secondary',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-surface text-on-surface overflow-x-hidden">
       <Navbar />
@@ -80,16 +78,14 @@ export default function ProductsHubPage() {
         <section className="relative z-10 section-container pt-28 pb-24">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-container/30 border border-primary/20 rounded-sm mb-10">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="label-institutional text-primary">5 Products · 2 Live</span>
+            <span className="label-institutional text-primary">{t('badge')}</span>
           </div>
           <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8 max-w-3xl">
-            Product<br />
-            <span className="text-primary">Ecosystem</span>
+            {t('heroTitle')}<br />
+            <span className="text-primary">{t('heroTitleHighlight')}</span>
           </h1>
           <p className="font-body text-lg text-on-surface-variant font-light leading-relaxed max-w-2xl">
-            Institutional-grade DeFi products for LATAM capital markets. Each product
-            operates on its own subdomain and is accessible via the Convexo Protocol
-            identity stack.
+            {t('heroDesc')}
           </p>
         </section>
 
@@ -126,16 +122,11 @@ export default function ProductsHubPage() {
 
                   <div className="flex flex-wrap gap-4 mt-10">
                     <Link href={p.href} className="btn-primary py-3">
-                      Learn More
+                      {t('learnMore')}
                     </Link>
                     {p.status === 'Live' && (
-                      <a
-                        href={p.appHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-secondary py-3"
-                      >
-                        Open App ↗
+                      <a href={p.appHref} target="_blank" rel="noopener noreferrer" className="btn-secondary py-3">
+                        {t('openApp')}
                       </a>
                     )}
                   </div>
@@ -143,7 +134,7 @@ export default function ProductsHubPage() {
 
                 {/* Right — highlights */}
                 <div className="lg:col-span-5 p-10 lg:p-12 bg-surface-container-lowest/50 border-t lg:border-t-0 lg:border-l border-outline-variant/10">
-                  <span className="label-institutional text-primary block mb-6">Key Features</span>
+                  <span className="label-institutional text-primary block mb-6">{t('keyFeatures')}</span>
                   <ul className="space-y-4">
                     {p.highlights.map((h) => (
                       <li key={h} className="flex items-start gap-3">

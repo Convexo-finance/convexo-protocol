@@ -1,44 +1,37 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Link } from '@/navigation';
 
 export const metadata: Metadata = {
   title: 'About | Convexo Protocol',
   description: 'Learn about Convexo Protocol — institutional DeFi infrastructure for Latin America.',
 };
 
-const values = [
-  { label: '01', title: 'Innovation',   desc: 'We implement emerging technologies not as a trend, but as a tool to redefine financial efficiency.' },
-  { label: '02', title: 'Security',     desc: 'In a decentralized environment, security is our highest promise. We apply the most rigorous standards.' },
-  { label: '03', title: 'Research',     desc: 'Every decision is based on data and technical analysis. We anticipate market movements and validate protocols.' },
-  { label: '04', title: 'Transparency', desc: 'We operate under absolute clarity. In financial and crypto markets, transparency is the only path to an unbreakable institutional reputation.' },
-  { label: '05', title: 'Excellence',   desc: 'We pursue perfection in execution. Every touchpoint — from product interfaces to advisory — must reflect superior quality.' },
-  { label: '06', title: 'Education',    desc: 'We empower clients through knowledge. An educated market is a stronger market, more prone to adopting financial innovations.' },
-];
+export default async function AboutPage() {
+  const t = await getTranslations('about');
 
-const pillars = [
-  {
-    title: 'Compliance-First',
-    desc: 'Every product is built with regulatory compliance as the foundation. KYC, AML, and CFT frameworks are embedded at the protocol level, not bolted on.',
-  },
-  {
-    title: 'AI-Powered',
-    desc: 'Proprietary AI models drive credit scoring, OTC order routing, and P2P arbitration — giving institutional clients a technological edge across LATAM markets.',
-  },
-  {
-    title: 'Enterprise-Grade',
-    desc: 'Built for executives, corporations, and High-Net-Worth Individuals who demand institutional precision, not consumer-grade DeFi products.',
-  },
-];
+  const values = [
+    { label: '01', titleKey: 'value1Title', descKey: 'value1Desc' },
+    { label: '02', titleKey: 'value2Title', descKey: 'value2Desc' },
+    { label: '03', titleKey: 'value3Title', descKey: 'value3Desc' },
+    { label: '04', titleKey: 'value4Title', descKey: 'value4Desc' },
+    { label: '05', titleKey: 'value5Title', descKey: 'value5Desc' },
+    { label: '06', titleKey: 'value6Title', descKey: 'value6Desc' },
+  ];
 
-const locations = [
-  { city: 'Bogotá', country: 'Colombia', region: 'Latin America HQ' },
-  { city: 'Miami',  country: 'United States', region: 'North America' },
-  { city: 'Hong Kong', country: 'Hong Kong', region: 'Asia Pacific' },
-];
+  const pillars = [
+    { titleKey: 'pillar1Title', descKey: 'pillar1Desc' },
+    { titleKey: 'pillar2Title', descKey: 'pillar2Desc' },
+    { titleKey: 'pillar3Title', descKey: 'pillar3Desc' },
+  ];
 
-export default function AboutPage() {
+  const locations = [
+    { cityKey: 'loc1City', countryKey: 'loc1Country', regionKey: 'loc1Region' },
+    { cityKey: 'loc2City', countryKey: 'loc2Country', regionKey: 'loc2Region' },
+    { cityKey: 'loc3City', countryKey: 'loc3Country', regionKey: 'loc3Region' },
+  ];
+
   return (
     <div className="min-h-screen bg-surface text-on-surface overflow-x-hidden">
       <Navbar />
@@ -52,16 +45,14 @@ export default function AboutPage() {
           <div className="absolute inset-0 technical-grid opacity-30 pointer-events-none" />
           <div className="relative z-10 text-center max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-container/30 border border-primary/20 rounded-sm mb-10">
-              <span className="label-institutional text-primary">Institutional Grade Since 2023</span>
+              <span className="label-institutional text-primary">{t('badge')}</span>
             </div>
             <h1 className="heading-display text-[clamp(3rem,8vw,6rem)] text-on-surface mb-8">
-              The Sovereign<br />
-              <span className="text-primary">Protocol</span>
+              {t('heroTitle')}<br />
+              <span className="text-primary">{t('heroTitleHighlight')}</span>
             </h1>
             <p className="font-body text-lg text-on-surface-variant font-light leading-relaxed max-w-2xl mx-auto">
-              Convexo Protocol bridges traditional finance and decentralized infrastructure across
-              Latin America — bringing institutional rigor, AI intelligence, and blockchain
-              transparency to capital markets that need it most.
+              {t('heroDesc')}
             </p>
           </div>
         </section>
@@ -70,29 +61,18 @@ export default function AboutPage() {
         <section className="section-container section-padding">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-surface-container-high p-12 rounded-xl metallic-edge">
-              <span className="label-institutional text-primary block mb-6">Mission</span>
+              <span className="label-institutional text-primary block mb-6">{t('missionLabel')}</span>
               <h2 className="font-headline text-2xl font-black uppercase tracking-tight text-on-surface mb-6">
-                Leading the Convergence
+                {t('missionTitle')}
               </h2>
-              <p className="body-text leading-relaxed">
-                Our mission is to lead the convergence of traditional finance and disruptive
-                technologies — applying Crypto, Blockchain, and Artificial Intelligence with
-                institutional rigor. We foster a growth ecosystem through constant research
-                and strategic partnerships with governments, academic institutions, and global
-                infrastructure protocols.
-              </p>
+              <p className="body-text leading-relaxed">{t('missionDesc')}</p>
             </div>
             <div className="bg-surface-container-high p-12 rounded-xl metallic-edge">
-              <span className="label-institutional text-secondary block mb-6">Vision</span>
+              <span className="label-institutional text-secondary block mb-6">{t('visionLabel')}</span>
               <h2 className="font-headline text-2xl font-black uppercase tracking-tight text-on-surface mb-6">
-                Sovereign Financial Infrastructure
+                {t('visionTitle')}
               </h2>
-              <p className="body-text leading-relaxed">
-                To become the definitive institutional DeFi infrastructure layer for Latin
-                America — where every SME, financial institution, and high-net-worth individual
-                can access sovereign-grade financial products with full compliance, full
-                transparency, and full control over their assets.
-              </p>
+              <p className="body-text leading-relaxed">{t('visionDesc')}</p>
             </div>
           </div>
         </section>
@@ -102,15 +82,15 @@ export default function AboutPage() {
           <div className="section-container">
             <h2 className="heading-lg text-2xl mb-16 flex items-center gap-6">
               <span className="section-rule" />
-              Our Approach
+              {t('approachTitle')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pillars.map((p) => (
-                <div key={p.title} className="group p-10 bg-surface-container-highest rounded-xl metallic-edge hover:bg-surface-variant transition-all duration-300">
+                <div key={p.titleKey} className="group p-10 bg-surface-container-highest rounded-xl metallic-edge hover:bg-surface-variant transition-all duration-300">
                   <h3 className="font-headline text-lg font-black uppercase tracking-tight text-on-surface mb-5 group-hover:text-primary transition-colors">
-                    {p.title}
+                    {t(p.titleKey as Parameters<typeof t>[0])}
                   </h3>
-                  <p className="body-text leading-relaxed">{p.desc}</p>
+                  <p className="body-text leading-relaxed">{t(p.descKey as Parameters<typeof t>[0])}</p>
                 </div>
               ))}
             </div>
@@ -121,7 +101,7 @@ export default function AboutPage() {
         <section className="section-container section-padding">
           <h2 className="heading-lg text-2xl mb-16 flex items-center gap-6">
             <span className="section-rule" />
-            Core Values
+            {t('valuesTitle')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v) => (
@@ -129,9 +109,11 @@ export default function AboutPage() {
                 <span className="label-institutional text-primary flex-shrink-0 mt-1">{v.label}</span>
                 <div>
                   <h3 className="font-headline text-sm font-black uppercase tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors">
-                    {v.title}
+                    {t(v.titleKey as Parameters<typeof t>[0])}
                   </h3>
-                  <p className="font-body text-xs text-on-surface-variant leading-relaxed">{v.desc}</p>
+                  <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                    {t(v.descKey as Parameters<typeof t>[0])}
+                  </p>
                 </div>
               </div>
             ))}
@@ -143,14 +125,20 @@ export default function AboutPage() {
           <div className="section-container">
             <h2 className="heading-lg text-2xl mb-16 flex items-center gap-6">
               <span className="section-rule" />
-              Global Presence
+              {t('presenceTitle')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {locations.map((l) => (
-                <div key={l.city} className="p-10 bg-surface-container-high rounded-xl metallic-edge">
-                  <span className="label-institutional text-primary block mb-4">{l.region}</span>
-                  <h3 className="font-headline text-2xl font-black uppercase tracking-tight text-on-surface mb-1">{l.city}</h3>
-                  <p className="font-body text-sm text-on-surface-variant">{l.country}</p>
+                <div key={l.cityKey} className="p-10 bg-surface-container-high rounded-xl metallic-edge">
+                  <span className="label-institutional text-primary block mb-4">
+                    {t(l.regionKey as Parameters<typeof t>[0])}
+                  </span>
+                  <h3 className="font-headline text-2xl font-black uppercase tracking-tight text-on-surface mb-1">
+                    {t(l.cityKey as Parameters<typeof t>[0])}
+                  </h3>
+                  <p className="font-body text-sm text-on-surface-variant">
+                    {t(l.countryKey as Parameters<typeof t>[0])}
+                  </p>
                 </div>
               ))}
             </div>
@@ -162,34 +150,16 @@ export default function AboutPage() {
           <div className="bg-gradient-to-br from-primary-container/15 to-secondary-container/15 rounded-3xl p-px metallic-edge">
             <div className="bg-surface-container-low rounded-3xl p-12 md:p-20">
               <h2 className="heading-display text-[clamp(2rem,4vw,3.5rem)] text-on-surface mb-6">
-                Get in <span className="text-primary">Touch</span>
+                {t('contactTitle')} <span className="text-primary">{t('contactTitleHighlight')}</span>
               </h2>
-              <p className="body-text text-base max-w-xl mb-14">
-                We work exclusively with institutional clients, corporations, and
-                high-net-worth individuals. Reach out through your preferred channel.
-              </p>
+              <p className="body-text text-base max-w-xl mb-14">{t('contactDesc')}</p>
               <div className="flex flex-wrap gap-6">
-                <a
-                  href="mailto:hello@convexo.xyz"
-                  className="btn-secondary"
-                >
-                  hello@convexo.xyz
+                <a href="mailto:hello@convexo.xyz" className="btn-secondary">{t('emailBtn')}</a>
+                <a href="https://t.me/convexoprotocol" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  {t('telegramBtn')}
                 </a>
-                <a
-                  href="https://t.me/convexoprotocol"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary"
-                >
-                  Telegram
-                </a>
-                <a
-                  href="https://wa.me/573186766035"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary"
-                >
-                  WhatsApp
+                <a href="https://wa.me/573186766035" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  {t('whatsappBtn')}
                 </a>
               </div>
             </div>

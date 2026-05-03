@@ -2,18 +2,27 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/navigation';
 
 const products = [
-  { name: 'Payments Convexo',  href: '/products/payments',    tag: 'Live', desc: 'International settlements & OTC' },
-  { name: 'Tokenized C-Bonds', href: '/products/c-bonds',     tag: 'Live', desc: 'On-chain credit bonds, 12%+ APY' },
-  { name: 'Real Estate Vaults',href: '/products/real-estate', tag: 'Soon', desc: 'Tokenized LATAM property, 18% APY' },
-  { name: 'ETH Fund Convexo',  href: '/products/eth-fund',    tag: 'Soon', desc: 'Institutional ETH yield fund' },
-  { name: 'P2P AI',            href: '/products/p2p',         tag: 'Soon', desc: 'AI-powered peer-to-peer payments' },
+  { nameKey: 'navProd1', href: '/products/payments',    tag: 'live', desc: 'International settlements & OTC' },
+  { nameKey: 'navProd2', href: '/products/c-bonds',     tag: 'live', desc: 'On-chain credit bonds, 12%+ APY' },
+  { nameKey: 'navProd3', href: '/products/real-estate', tag: 'soon', desc: 'Tokenized LATAM property, 18% APY' },
+  { nameKey: 'navProd4', href: '/products/eth-fund',    tag: 'soon', desc: 'Institutional ETH yield fund' },
+  { nameKey: 'navProd5', href: '/products/p2p',         tag: 'soon', desc: 'AI-powered peer-to-peer payments' },
 ];
 
+const productNames: Record<string, string> = {
+  navProd1: 'Payments Convexo',
+  navProd2: 'Tokenized C-Bonds',
+  navProd3: 'Real Estate Vaults',
+  navProd4: 'ETH Fund Convexo',
+  navProd5: 'P2P AI',
+};
+
 export default function Navbar() {
+  const t = useTranslations('nav');
   const [scrolled,           setScrolled]           = useState(false);
   const [productsOpen,       setProductsOpen]       = useState(false);
   const [mobileOpen,         setMobileOpen]         = useState(false);
@@ -89,7 +98,7 @@ export default function Navbar() {
                       : 'text-on-surface/60 hover:text-on-surface'
                   }`}
                 >
-                  Products
+                  {t('products')}
                   <svg
                     className={`w-3 h-3 transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`}
                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -111,14 +120,14 @@ export default function Navbar() {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
                               <span className="font-label text-xs font-bold text-on-surface group-hover:text-primary transition-colors">
-                                {p.name}
+                                {productNames[p.nameKey]}
                               </span>
                               <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${
-                                p.tag === 'Live'
+                                p.tag === 'live'
                                   ? 'bg-primary/10 text-primary'
                                   : 'bg-outline-variant/30 text-on-surface/40'
                               }`}>
-                                {p.tag}
+                                {p.tag === 'live' ? t('live') : t('soon')}
                               </span>
                             </div>
                             <p className="text-[11px] text-on-surface-variant mt-0.5 truncate">{p.desc}</p>
@@ -130,9 +139,9 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/technology"  className={navLink('/technology')}>Technology</Link>
-              <Link href="/about"       className={navLink('/about')}>About</Link>
-              <Link href="/compliance"  className={navLink('/compliance')}>Compliance</Link>
+              <Link href="/technology"  className={navLink('/technology')}>{t('technology')}</Link>
+              <Link href="/about"       className={navLink('/about')}>{t('about')}</Link>
+              <Link href="/compliance"  className={navLink('/compliance')}>{t('compliance')}</Link>
             </div>
 
             {/* Desktop right */}
@@ -159,7 +168,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="btn-primary py-2.5"
               >
-                Launch App
+                {t('launchApp')}
               </a>
             </div>
 
@@ -216,7 +225,7 @@ export default function Navbar() {
             onClick={() => setMobileProductsOpen(p => !p)}
             className="w-full flex items-center justify-between py-3 font-label text-xs font-bold uppercase tracking-[0.15em] text-on-surface/60"
           >
-            Products
+            {t('products')}
             <svg className={`w-4 h-4 transition-transform ${mobileProductsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -229,9 +238,9 @@ export default function Navbar() {
                   href={p.href}
                   className="flex items-center gap-2 py-2.5 font-label text-xs text-on-surface-variant hover:text-primary transition-colors"
                 >
-                  {p.name}
-                  {p.tag === 'Soon' && (
-                    <span className="text-[9px] bg-outline-variant/30 text-on-surface/40 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">Soon</span>
+                  {productNames[p.nameKey]}
+                  {p.tag === 'soon' && (
+                    <span className="text-[9px] bg-outline-variant/30 text-on-surface/40 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">{t('soon')}</span>
                   )}
                 </Link>
               ))}
@@ -239,13 +248,13 @@ export default function Navbar() {
           )}
 
           <Link href="/technology" className="block py-3 font-label text-xs font-bold uppercase tracking-[0.15em] text-on-surface/60 hover:text-on-surface transition-colors">
-            Technology
+            {t('technology')}
           </Link>
           <Link href="/about" className="block py-3 font-label text-xs font-bold uppercase tracking-[0.15em] text-on-surface/60 hover:text-on-surface transition-colors">
-            About
+            {t('about')}
           </Link>
           <Link href="/compliance" className="block py-3 font-label text-xs font-bold uppercase tracking-[0.15em] text-on-surface/60 hover:text-primary transition-colors">
-            Compliance Hub
+            {t('complianceHub')}
           </Link>
         </div>
 
@@ -273,7 +282,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary w-full justify-center"
           >
-            Launch App
+            {t('launchApp')}
           </a>
         </div>
       </div>

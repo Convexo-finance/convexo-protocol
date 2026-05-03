@@ -1,536 +1,432 @@
 {
   "nav": {
-    "home": "Home",
     "products": "Products",
-    "services": "Services",
-    "about": "About Us",
     "technology": "Technology",
+    "about": "About",
+    "compliance": "Compliance",
+    "complianceHub": "Compliance Hub",
     "launchApp": "Launch App",
-    "viewAll": "View All Products"
-  },
-  "hero": {
-    "title": "Institutional",
-    "titleHighlight": "DeFi Solutions",
-    "titleSuffix": "for LATAM",
-    "subtitle": "Access international funding through tokenized corporate bonds and institutional-grade digital asset services",
-    "getStarted": "Get Started",
-    "exploreProducts": "Explore Products",
-    "aiPowered": "AI-Powered",
-    "aiPoweredSub": "Credit Scoring",
-    "nft": "NFT",
-    "nftSub": "Evaluation Certificates",
-    "uniswap": "Uniswap V4",
-    "uniswapSub": "Integration",
-    "chainlink": "Chainlink",
-    "chainlinkSub": "Oracles",
-    "badge": "Institutional Financial Infrastructure",
-    "viewProducts": "View Products",
-    "networks": "Accumulated Volume Traded",
-    "settlement": "Settlement",
-    "coverage": "Coverage",
-    "availability": "Availability",
-    "networksValue": "+3MM USD",
-    "settlementValue": "~15 minutes",
-    "coverageValue": "20 countries",
-    "availabilityValue": "24 / 7 / 365"
-  },
-  "coinWidget": {
-    "title": "Live Market Prices"
-  },
-  "cryptoRails": {
-    "badge": "THE FUTURE OF FINANCE",
-    "title": "Why International Crypto Rails Matter",
-    "description1": "Traditional cross-border payment systems are slow, expensive, and opaque. Crypto rails offer a revolutionary alternative: instant settlement, transparent pricing, and 24/7 availability. For businesses in Latin America, this isn't just convenient—it's transformative.",
-    "description2": "With blockchain-based payment rails, LATAM enterprises can access international markets without the traditional barriers. No more waiting 3-5 days for wire transfers. No more losing 3-7% to intermediary fees. No more dealing with banking hour restrictions.",
-    "cta": "Explore Our Treasury Solutions",
-    "instantTitle": "Instant Settlement",
-    "instantDesc": "Transfer value globally in seconds, not days. No more waiting for bank clearances.",
-    "lowerCostsTitle": "Lower Costs",
-    "lowerCostsDesc": "Save up to 80% on international transfer fees compared to traditional banking.",
-    "globalTitle": "Global Access",
-    "globalDesc": "Reach any market, any time. True 24/7 financial operations without borders.",
-    "transparentTitle": "Full Transparency",
-    "transparentDesc": "Every transaction is traceable and verifiable on the blockchain. Complete audit trails.",
-    "settlementTime": "Average Settlement Time",
-    "lowerFees": "Lower Transaction Fees",
-    "available": "Always Available",
-    "countries": "Countries Accessible"
-  },
-  "fundingGap": {
-    "badge": "THE LATAM OPPORTUNITY",
-    "title": "Bridging the LATAM Funding Gap",
-    "subtitle": "Latin America faces a massive funding gap. We're here to change that.",
-    "challengeTitle": "The Challenge",
-    "challenge1Title": "Limited Access to Capital",
-    "challenge1Desc": "SMEs in LATAM face rejection rates of up to 40% for traditional bank loans, even when creditworthy.",
-    "challenge2Title": "High Cost of Capital",
-    "challenge2Desc": "Interest rates in LATAM can be 2-3x higher than in developed markets, stifling growth.",
-    "challenge3Title": "Currency Volatility",
-    "challenge3Desc": "Local currency depreciation makes international funding risky and unpredictable.",
-    "challenge4Title": "Complex Processes",
-    "challenge4Desc": "Traditional international funding involves mountains of paperwork and months of waiting.",
-    "solutionTitle": "The Solution",
-    "solution1Title": "Tokenized Corporate Bonds",
-    "solution1Desc": "Access international investors through blockchain-based corporate bonds with transparent pricing.",
-    "solution2Title": "AI-Powered Credit Scoring",
-    "solution2Desc": "Fair, transparent evaluation that looks beyond traditional credit scores to assess true potential.",
-    "solution3Title": "Stablecoin Infrastructure",
-    "solution3Desc": "Mitigate currency risk with USDC, EURC, and local stablecoins like ECOP for Colombia.",
-    "solution4Title": "Streamlined Digital Process",
-    "solution4Desc": "Complete evaluation and funding in weeks, not months, with full digital workflow.",
-    "impactTitle": "The Impact of the Funding Gap",
-    "stat1": "LATAM SME Credit Gap",
-    "stat1Desc": "Annual funding shortage for small and medium enterprises",
-    "stat2": "SMEs Are Credit Constrained",
-    "stat2Desc": "Cannot access the capital they need to grow",
-    "stat3": "Average Interest Rates",
-    "stat3Desc": "Significantly higher than developed markets",
-    "ctaTitle": "Ready to Access International Funding?",
-    "ctaDesc": "Join leading LATAM enterprises leveraging blockchain technology for growth",
-    "ctaButton": "Explore Tokenized Bonds"
-  },
-  "products": {
-    "title": "Our Products",
-    "subtitle": "Comprehensive institutional DeFi solutions designed for LATAM enterprises",
-    "learnMore": "Learn More",
-    "badge": "Solutions",
-    "tags": {
-      "identity": "Identity",
-      "treasury": "Treasury",
-      "currency": "Currency",
-      "trading": "Trading",
-      "lending": "Lending",
-      "realEstate": "Real Estate",
-      "p2p": "P2P"
-    },
-    "tokenizedBonds": {
-      "title": "Tokenized Corporate Bonds",
-      "description": "Access international funding through compliant, tokenized corporate bonds. Our comprehensive evaluation process includes Sumsub verification and AI-powered credit scoring.",
-      "feature1": "AI-generated credit score with NFT certification",
-      "feature2": "Sumsub compliant evaluation",
-      "feature3": "Focus on solid enterprises needing working capital",
-      "feature4": "Scale your current operations with international funding",
-      "feature5": "Transparent and secure bond tokenization"
-    },
-    "treasury": {
-      "title": "Digital Assets Treasury",
-      "description": "Seamlessly trade local stablecoins with international stablecoins like USDC and EURC. Manage your digital asset treasury with institutional-grade tools.",
-      "feature1": "Easy conversion to USDC and EURC",
-      "feature2": "Local stablecoin support",
-      "feature3": "Competitive exchange rates",
-      "feature4": "Institutional-grade security",
-      "feature5": "Real-time portfolio management"
-    },
-    "stablecoins": {
-      "title": "Local Stablecoins for LATAM",
-      "description": "Introducing ECOP for Colombia, powered by Uniswap V4 and Chainlink oracles. Access localized stablecoins designed for LATAM markets.",
-      "feature1": "ECOP - Colombian Peso stablecoin",
-      "feature2": "Powered by Uniswap V4",
-      "feature3": "Chainlink price feeds",
-      "feature4": "Designed for LATAM markets",
-      "feature5": "Regulatory-compliant infrastructure"
-    },
-    "otc": {
-      "title": "OTC Services",
-      "description": "Fast, private, and secure trading of digital assets with our professional traders. Get personalized service for large volume trades.",
-      "feature1": "Professional trader support",
-      "feature2": "Private and secure transactions",
-      "feature3": "Fast execution",
-      "feature4": "Competitive pricing for large volumes",
-      "feature5": "White-glove service"
-    },
-    "digitalIds": {
-      "title": "Digital Identity Tiers",
-      "description": "Progressive verification system with 4 tiers: Private ID, Limited Partners (Individuals & Enterprises), and E-Credit.",
-      "feature1": "Tier 1: Private ID with zkPassport",
-      "feature2": "Tier 2: Limited Partners (Veriff/Sumsub)",
-      "feature3": "Tier 3: E-Credit with AI scoring",
-      "feature4": "Privacy persistent verification"
-    },
-    "eloans": {
-      "title": "E-LOANS",
-      "description": "Electronic Credit and Contract services using EIP-4626 framework. Create loans with legal contracts and minimum 12% APY.",
-      "feature1": "E-Credits using EIP-4626 standard",
-      "feature2": "E-Contracts with legal documents",
-      "feature3": "Minimum 12% APY",
-      "feature4": "Tier 3 verification required"
-    },
-    "realEstateVaults": {
-      "title": "Real Estate Vaults",
-      "description": "Access tokenized real estate investments with institutional-grade properties and transparent on-chain valuations.",
-      "feature1": "Tokenized commercial & residential properties",
-      "feature2": "Fractional ownership opportunities",
-      "feature3": "Institutional-grade asset management",
-      "feature4": "Transparent blockchain-based valuations"
-    },
-    "p2pai": {
-      "title": "P2P-AI",
-      "description": "Agentic P2P marketplace where an AI agent acts as trusted arbitrator, holding funds in escrow for secure crypto-fiat trades.",
-      "feature1": "AI agent arbitrator with Coinbase wallet",
-      "feature2": "Telegram-based trading interface",
-      "feature3": "ERC-8004 on-chain reputation system",
-      "feature4": "0.1% commission on all trades"
-    }
-  },
-  "services": {
-    "title": "Our Services",
-    "subtitle": "Institutional-grade financial services powered by blockchain technology",
-    "badge": "Services"
+    "soon": "Soon",
+    "live": "Live"
   },
   "footer": {
-    "description": "Institutional DeFi solutions connecting LATAM enterprises with global capital markets.",
+    "tagline": "Institutional DeFi Infrastructure for Latin America. Sovereign, compliant, on-chain.",
     "productsTitle": "Products",
-    "servicesTitle": "Services",
-    "legalComplianceTitle": "Legal Compliance",
-    "copyright": "All rights reserved",
-    "about": "About",
-    "launchApp": "Launch App",
-    "privacy": "Privacy Policy",
-    "terms": "Terms & Conditions",
+    "technologyTitle": "Technology",
+    "legalTitle": "Legal",
+    "connectTitle": "Connect",
+    "verificationTitle": "Verification",
+    "ourTechnology": "Our Technology",
+    "infrastructureProviders": "Infrastructure Providers",
+    "complianceHub": "Compliance Hub",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
     "amlCft": "AML/CFT Policy",
-    "connect": "Connect",
-    "tagline": "Institutional Financial Infrastructure"
+    "aboutUs": "About Us",
+    "copyright": "© 2026 Convexo Protocol — Sovereign Vault Institutional DeFi",
+    "liveNetwork": "Live Operational Network",
+    "complianceLink": "Compliance Hub →"
   },
-  "amlCft": {
-    "title": "AML/CFT Policy",
-    "subtitle": "Our commitment to Anti-Money Laundering and Counter-Financing of Terrorism compliance",
-    "overview": {
-      "title": "Overview",
-      "description": "Convexo Protocol is committed to maintaining the highest standards of compliance with Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) regulations. This policy outlines our comprehensive approach to preventing illicit activities and ensuring regulatory compliance across all our operations."
-    },
-    "aml": {
-      "title": "Anti-Money Laundering Policy",
-      "description": "We implement robust AML measures to detect and prevent money laundering activities within our ecosystem. Our approach includes comprehensive risk assessment, customer due diligence, and ongoing monitoring of all transactions.",
-      "requirements": {
-        "title": "AML Requirements",
-        "req1": "Customer Identity Verification through progressive KYC tiers",
-        "req2": "Source of funds verification for high-value transactions",
-        "req3": "Ongoing transaction monitoring and suspicious activity reporting",
-        "req4": "Regular review and updating of customer risk profiles"
-      }
-    },
-    "cft": {
-      "title": "Counter-Financing of Terrorism",
-      "description": "Our CFT measures are designed to identify and prevent any financing activities related to terrorism. We maintain strict compliance with international sanctions and watchlists.",
-      "measures": {
-        "title": "CFT Measures",
-        "measure1": "Screening against international sanctions lists (OFAC, UN, EU)",
-        "measure2": "Enhanced due diligence for high-risk jurisdictions",
-        "measure3": "Real-time transaction monitoring for suspicious patterns",
-        "measure4": "Immediate reporting of any suspected terrorist financing activities"
-      }
-    },
-    "kyc": {
-      "title": "Know Your Customer (KYC) Requirements",
-      "description": "Our progressive KYC system ensures proper customer identification while maintaining user privacy through zero-knowledge proofs and advanced cryptographic techniques.",
-      "individual": {
-        "title": "Individual Users",
-        "req1": "Government-issued ID verification",
-        "req2": "Proof of address verification",
-        "req3": "Enhanced verification for higher transaction limits"
-      },
-      "enterprise": {
-        "title": "Enterprise Clients",
-        "req1": "Corporate registration documents",
-        "req2": "Beneficial ownership identification",
-        "req3": "Business license and regulatory approvals",
-        "req4": "Financial statements and audit reports"
-      }
-    },
-    "monitoring": {
-      "title": "Transaction Monitoring and Reporting",
-      "description": "We employ advanced analytics and machine learning algorithms to monitor all transactions for suspicious activities. Our monitoring system operates 24/7 to ensure real-time detection of potentially illicit activities.",
-      "activities": {
-        "title": "Monitoring Activities",
-        "activity1": "Real-time transaction analysis using AI-powered risk scoring",
-        "activity2": "Pattern recognition for unusual transaction behaviors",
-        "activity3": "Automated alerts for high-risk transactions",
-        "activity4": "Regular reporting to relevant financial intelligence units"
-      }
-    },
-    "compliance": {
-      "title": "Compliance and Regular Updates",
-      "description": "This policy is regularly reviewed and updated to ensure compliance with evolving regulatory requirements across all jurisdictions where we operate.",
-      "updates": "Last updated: March 2026. This policy is subject to change as regulations evolve and our services expand."
-    },
-    "contact": {
-      "title": "Compliance Contact",
-      "description": "For any compliance-related inquiries or to report suspicious activities, please contact our compliance team:",
-      "email": {
-        "label": "Email:",
-        "value": "compliance@convexo.xyz"
-      }
-    }
-  },
-  "chains": {
-    "deployed": "Deployed On",
-    "subtitle": "Convexo Protocol is available on leading blockchain networks",
-    "base": "Base",
-    "ethereum": "Ethereum",
-    "unichain": "UniChain"
-  },
-  "digitalIds": {
-    "title": "Digital Identity Tiers",
-    "subtitle": "Progressive verification system with 4 tiers of identity verification and compliance",
-    "learnMore": "Learn More About Digital IDs",
-    "tier1": {
-      "title": "Private ID",
-      "description": "Private persistent NFT created using zkPassport that verifies Personhood, age +18, and KYC users using OpenSanctions.",
-      "req1": "zkPassport verification for Personhood",
-      "req2": "Age verification (18+)",
-      "req3": "OpenSanctions KYC screening"
-    },
-    "tier2": {
-      "title": "Limited Partners",
-      "description": "Enhanced verification for individuals and enterprises",
-      "individuals": {
-        "title": "Individuals",
-        "description": "Verified with Veriff for individual identity validation"
-      },
-      "enterprises": {
-        "title": "Enterprises",
-        "description": "Verified with Sumsub for business entity validation"
-      }
-    },
-    "tier3": {
-      "title": "E-Credit",
-      "description": "AI-powered credit profile using Business Model Information and Financial Information analyzed by an open-source AI model with open criteria.",
-      "req1": "Complete business model information",
-      "req2": "Financial information analysis"
-    }
-  },
-  "treasury": {
-    "title": "Treasury Services",
-    "subtitle": "All treasury functions require at least Private ID verification",
-    "requirement": "Requirement",
+  "home": {
+    "badge": "Status: Live Operational Network",
+    "headline": "Institutional",
+    "headlineHighlight": "DeFi",
+    "headlineSuffix": "Infrastructure",
+    "subheadline": "Sovereign liquidity protocols for the next generation of LATAM financial institutions. Real-world assets meets decentralized settlement.",
+    "cta1": "Open Terminal",
+    "cta2": "View Products",
+    "deployedOn": "Deployed On",
+    "marketPrices": "Live Market Prices",
+    "productEcosystem": "Product Ecosystem",
+    "comingSoon": "Coming Soon",
+    "technologyLine1": "Sovereign",
+    "technologyLine2": "Technology",
+    "technologyLine3": "Layer",
+    "networkStatus": "Network Status: Optimized",
+    "exploreInfrastructure": "Explore Infrastructure",
+    "rwaTitle": "The Convergence of",
+    "rwaLabel1": "RWA",
+    "rwaLabel2": "AI",
+    "rwaDesc": "Our automated settlement layer uses proprietary AI to navigate complex regulatory requirements, while our tokenization engine brings deep liquidity to off-chain LATAM assets.",
+    "rwaFeature1": "Automated Regulatory Compliance Matching",
+    "rwaFeature2": "Predictive Liquidity Flow Analysis",
+    "rwaFeature3": "On-chain Real-world Asset Provenance",
+    "accessPlatform": "Access Platform",
     "learnMore": "Learn More",
-    "otc": {
-      "title": "OTC Orders",
-      "description": "Cash-in and cash-out using Telegram, WhatsApp, and Signal. We charge a fixed spread of 1.5% over market price with secure cash delivery.",
-      "contactVia": "Contact via",
-      "feature1": "1.5% fixed spread over market price",
-      "feature2": "Secure cash delivery",
-      "feature3": "Privacy persistent with zkPassport",
-      "feature4": "Direct contact via messaging apps",
-      "requirement": "Private ID verification required"
-    },
-    "swaps": {
-      "title": "Swaps with Uniswap V4",
-      "description": "Swap and be a liquidity provider in Private Persistent and Compliant Liquidity Pools with Uniswap V4.",
-      "feature1": "0.3% spread on swaps",
-      "feature2": "Private Persistent Pools",
-      "feature3": "Compliant Liquidity Pools",
-      "feature4": "Based on Google API Price (USD-COP)",
-      "requirement": "Private ID verification required"
-    },
-    "monetization": {
-      "title": "Monetization of Local Stablecoins",
-      "description": "Redeem and claim local stablecoins powered by Chainlink Cross-Chain Interoperability Protocol (CCIP).",
-      "feature1": "Chainlink CCIP powered",
-      "feature2": "Local stablecoin redemption",
-      "feature3": "Cross-chain interoperability",
-      "requirement": "Private ID verification required"
-    }
+    "protocolMetrics": "Protocol Metrics",
+    "metricVolumeLabel": "Accumulated Volume",
+    "metricSettlementLabel": "Settlement Time",
+    "metricCountriesLabel": "Global Reach",
+    "metricUptimeLabel": "Network Uptime",
+    "panelSettlement": "Settlement",
+    "panelCountries": "Countries",
+    "panelUptime": "Uptime",
+    "panelVolume": "Volume",
+    "statCreditGap": "LATAM Credit Gap",
+    "statCreditConstrained": "Credit Constrained",
+    "statInterestReduction": "Interest Reduction",
+    "statActiveCountries": "Active Countries",
+    "techIdentityTitle": "Digital Identity (zkPassport)",
+    "techIdentityDesc": "Zero-knowledge identity verification that ensures regulatory compliance without compromising sovereign privacy.",
+    "techStablecoinsTitle": "Local Stablecoins (ECOP)",
+    "techStablecoinsDesc": "Collateral-backed digital currencies pegged to regional LATAM assets, minimizing FX volatility risks.",
+    "techVaultsTitle": "EIP-4626 Vaults",
+    "techVaultsDesc": "Standardized yield-bearing vault infrastructure powering C-Bonds, Real Estate, and ETH Fund products.",
+    "techOtcTitle": "Agentic OTC Desk",
+    "techOtcDesc": "AI-driven automated settlement for large-block trades, executing with institutional precision 24/7.",
+    "valuePropPrivacyTitle": "Hardened Privacy",
+    "valuePropPrivacyDesc": "Encrypted transactional data ensuring that institutional strategies remain confidential while remaining fully auditable on-chain.",
+    "valuePropSpeedTitle": "Atomic Speed",
+    "valuePropSpeedDesc": "Eliminating traditional T+2 settlement windows. Convexo provides T+0 finality for all regional and cross-border assets.",
+    "valuePropComplianceTitle": "Compliance-First",
+    "valuePropComplianceDesc": "Full KYC/AML stack with 3-tier Digital ID system. Built to meet regulatory requirements across 20 LATAM jurisdictions.",
+    "prodPaymentsName": "Cross-Border Payments",
+    "prodPaymentsTag1": "Instant",
+    "prodPaymentsTag2": "Compliant",
+    "prodPaymentsDesc": "Institutional settlement layer for high-velocity international transfers with instant liquidity provisioning and OTC agentic channels.",
+    "prodCbondsName": "Tokenized C-Bonds",
+    "prodCbondsTag": "12%+ APY",
+    "prodCbondsDesc": "Fractionalized corporate debt instruments secured by on-chain collateral and verified legal frameworks. 12%+ APY.",
+    "prodRealEstateName": "Real Estate Vaults",
+    "prodRealEstateDesc": "On-chain exposure to premium LATAM commercial property yields via RWA tokenization. 18% Annual APY.",
+    "prodEthFundName": "ETH Institutional Fund",
+    "prodEthFundDesc": "Active yield optimization for large-scale ETH positions using proprietary institutional-grade vaults.",
+    "prodP2pName": "P2P AI Agent",
+    "prodP2pDesc": "Autonomous matching engine for institutional counterparties, optimizing for slippage and privacy across LATAM currencies."
   },
-  "eloans": {
-    "title": "E-LOANS",
-    "subtitle": "Electronic Credit and Contract services for verified Tier 3 users",
-    "requirement": "Requires Tier 3: Private ID + KYC/KYB + Credit Score",
-    "learnMore": "Learn More About E-LOANS",
-    "framework": "Framework",
-    "credits": {
-      "title": "E-Credits",
-      "description": "Users create loans to be fulfilled by counterparties using the EIP-4626 framework standard.",
-      "feature1": "EIP-4626 standard implementation",
-      "feature2": "User-created loans",
-      "feature3": "Counterparty fulfillment",
-      "feature4": "Open and transparent lending",
-      "framework": "EIP-4626 Tokenized Vault Standard"
-    },
-    "contracts": {
-      "title": "E-Contracts",
-      "description": "Each vault must be attached to a predefined contract to activate the loan. Contracts are built from strong legal documents filled by the borrower and signed by the lender.",
-      "feature1": "Legal document-based contracts",
-      "feature2": "Borrower fills contract details",
-      "feature3": "Lender signature required for activation",
-      "feature4": "Funds only accessible after lender approval",
-      "apy": "Minimum APY: 12%"
-    }
+  "about": {
+    "badge": "Institutional Grade Since 2023",
+    "heroTitle": "The Sovereign",
+    "heroTitleHighlight": "Protocol",
+    "heroDesc": "Convexo Protocol bridges traditional finance and decentralized infrastructure across Latin America — bringing institutional rigor, AI intelligence, and blockchain transparency to capital markets that need it most.",
+    "missionLabel": "Mission",
+    "missionTitle": "Leading the Convergence",
+    "missionDesc": "Our mission is to lead the convergence of traditional finance and disruptive technologies — applying Crypto, Blockchain, and Artificial Intelligence with institutional rigor. We foster a growth ecosystem through constant research and strategic partnerships with governments, academic institutions, and global infrastructure protocols.",
+    "visionLabel": "Vision",
+    "visionTitle": "Sovereign Financial Infrastructure",
+    "visionDesc": "To become the definitive institutional DeFi infrastructure layer for Latin America — where every SME, financial institution, and high-net-worth individual can access sovereign-grade financial products with full compliance, full transparency, and full control over their assets.",
+    "approachTitle": "Our Approach",
+    "pillar1Title": "Compliance-First",
+    "pillar1Desc": "Every product is built with regulatory compliance as the foundation. KYC, AML, and CFT frameworks are embedded at the protocol level, not bolted on.",
+    "pillar2Title": "AI-Powered",
+    "pillar2Desc": "Proprietary AI models drive credit scoring, OTC order routing, and P2P arbitration — giving institutional clients a technological edge across LATAM markets.",
+    "pillar3Title": "Enterprise-Grade",
+    "pillar3Desc": "Built for executives, corporations, and High-Net-Worth Individuals who demand institutional precision, not consumer-grade DeFi products.",
+    "valuesTitle": "Core Values",
+    "value1Title": "Innovation",
+    "value1Desc": "We implement emerging technologies not as a trend, but as a tool to redefine financial efficiency.",
+    "value2Title": "Security",
+    "value2Desc": "In a decentralized environment, security is our highest promise. We apply the most rigorous standards.",
+    "value3Title": "Research",
+    "value3Desc": "Every decision is based on data and technical analysis. We anticipate market movements and validate protocols.",
+    "value4Title": "Transparency",
+    "value4Desc": "We operate under absolute clarity. In financial and crypto markets, transparency is the only path to an unbreakable institutional reputation.",
+    "value5Title": "Excellence",
+    "value5Desc": "We pursue perfection in execution. Every touchpoint — from product interfaces to advisory — must reflect superior quality.",
+    "value6Title": "Education",
+    "value6Desc": "We empower clients through knowledge. An educated market is a stronger market, more prone to adopting financial innovations.",
+    "presenceTitle": "Global Presence",
+    "loc1City": "Bogotá",
+    "loc1Country": "Colombia",
+    "loc1Region": "Latin America HQ",
+    "loc2City": "Miami",
+    "loc2Country": "United States",
+    "loc2Region": "North America",
+    "loc3City": "Hong Kong",
+    "loc3Country": "Hong Kong",
+    "loc3Region": "Asia Pacific",
+    "contactTitle": "Get in",
+    "contactTitleHighlight": "Touch",
+    "contactDesc": "We work exclusively with institutional clients, corporations, and high-net-worth individuals. Reach out through your preferred channel.",
+    "emailBtn": "hello@convexo.xyz",
+    "telegramBtn": "Telegram",
+    "whatsappBtn": "WhatsApp"
   },
-  "realEstateVaults": {
-    "hero": {
-      "title": "Real Estate Vaults",
-      "subtitle": "Access institutional-grade tokenized real estate investments across Latin America"
-    },
-    "requirement": {
-      "tier2": "Requires Tier 2 Verification (KYC/KYB)"
-    },
-    "properties": {
-      "title": "Property Types",
-      "subtitle": "Diversified portfolio of institutional-grade real estate assets",
-      "commercial": {
-        "title": "Commercial Office",
-        "description": "Premium office buildings in major business districts with stable corporate tenants",
-        "feature1": "Class A office properties",
-        "feature2": "Long-term corporate leases",
-        "feature3": "Prime business locations"
-      },
-      "residential": {
-        "title": "Residential Towers",
-        "description": "Modern luxury apartment complexes with consistent rental yields",
-        "feature1": "Multi-family residential units",
-        "feature2": "Stable rental income streams",
-        "feature3": "High-demand urban locations"
-      },
-      "mixedUse": {
-        "title": "Mixed-Use Developments",
-        "description": "Integrated commercial and residential complexes maximizing property value",
-        "feature1": "Diversified revenue streams",
-        "feature2": "Retail + residential combination",
-        "feature3": "Strategic urban positioning"
-      }
-    },
-    "process": {
-      "title": "Tokenization Process",
-      "subtitle": "How we transform real estate into accessible digital assets",
-      "step1": {
-        "title": "Property Selection",
-        "description": "Institutional-grade properties vetted for quality, location, and yield potential"
-      },
-      "step2": {
-        "title": "Legal Structuring",
-        "description": "Compliant SPV formation with clear ownership rights and regulatory compliance"
-      },
-      "step3": {
-        "title": "Token Issuance",
-        "description": "ERC-4626 vault tokens representing fractional property ownership"
-      },
-      "step4": {
-        "title": "Yield Distribution",
-        "description": "Automatic rental income distribution to token holders on-chain"
-      }
-    },
-    "benefits": {
-      "title": "Why Real Estate Vaults?",
-      "subtitle": "Breaking down barriers to institutional real estate investment",
-      "fractional": {
-        "title": "Fractional Ownership",
-        "description": "Invest in premium properties with lower capital requirements"
-      },
-      "liquidity": {
-        "title": "Enhanced Liquidity",
-        "description": "Trade tokenized real estate shares 24/7 on secondary markets"
-      },
-      "transparent": {
-        "title": "Transparent Valuations",
-        "description": "On-chain property valuations powered by Chainlink oracles"
-      },
-      "institutional": {
-        "title": "Institutional Quality",
-        "description": "Access professionally managed properties with institutional standards"
-      }
-    },
-    "technology": {
-      "title": "Technology Stack",
-      "subtitle": "Built on proven blockchain infrastructure for security and compliance",
-      "blockchain": {
-        "title": "Multi-Chain Support",
-        "description": "Deployed on Ethereum, Base, and UniChain for maximum accessibility"
-      },
-      "erc4626": {
-        "title": "ERC-4626 Vaults",
-        "description": "Industry-standard tokenized vaults ensuring interoperability and security"
-      },
-      "oracles": {
-        "title": "Chainlink Oracles",
-        "description": "Real-time property valuations and proof of reserves via decentralized oracles"
-      }
-    },
-    "cta": {
-      "title": "Ready to Invest in Real Estate?",
-      "description": "Join institutional investors accessing tokenized real estate in Latin America",
-      "getStarted": "Get Started",
-      "learnVerification": "Learn About Verification"
-    }
+  "technology": {
+    "badge": "Technology Stack",
+    "heroTitle": "Built on Proven Infrastructure",
+    "heroDesc": "Convexo Protocol integrates best-in-class blockchain infrastructure, institutional custody, and compliance providers to deliver sovereign-grade financial services.",
+    "deployedOn": "Deployed on",
+    "ownTechTitle": "Our Technology",
+    "tech1Label": "01",
+    "tech1Title": "Digital Identity System",
+    "tech1Subtitle": "zkPassport · Sumsub · Veriff",
+    "tech1Desc": "A 3-tier identity infrastructure that balances privacy with compliance. From zero-knowledge anonymous verification to full enterprise KYB.",
+    "tech1Tier1": "Tier 1",
+    "tech1Tier1Name": "zkPassport + OpenSanctions",
+    "tech1Tier1Detail": "Privacy-preserving. No document upload required.",
+    "tech1Tier2": "Tier 2",
+    "tech1Tier2Name": "Veriff / Sumsub",
+    "tech1Tier2Detail": "Full KYC for individuals and enterprises.",
+    "tech1Tier3": "Tier 3",
+    "tech1Tier3Name": "AI Credit Scoring",
+    "tech1Tier3Detail": "E-Credit assessment. Unlocks Tokenized C-Bonds.",
+    "tech2Label": "02",
+    "tech2Title": "Local Stablecoins",
+    "tech2Subtitle": "ECOP · Chainlink CCIP · Proof of Reserves",
+    "tech2Desc": "LATAM-native stablecoins pegged to regional currencies. Fully collateral-backed with on-chain proof of reserves and cross-chain interoperability.",
+    "tech2Tier1": "ECOP",
+    "tech2Tier1Name": "Colombian Peso Stablecoin",
+    "tech2Tier1Detail": "USD/COP data feeds via Google Finance API.",
+    "tech2Tier2": "CCIP",
+    "tech2Tier2Name": "Chainlink Cross-Chain",
+    "tech2Tier2Detail": "Seamless cross-chain transfers and bridging.",
+    "tech2Tier3": "Reserves",
+    "tech2Tier3Name": "Proof of Reserves",
+    "tech2Tier3Detail": "Real-time on-chain collateral verification.",
+    "tech3Label": "03",
+    "tech3Title": "EIP-4626 Vaults",
+    "tech3Subtitle": "Yield Infrastructure · Tokenized Assets",
+    "tech3Desc": "Standardized vault infrastructure powering all yield-bearing products. EIP-4626 ensures composability, transparency, and institutional-grade security.",
+    "tech3Tier1": "C-Bonds",
+    "tech3Tier1Name": "Tokenized Credit Bonds",
+    "tech3Tier1Detail": "12%+ APY for lenders.",
+    "tech3Tier2": "Real Estate",
+    "tech3Tier2Name": "Property Vaults",
+    "tech3Tier2Detail": "18% Annual APY via RWA tokenization.",
+    "tech3Tier3": "ETH Fund",
+    "tech3Tier3Name": "Ethereum Yield",
+    "tech3Tier3Detail": "Institutional-grade ETH exposure.",
+    "tech4Label": "04",
+    "tech4Title": "OTC Agentic Channels",
+    "tech4Subtitle": "AI-Driven · 24/7 · Multi-Channel",
+    "tech4Desc": "AI-powered over-the-counter order routing and execution. Autonomous agents handle large-block trades across Telegram, WhatsApp, Signal, and DEX liquidity pools.",
+    "tech4Tier1": "OTC",
+    "tech4Tier1Name": "Direct OTC Orders",
+    "tech4Tier1Detail": "1.5% spread. Via Telegram/WhatsApp/Signal.",
+    "tech4Tier2": "DEX",
+    "tech4Tier2Name": "Uniswap V4 Swaps",
+    "tech4Tier2Detail": "0.3% spread. Private persistent pools.",
+    "tech4Tier3": "CCIP",
+    "tech4Tier3Name": "Stablecoin Monetization",
+    "tech4Tier3Detail": "Cross-chain via Chainlink CCIP.",
+    "providersTitle": "Infrastructure Providers",
+    "providersDesc": "We partner with leading institutional infrastructure providers for custody, compliance, oracles, and identity verification.",
+    "provider1Name": "Chainlink",
+    "provider1Cat": "Oracles & CCIP",
+    "provider1Desc": "Decentralized oracle network for price feeds and cross-chain interoperability",
+    "provider2Name": "Uniswap",
+    "provider2Cat": "Decentralized Exchange",
+    "provider2Desc": "Uniswap V4 powers our compliant liquidity pools and stablecoin swaps",
+    "provider3Name": "Sumsub",
+    "provider3Cat": "KYB / Compliance",
+    "provider3Desc": "Enterprise KYB/KYC verification for institutional and business clients",
+    "provider4Name": "Veriff",
+    "provider4Cat": "Identity Verification",
+    "provider4Desc": "Individual identity verification with AI-powered document authentication",
+    "provider5Name": "zkPassport",
+    "provider5Cat": "Privacy Identity",
+    "provider5Desc": "Zero-knowledge proof identity for privacy-persistent on-chain verification",
+    "provider6Name": "Safe",
+    "provider6Cat": "Institutional Custody",
+    "provider6Desc": "Multi-signature smart contract wallets for institutional treasury security",
+    "provider7Name": "Circle USDC",
+    "provider7Cat": "Stablecoins",
+    "provider7Desc": "Circle's USDC for fiat-backed stablecoin infrastructure and settlements",
+    "provider8Name": "CoinGecko",
+    "provider8Cat": "Price Oracles",
+    "provider8Desc": "Real-time cryptocurrency price data for oracle feeds and P2P pricing",
+    "provider9Name": "HashKey",
+    "provider9Cat": "Institutional Custody",
+    "provider9Desc": "Institutional-grade digital asset custody and regulated infrastructure",
+    "provider10Name": "OKX",
+    "provider10Cat": "Liquidity",
+    "provider10Desc": "Deep liquidity partner for institutional OTC and trading operations"
   },
-  "p2pai": {
-    "hero": {
-      "title": "P2P-AI",
-      "subtitle": "AI-powered peer-to-peer marketplace with automated escrow and trustless arbitration"
-    },
-    "requirement": {
-      "tier1": "Requires Tier 1 Verification (Private ID)"
-    },
-    "howItWorks": {
-      "title": "How the Agent Works",
-      "subtitle": "Autonomous AI agent facilitates secure trades between two parties",
-      "step1": {
-        "title": "Order Creation",
-        "description": "User initiates buy/sell order via Telegram bot with desired amount"
-      },
-      "step2": {
-        "title": "Agent Quotes Price",
-        "description": "AI agent fetches CoinGecko rate and applies 0.1% commission spread"
-      },
-      "step3": {
-        "title": "Funds Transfer",
-        "description": "User sends fiat or USDC to agent's escrow wallet on Base"
-      },
-      "step4": {
-        "title": "Agent Verification",
-        "description": "Agent confirms receipt and initiates counterparty transfer"
-      },
-      "step5": {
-        "title": "Settlement & Reputation",
-        "description": "Trade completed, reputation recorded on-chain via ERC-8004"
-      }
-    },
-    "features": {
-      "title": "Key Features",
-      "subtitle": "Built for trust, speed, and security in P2P trading",
-      "agent": {
-        "title": "Autonomous AI Agent",
-        "description": "Coinbase Agentic Wallet on Base acts as neutral arbitrator, eliminating counterparty risk and ensuring fair trade execution."
-      },
-      "reputation": {
-        "title": "ERC-8004 Reputation",
-        "description": "Immutable on-chain reputation system records all trades and feedback, building trust through transparency."
-      },
-      "escrow": {
-        "title": "Smart Escrow System",
-        "description": "Funds held securely by agent wallet until both parties confirm, protecting buyers and sellers equally."
-      },
-      "telegram": {
-        "title": "Telegram Integration",
-        "description": "Seamless trading experience through familiar Telegram interface with instant notifications."
-      }
-    },
-    "architecture": {
-      "title": "Agent Architecture",
-      "subtitle": "Powered by cutting-edge blockchain and AI technology",
-      "wallet": {
-        "title": "Coinbase Agentic Wallet",
-        "description": "Self-custodial agent wallet on Base for autonomous transaction execution"
-      },
-      "escrow": {
-        "title": "Escrow Protocol",
-        "description": "Smart contract-based escrow ensuring trustless fund custody"
-      },
-      "pricing": {
-        "title": "Oracle Pricing",
-        "description": "Real-time CoinGecko API pricing with transparent 0.1% spread"
-      }
-    },
-    "currencies": {
-      "title": "Supported Currencies",
-      "subtitle": "Trade USDC against major Latin American fiat currencies"
-    },
-    "cta": {
-      "title": "Ready to Start Trading?",
-      "description": "Connect with our AI agent on Telegram and experience trustless P2P trading",
-      "startTrading": "Start Trading on Telegram",
-      "getVerified": "Get Verified First"
-    }
+  "productsHub": {
+    "badge": "5 Products · 2 Live",
+    "heroTitle": "Product",
+    "heroTitleHighlight": "Ecosystem",
+    "heroDesc": "Institutional-grade DeFi products for LATAM capital markets. Each product operates on its own subdomain and is accessible via the Convexo Protocol identity stack.",
+    "keyFeatures": "Key Features",
+    "learnMore": "Learn More",
+    "openApp": "Open App ↗",
+    "product1Name": "Payments Convexo",
+    "product1Desc": "Institutional settlement layer for cross-border payments, international collections, and OTC agentic channels.",
+    "product1H1": "International payments to China & beyond",
+    "product1H2": "Collections from global clients",
+    "product1H3": "OTC Agentic channels with AI routing",
+    "product1H4": "1.5% OTC spread / 0.3% DEX spread",
+    "product2Name": "Tokenized C-Bonds",
+    "product2Desc": "On-chain corporate credit bonds for LATAM SMEs. Lenders earn 12%+ APY. Borrowers access affordable institutional capital.",
+    "product2H1": "12%+ APY for lenders",
+    "product2H2": "EIP-4626 vault standard",
+    "product2H3": "AI credit scoring (Tier 3)",
+    "product2H4": "Legally binding E-Contracts",
+    "product3Name": "Real Estate Vaults",
+    "product3Desc": "Tokenized fractional ownership of LATAM commercial and residential real estate. 18% Annual APY, 70% projected 5-year return.",
+    "product3H1": "18% Annual APY",
+    "product3H2": "70% 5-year projected return",
+    "product3H3": "ERC-7540 async vault standard",
+    "product3H4": "Commercial, residential, mixed-use",
+    "product4Name": "ETH Fund Convexo",
+    "product4Desc": "Institutional-grade Ethereum yield fund. Active yield optimization for large-scale ETH positions using proprietary vaults.",
+    "product4H1": "Institutional ETH exposure",
+    "product4H2": "Active yield optimization",
+    "product4H3": "Proprietary vault strategies",
+    "product4H4": "Requires Tier 2 identity",
+    "product5Name": "P2P AI",
+    "product5Desc": "AI-powered peer-to-peer payment system with on-chain arbitration across LATAM currencies. 0.1% commission.",
+    "product5H1": "AI agent arbitrator",
+    "product5H2": "ERC-8004 reputation system",
+    "product5H3": "0.1% commission",
+    "product5H4": "COP, ARS, MXN, BRL, CLP, PEN"
+  },
+  "payments": {
+    "tagLive": "Live",
+    "tagApp": "pay.convexo.xyz",
+    "heroTitle": "Payments",
+    "heroTitleHighlight": "Convexo",
+    "heroDesc": "Institutional settlement infrastructure for cross-border payments. Send, receive, and trade digital assets across 20 countries with AI-powered execution and compliance baked in.",
+    "openApp": "Open App",
+    "contactOtc": "Contact OTC Desk",
+    "kpiVolume": "Volume Settled",
+    "kpiSettlement": "Settlement Time",
+    "kpiCountries": "Countries",
+    "kpiSavings": "Cost Savings",
+    "channelsTitle": "Payment Channels",
+    "ch1Title": "International Payments",
+    "ch1Tag": "Outbound",
+    "ch1Desc": "Send payments to international suppliers, including the China corridor and other high-friction markets. Settle in minutes, not days.",
+    "ch1Stat1": "Settlement",
+    "ch1Stat2": "Availability",
+    "ch2Title": "International Collections",
+    "ch2Tag": "Inbound",
+    "ch2Desc": "Receive funds from global clients into your Convexo account. Convert to stablecoins or local currency instantly.",
+    "ch2Stat1": "Countries",
+    "ch2Stat2": "Cost Savings",
+    "ch3Title": "OTC Agentic Orders",
+    "ch3Tag": "1.5% Spread",
+    "ch3Desc": "AI-driven OTC desk. Place large-block orders through Telegram, WhatsApp, or Signal. Agents execute with institutional precision.",
+    "ch3Stat1": "Spread",
+    "ch3Stat2": "Min Size",
+    "ch4Title": "Uniswap V4 Swaps",
+    "ch4Tag": "0.3% Spread",
+    "ch4Desc": "Swap directly through private persistent Uniswap V4 liquidity pools. Lower spread, deeper liquidity, fully on-chain.",
+    "ch4Stat1": "Spread",
+    "ch4Stat2": "Protocol",
+    "ch5Title": "Stablecoin Monetization",
+    "ch5Tag": "Cross-Chain",
+    "ch5Desc": "Convert and move stablecoins cross-chain via Chainlink CCIP. ECOP, USDC, and more — seamless interoperability.",
+    "ch5Stat1": "Bridge",
+    "ch5Stat2": "Latency",
+    "howTitle": "How It Works",
+    "step1Title": "Verify Identity",
+    "step1Desc": "Complete Digital ID Tier 1 or Tier 2 to access payment rails.",
+    "step2Title": "Fund Your Account",
+    "step2Desc": "Deposit via OTC, DEX swap, or direct stablecoin transfer.",
+    "step3Title": "Execute",
+    "step3Desc": "Initiate payments via app, Telegram bot, or API.",
+    "step4Title": "Settle",
+    "step4Desc": "Funds arrive in ~15 minutes. Receive confirmation on-chain."
+  },
+  "cbonds": {
+    "tagLive": "Live",
+    "tagApp": "protocol.convexo.xyz",
+    "heroTitle": "Tokenized",
+    "heroTitleHighlight": "C-Bonds",
+    "heroDesc": "Fractionalized corporate debt instruments for LATAM SMEs. Lenders earn institutional yield. Borrowers access capital at fair market rates. Powered by EIP-4626 vaults and AI credit scoring.",
+    "openApp": "Open App",
+    "learnMore": "Learn More",
+    "kpiApy": "Min APY for Lenders",
+    "kpiGap": "LATAM SME Credit Gap",
+    "kpiConstrained": "Credit Constrained SMEs",
+    "kpiRates": "Current LATAM Rates",
+    "howTitle": "How C-Bonds Work",
+    "lendersLabel": "For Lenders",
+    "lendersTitle": "Earn 12%+ APY",
+    "lenderStep1": "Complete Digital ID Tier 1 or 2",
+    "lenderStep2": "Deposit capital into C-Bond vault (EIP-4626)",
+    "lenderStep3": "Receive E-Credit tokens representing your position",
+    "lenderStep4": "Earn yield automatically — withdraw anytime",
+    "borrowersLabel": "For Borrowers",
+    "borrowersTitle": "Access Capital",
+    "borrowerStep1": "Complete Digital ID Tier 3 (AI credit scoring)",
+    "borrowerStep2": "Receive AI-generated credit assessment",
+    "borrowerStep3": "Sign legally binding E-Contract on-chain",
+    "borrowerStep4": "Receive funds within 24 hours",
+    "builtOnTitle": "Built On",
+    "tech1Title": "EIP-4626 Vaults",
+    "tech1Desc": "Standardized yield-bearing vault. Composable, auditable, and fully on-chain.",
+    "tech2Title": "AI Credit Scoring",
+    "tech2Desc": "Proprietary model trained on LATAM SME data. Tier 3 identity required.",
+    "tech3Title": "E-Contracts",
+    "tech3Desc": "Legally binding digital contracts. On-chain signing with jurisdictional enforceability."
+  },
+  "realEstate": {
+    "tagSoon": "Coming Soon",
+    "tagApp": "realstate.convexo.xyz",
+    "tagRwa": "RWA",
+    "heroTitle": "Real Estate",
+    "heroTitleHighlight": "Vaults",
+    "heroDesc": "Fractional ownership of premium LATAM real estate — fully tokenized, legally backed, and accessible to institutional investors worldwide. 18% Annual APY.",
+    "inquiry": "Investment Inquiry",
+    "kpiApy": "Annual APY",
+    "kpiFiveYear": "5-Year Projected Return",
+    "kpiIdentity": "Identity Required",
+    "kpiStandard": "Vault Standard",
+    "propertyTitle": "Property Types",
+    "prop1Type": "Commercial",
+    "prop1Desc": "Office buildings, retail centers, and logistics hubs across major LATAM cities.",
+    "prop2Type": "Residential",
+    "prop2Desc": "Premium residential developments in high-growth urban corridors.",
+    "prop3Type": "Mixed-Use",
+    "prop3Desc": "Integrated developments combining retail, residential, and office space.",
+    "howTitle": "How It Works",
+    "step1Title": "Verify Identity",
+    "step1Desc": "Complete Digital ID Tier 2 via Veriff (individual) or Sumsub (enterprise).",
+    "step2Title": "Choose Vault",
+    "step2Desc": "Select a property vault based on type, location, and risk profile.",
+    "step3Title": "Deposit",
+    "step3Desc": "Deposit capital. Receive ERC-7540 vault tokens representing your ownership.",
+    "step4Title": "Earn Yield",
+    "step4Desc": "Receive rental yield distributions automatically. Exit at any time."
+  },
+  "ethFund": {
+    "tagSoon": "Coming Soon",
+    "tagApp": "fund.convexo.xyz",
+    "heroTitle": "ETH Fund",
+    "heroTitleHighlight": "Convexo",
+    "heroDesc": "Institutional-grade Ethereum yield fund. Active yield optimization for large-scale ETH positions using proprietary institutional-grade vaults and AI-driven strategies.",
+    "waitlistLabel": "Join the Waitlist",
+    "waitlistDesc": "Be among the first institutional clients to access Convexo's ETH Fund when it launches. Early access for Tier 2+ verified accounts.",
+    "earlyAccess": "Get Early Access",
+    "expectTitle": "What to Expect",
+    "feat1Title": "Active Yield Strategies",
+    "feat1Desc": "Proprietary AI models optimize yield across ETH staking, lending protocols, and liquidity provision.",
+    "feat2Title": "Institutional Custody",
+    "feat2Desc": "ETH positions secured via Safe multi-sig and HashKey institutional custody infrastructure.",
+    "feat3Title": "Transparent Reporting",
+    "feat3Desc": "Real-time on-chain performance reporting. Full auditability of all vault positions and strategies."
+  },
+  "p2p": {
+    "tagSoon": "Coming Soon",
+    "tagApp": "p2p.convexo.xyz",
+    "tagAi": "AI Agent",
+    "heroTitle": "P2P",
+    "heroTitleHighlight": "AI",
+    "heroDesc": "Autonomous peer-to-peer payment matching powered by AI. Trade LATAM currencies with institutional-grade security, on-chain reputation, and zero trust required between parties.",
+    "joinWaitlist": "Join Waitlist",
+    "botLabel": "@convexobot",
+    "kpiCommission": "Commission",
+    "kpiReputation": "Reputation Standard",
+    "kpiCurrencies": "LATAM Currencies",
+    "kpiArbitration": "Arbitration",
+    "currenciesTitle": "Supported Currencies",
+    "howTitle": "How It Works",
+    "step1Title": "Create Order",
+    "step1Desc": "Post a buy or sell order through the Telegram bot @convexobot or the web app.",
+    "step2Title": "AI Matching",
+    "step2Desc": "The AI agent finds the best counterparty and proposes optimal terms.",
+    "step3Title": "Lock Funds",
+    "step3Desc": "Both parties lock funds in the smart contract escrow. Fully trustless.",
+    "step4Title": "Complete Transfer",
+    "step4Desc": "Exchange fiat payment via agreed method. Confirm on-chain.",
+    "step5Title": "Release",
+    "step5Desc": "AI agent verifies completion and releases funds. Builds on-chain reputation.",
+    "reputationLabel": "ERC-8004 On-Chain Reputation",
+    "reputationTitle": "Build Your Trading Reputation",
+    "reputationDesc": "Every successful P2P transaction builds your on-chain reputation score, unlocking better rates, higher limits, and priority matching. Reputation is non-transferable and permanently recorded on-chain."
   },
   "privacy": {
     "badge": "Legal",
@@ -830,123 +726,74 @@
       "description": "Our legal team is available to clarify any questions about these Terms and Conditions."
     }
   },
-  "about": {
-    "badge": "About",
-    "hero": {
-      "title": "Pioneering Institutional DeFi for Latin America",
-      "subtitle": "Building the bridge between traditional finance and decentralized financial systems with sovereign-grade infrastructure."
+  "amlCft": {
+    "title": "AML/CFT Policy",
+    "subtitle": "Our commitment to Anti-Money Laundering and Counter-Financing of Terrorism compliance",
+    "overview": {
+      "title": "Overview",
+      "description": "Convexo Protocol is committed to maintaining the highest standards of compliance with Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) regulations. This policy outlines our comprehensive approach to preventing illicit activities and ensuring regulatory compliance across all our operations."
     },
-    "mission": {
-      "badge": "Mission",
-      "title": "Democratizing Capital Access",
-      "description": "Connecting Latin American enterprises with global capital markets through blockchain technology and rigorous compliance standards."
+    "aml": {
+      "title": "Anti-Money Laundering Policy",
+      "description": "We implement robust AML measures to detect and prevent money laundering activities within our ecosystem. Our approach includes comprehensive risk assessment, customer due diligence, and ongoing monitoring of all transactions.",
+      "requirements": {
+        "title": "AML Requirements",
+        "req1": "Customer Identity Verification through progressive KYC tiers",
+        "req2": "Source of funds verification for high-value transactions",
+        "req3": "Ongoing transaction monitoring and suspicious activity reporting",
+        "req4": "Regular review and updating of customer risk profiles"
+      }
     },
-    "vision": {
-      "badge": "Vision",
-      "title": "Leading Institutional DeFi",
-      "description": "Becoming the premier platform where geographical boundaries don't limit access to funding and blockchain enables transparent, efficient financial services."
+    "cft": {
+      "title": "Counter-Financing of Terrorism",
+      "description": "Our CFT measures are designed to identify and prevent any financing activities related to terrorism. We maintain strict compliance with international sanctions and watchlists.",
+      "measures": {
+        "title": "CFT Measures",
+        "measure1": "Screening against international sanctions lists (OFAC, UN, EU)",
+        "measure2": "Enhanced due diligence for high-risk jurisdictions",
+        "measure3": "Real-time transaction monitoring for suspicious patterns",
+        "measure4": "Immediate reporting of any suspected terrorist financing activities"
+      }
     },
-    "approach": {
-      "badge": "Our Approach",
-      "title": "Three Core Pillars",
-      "compliance": {
-        "title": "Compliance First",
-        "description": "Rigorous KYC/KYB verification ensuring all participants meet institutional standards."
-      },
-      "aiPowered": {
-        "title": "AI-Powered",
-        "description": "Advanced algorithms for accurate credit scoring with blockchain-certified assessments."
+    "kyc": {
+      "title": "Know Your Customer (KYC) Requirements",
+      "description": "Our progressive KYC system ensures proper customer identification while maintaining user privacy through zero-knowledge proofs and advanced cryptographic techniques.",
+      "individual": {
+        "title": "Individual Users",
+        "req1": "Government-issued ID verification",
+        "req2": "Proof of address verification",
+        "req3": "Enhanced verification for higher transaction limits"
       },
       "enterprise": {
-        "title": "Enterprise Grade",
-        "description": "Built on leading DeFi protocols with institutional-grade security and infrastructure."
+        "title": "Enterprise Clients",
+        "req1": "Corporate registration documents",
+        "req2": "Beneficial ownership identification",
+        "req3": "Business license and regulatory approvals",
+        "req4": "Financial statements and audit reports"
       }
     },
-    "locations": {
-      "badge": "Global Presence",
-      "title": "Our Locations",
-      "subtitle": "Operating across key financial hubs to serve our clients worldwide",
-      "us": {
-        "title": "United States",
-        "address1": "159 North Wolcott Street",
-        "address2": "Suite 133",
-        "city": "Casper, WY"
-      },
-      "colombia": {
-        "title": "Colombia",
-        "address1": "Calle 36#128-321",
-        "address2": "Zona Franca, Zonaamerica.com",
-        "city": "Cali, Valle del Cauca"
-      },
-      "hongkong": {
-        "title": "Hong Kong",
-        "address1": "Spaces",
-        "address2": "8 Queens Road East",
-        "city": "Hong Kong"
+    "monitoring": {
+      "title": "Transaction Monitoring and Reporting",
+      "description": "We employ advanced analytics and machine learning algorithms to monitor all transactions for suspicious activities. Our monitoring system operates 24/7 to ensure real-time detection of potentially illicit activities.",
+      "activities": {
+        "title": "Monitoring Activities",
+        "activity1": "Real-time transaction analysis using AI-powered risk scoring",
+        "activity2": "Pattern recognition for unusual transaction behaviors",
+        "activity3": "Automated alerts for high-risk transactions",
+        "activity4": "Regular reporting to relevant financial intelligence units"
       }
+    },
+    "compliance": {
+      "title": "Compliance and Regular Updates",
+      "description": "This policy is regularly reviewed and updated to ensure compliance with evolving regulatory requirements across all jurisdictions where we operate.",
+      "updates": "Last updated: March 2026. This policy is subject to change as regulations evolve and our services expand."
     },
     "contact": {
-      "badge": "Get in Touch",
-      "title": "Contact Us",
-      "whatsapp": "WhatsApp",
-      "telegram": "Telegram",
-      "email": "Email"
-    },
-    "cta": {
-      "title": "Ready to Transform Your Business?",
-      "subtitle": "Join the future of institutional finance in Latin America",
-      "button": "Get Started"
-    }
-  },
-  "technology": {
-    "badge": "Technology Stack",
-    "hero": {
-      "title": "Built on Proven Infrastructure",
-      "subtitle": "Convexo Protocol integrates best-in-class blockchain infrastructure, institutional custody, and compliance providers to deliver sovereign-grade financial services.",
-      "deployedOn": "Deployed on"
-    },
-    "partners": {
-      "badge": "Infrastructure Partners",
-      "title": "Enterprise-Grade Integrations",
-      "subtitle": "We partner with leading institutional infrastructure providers for custody, compliance, oracles, and identity verification.",
-      "categories": {
-        "oracles": "Oracles",
-        "dex": "DEX Infrastructure",
-        "kyb": "KYB Verification",
-        "identity": "Identity Verification",
-        "privacy": "Privacy Identity",
-        "custody": "Custody",
-        "stablecoins": "Stablecoins",
-        "pricing": "Price Oracles",
-        "liquidity": "Liquidity"
-      },
-      "providers": {
-        "chainlink": "Decentralized oracle network for price feeds and proof of reserves",
-        "uniswap": "Uniswap V4 powers our liquidity pools and stablecoin swaps",
-        "sumsub": "Enterprise KYB/KYC verification for institutional clients",
-        "veriff": "Individual identity verification with AI-powered authentication",
-        "zkpassport": "Zero-knowledge proof identity for privacy-persistent verification",
-        "safe": "Multi-signature smart contract wallets for institutional security",
-        "usdc": "USD Coin for fiat-backed stablecoin infrastructure",
-        "coingecko": "Real-time cryptocurrency price data and market analytics",
-        "hashkey": "Institutional-grade digital asset custody and infrastructure",
-        "okx": "Deep liquidity provider for institutional trading"
-      }
-    },
-    "architecture": {
-      "badge": "Technical Architecture",
-      "title": "Sovereign-Grade Infrastructure",
-      "security": {
-        "title": "Security First",
-        "description": "Multi-signature custody, zero-knowledge proofs, and institutional-grade key management ensure sovereign control of digital assets."
-      },
-      "compliance": {
-        "title": "Compliance Native",
-        "description": "KYC/KYB verification, AML screening, and regulatory compliance built into every layer of the protocol."
-      },
-      "performance": {
-        "title": "High Performance",
-        "description": "Sub-second settlement, L2 scaling, and optimized smart contracts for institutional trading volumes."
+      "title": "Compliance Contact",
+      "description": "For any compliance-related inquiries or to report suspicious activities, please contact our compliance team:",
+      "email": {
+        "label": "Email:",
+        "value": "compliance@convexo.xyz"
       }
     }
   }
